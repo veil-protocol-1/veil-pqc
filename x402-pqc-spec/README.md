@@ -69,7 +69,7 @@ Package: @veil/x402-pqc (TypeScript/Node.js)
 - Full payment flow: sign → transmit → verify
 - Base + Base Sepolia network support
 
-Repository: https://github.com/veilprotocol/veil-pqc
+Repository: https://github.com/veil-protocol-1/veil-pqc
 
 ## Standards Alignment
 

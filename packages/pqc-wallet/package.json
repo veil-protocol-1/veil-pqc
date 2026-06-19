@@ -1,13 +1,13 @@
 {
   "name": "@veil_/pqc-wallet",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Quantum-resistant wallet primitives for AI agents and humans",
   "license": "Apache-2.0",
   "author": "Veil Foundation <dev@veilprotocol.net>",
   "homepage": "https://veilprotocol.net",
   "repository": {
     "type": "git",
-    "url": "https://github.com/veilprotocol/veil-pqc"
+    "url": "https://github.com/veil-protocol-1/veil-pqc"
   },
   "type": "module",
   "main": "./dist/index.cjs",

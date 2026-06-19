@@ -1,8 +1,12 @@
 {
   "name": "@veil_/agent-registry",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Agent-callable wrappers for Veil Protocol's quantum-resistant payments (x402-pqc) and private Ghost AI inference (circles) — MCP server, LangChain tools, OpenAI functions, and a REST API",
   "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/veil-protocol-1/veil-pqc"
+  },
   "type": "module",
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",

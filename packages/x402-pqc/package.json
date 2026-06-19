@@ -1,8 +1,12 @@
 {
   "name": "@veil_/x402-pqc",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Quantum-resistant x402 payment protocol — ML-DSA-65 signing + ML-KEM-768 encryption + session mode",
   "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/veil-protocol-1/veil-pqc"
+  },
   "type": "module",
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",

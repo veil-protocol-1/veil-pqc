@@ -1,8 +1,12 @@
 {
   "name": "@veil_/auth",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Biometric SSI with ZK proof of authentication. No passwords. No seed phrases. No servers.",
   "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/veil-protocol-1/veil-pqc"
+  },
   "type": "module",
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",
