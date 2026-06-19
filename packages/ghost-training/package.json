@@ -1,0 +1,52 @@
+{
+  "name": "@veil/ghost-training",
+  "version": "0.1.0",
+  "description": "Synthetic training dataset generator for Ghost — Veil's AI agent — across mobile, SDK, and web surfaces",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    }
+  },
+  "files": [
+    "dist",
+    "data"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "generate": "tsx src/generate.ts",
+    "validate": "tsx src/validate.ts",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "tsup": "^8.0.0",
+    "tsx": "^4.0.0",
+    "typescript": "^5.4.0",
+    "vitest": "^2.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "ghost",
+    "training",
+    "synthetic-data",
+    "agent",
+    "veil",
+    "defi",
+    "nlp"
+  ]
+}

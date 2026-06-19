@@ -1,0 +1,97 @@
+{
+  "name": "@veil_/agent-registry",
+  "version": "1.0.0",
+  "description": "Agent-callable wrappers for Veil Protocol's quantum-resistant payments (x402-pqc) and private Ghost AI inference (circles) — MCP server, LangChain tools, OpenAI functions, and a REST API",
+  "license": "Apache-2.0",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "bin": {
+    "veil-mcp": "./dist/mcp/server.js"
+  },
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    },
+    "./langchain": {
+      "import": {
+        "types": "./dist/langchain/tools.d.ts",
+        "default": "./dist/langchain/tools.js"
+      },
+      "require": {
+        "types": "./dist/langchain/tools.d.cts",
+        "default": "./dist/langchain/tools.cjs"
+      }
+    },
+    "./openai": {
+      "import": {
+        "types": "./dist/openai/functions.d.ts",
+        "default": "./dist/openai/functions.js"
+      },
+      "require": {
+        "types": "./dist/openai/functions.d.cts",
+        "default": "./dist/openai/functions.cjs"
+      }
+    },
+    "./mcp": {
+      "import": {
+        "types": "./dist/mcp/server.d.ts",
+        "default": "./dist/mcp/server.js"
+      },
+      "require": {
+        "types": "./dist/mcp/server.d.cts",
+        "default": "./dist/mcp/server.cjs"
+      }
+    }
+  },
+  "files": ["dist", "README.md", "LICENSE", "mcp-server.json"],
+  "scripts": {
+    "build": "tsup",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit",
+    "start:mcp": "node dist/mcp/server.js",
+    "start:api": "node dist/api/index.js"
+  },
+  "dependencies": {
+    "@veil_/x402-pqc": "^1.0.1",
+    "@veil_/pqc-wallet": "^1.0.0",
+    "@veil_/circles": "^1.0.1",
+    "@modelcontextprotocol/sdk": "^1.0.4",
+    "@langchain/core": "^0.3.27",
+    "@noble/hashes": "^1.6.0",
+    "express": "^4.19.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.0.0",
+    "@types/supertest": "^6.0.2",
+    "supertest": "^7.0.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.4.0",
+    "vitest": "^2.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "veil",
+    "x402-pqc",
+    "post-quantum",
+    "mcp",
+    "langchain",
+    "ai-agents",
+    "defi",
+    "base",
+    "quantum-resistant"
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "name": "@veil_/auth",
+  "version": "1.0.1",
+  "description": "Biometric SSI with ZK proof of authentication. No passwords. No seed phrases. No servers.",
+  "license": "Apache-2.0",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@aztec/bb.js": "5.0.0-nightly.20260522",
+    "@noble/curves": "^1.6.0",
+    "@noble/hashes": "^1.6.0",
+    "@noble/post-quantum": "^0.2.1",
+    "@noir-lang/noir_js": "1.0.0-beta.22",
+    "@veil_/pqc-wallet": "^1.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.4.0",
+    "vitest": "^2.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "biometric",
+    "fuzzy-extractor",
+    "zk-proof",
+    "post-quantum",
+    "ml-kem",
+    "ml-dsa",
+    "veil",
+    "ssi"
+  ]
+}

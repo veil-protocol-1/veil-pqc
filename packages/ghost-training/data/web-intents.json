@@ -1,0 +1,5902 @@
+[
+  {
+    "input": "Execute a token swap: 25 VEIL → BNB via Aerodrome 001001",
+    "intent": {
+      "action": "swap",
+      "token": "VEIL",
+      "toToken": "BNB",
+      "amount": "25"
+    },
+    "ghostResponse": "Understood, Sovereign. I will execute a swap of 25 VEIL to BNB via Aerodrome.",
+    "category": "swap",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Execute a token swap: 1000 SOL → FTM via Curve 001002",
+    "intent": {
+      "action": "swap",
+      "token": "SOL",
+      "toToken": "FTM",
+      "amount": "1000"
+    },
+    "ghostResponse": "Understood, Sovereign. I will execute a swap of 1000 SOL to FTM via Curve.",
+    "category": "swap",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Convert 50 VEIL to BTC at the current market rate 001003",
+    "intent": {
+      "action": "swap",
+      "token": "VEIL",
+      "toToken": "BTC",
+      "amount": "50"
+    },
+    "ghostResponse": "Understood, Sovereign. I will execute a swap of 50 VEIL to BTC via Compound.",
+    "category": "swap",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Execute a token swap: 1000 USDC → FTM via Curve 001004",
+    "intent": {
+      "action": "swap",
+      "token": "USDC",
+      "toToken": "FTM",
+      "amount": "1000"
+    },
+    "ghostResponse": "Understood, Sovereign. I will execute a swap of 1000 USDC to FTM via Curve.",
+    "category": "swap",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Swap 0.1 FTM tokens for BTC with a maximum slippage of 0.5% 001005",
+    "intent": {
+      "action": "swap",
+      "token": "FTM",
+      "toToken": "BTC",
+      "amount": "0.1"
+    },
+    "ghostResponse": "Understood, Sovereign. I will execute a swap of 0.1 FTM to BTC via Aave.",
+    "category": "swap",
+    "difficulty": "easy"
+  },
+  {
+    "input": "I'd like to exchange my BTC position of 500 for USDC 001006",
+    "intent": {
+      "action": "swap",
+      "token": "BTC",
+      "toToken": "USDC",
+      "amount": "500"
+    },
+    "ghostResponse": "Understood, Sovereign. I will execute a swap of 500 BTC to USDC via Uniswap.",
+    "category": "swap",
+    "difficulty": "easy"
+  },
+  {
+    "input": "I'd like to exchange my USDT position of 25 for ETH 001007",
+    "intent": {
+      "action": "swap",
+      "token": "USDT",
+      "toToken": "ETH",
+      "amount": "25"
+    },
+    "ghostResponse": "Understood, Sovereign. I will execute a swap of 25 USDT to ETH via Aave.",
+    "category": "swap",
+    "difficulty": "easy"
+  },
+  {
+    "input": "I'd like to exchange my ARB position of 500 for BNB 001008",
+    "intent": {
+      "action": "swap",
+      "token": "ARB",
+      "toToken": "BNB",
+      "amount": "500"
+    },
+    "ghostResponse": "Understood, Sovereign. I will execute a swap of 500 ARB to BNB via Aave.",
+    "category": "swap",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Convert 500 BNB to USDT at the current market rate 001009",
+    "intent": {
+      "action": "swap",
+      "token": "BNB",
+      "toToken": "USDT",
+      "amount": "500"
+    },
+    "ghostResponse": "Understood, Sovereign. I will execute a swap of 500 BNB to USDT via Aave.",
+    "category": "swap",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Swap 10 FTM tokens for USDT with a maximum slippage of 0.5% 001010",
+    "intent": {
+      "action": "swap",
+      "token": "FTM",
+      "toToken": "USDT",
+      "amount": "10"
+    },
+    "ghostResponse": "Understood, Sovereign. I will execute a swap of 10 FTM to USDT via Curve.",
+    "category": "swap",
+    "difficulty": "easy"
+  },
+  {
+    "input": "I'd like to exchange my VEIL position of 1 for ARB 001011",
+    "intent": {
+      "action": "swap",
+      "token": "VEIL",
+      "toToken": "ARB",
+      "amount": "1"
+    },
+    "ghostResponse": "Understood, Sovereign. I will execute a swap of 1 VEIL to ARB via Curve.",
+    "category": "swap",
+    "difficulty": "easy"
+  },
+  {
+    "input": "I'd like to exchange my VEIL position of 10 for FTM 001012",
+    "intent": {
+      "action": "swap",
+      "token": "VEIL",
+      "toToken": "FTM",
+      "amount": "10"
+    },
+    "ghostResponse": "Understood, Sovereign. I will execute a swap of 10 VEIL to FTM via Aerodrome.",
+    "category": "swap",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Swap 0.1 BNB tokens for VEIL with a maximum slippage of 0.5% 001013",
+    "intent": {
+      "action": "swap",
+      "token": "BNB",
+      "toToken": "VEIL",
+      "amount": "0.1"
+    },
+    "ghostResponse": "Understood, Sovereign. I will execute a swap of 0.1 BNB to VEIL via Aerodrome.",
+    "category": "swap",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Swap 25 USDC tokens for USDT with a maximum slippage of 0.5% 001014",
+    "intent": {
+      "action": "swap",
+      "token": "USDC",
+      "toToken": "USDT",
+      "amount": "25"
+    },
+    "ghostResponse": "Understood, Sovereign. I will execute a swap of 25 USDC to USDT via Aave.",
+    "category": "swap",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Swap 2 ETH tokens for SOL with a maximum slippage of 0.5% 001015",
+    "intent": {
+      "action": "swap",
+      "token": "ETH",
+      "toToken": "SOL",
+      "amount": "2"
+    },
+    "ghostResponse": "Understood, Sovereign. I will execute a swap of 2 ETH to SOL via Lido.",
+    "category": "swap",
+    "difficulty": "easy"
+  },
+  {
+    "input": "I'd like to exchange my BNB position of 500 for OP 001016",
+    "intent": {
+      "action": "swap",
+      "token": "BNB",
+      "toToken": "OP",
+      "amount": "500"
+    },
+    "ghostResponse": "Understood, Sovereign. I will execute a swap of 500 BNB to OP via Aerodrome.",
+    "category": "swap",
+    "difficulty": "easy"
+  },
+  {
+    "input": "I'd like to exchange my BNB position of 0.1 for ETH 001017",
+    "intent": {
+      "action": "swap",
+      "token": "BNB",
+      "toToken": "ETH",
+      "amount": "0.1"
+    },
+    "ghostResponse": "Understood, Sovereign. I will execute a swap of 0.1 BNB to ETH via Aave.",
+    "category": "swap",
+    "difficulty": "easy"
+  },
+  {
+    "input": "I'd like to exchange my VEIL position of 2 for ARB 001018",
+    "intent": {
+      "action": "swap",
+      "token": "VEIL",
+      "toToken": "ARB",
+      "amount": "2"
+    },
+    "ghostResponse": "Understood, Sovereign. I will execute a swap of 2 VEIL to ARB via Compound.",
+    "category": "swap",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Convert 1000 USDC to BTC at the current market rate 001019",
+    "intent": {
+      "action": "swap",
+      "token": "USDC",
+      "toToken": "BTC",
+      "amount": "1000"
+    },
+    "ghostResponse": "Understood, Sovereign. I will execute a swap of 1000 USDC to BTC via Lido.",
+    "category": "swap",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Convert 0.5 OP to BTC at the current market rate 001020",
+    "intent": {
+      "action": "swap",
+      "token": "OP",
+      "toToken": "BTC",
+      "amount": "0.5"
+    },
+    "ghostResponse": "Understood, Sovereign. I will execute a swap of 0.5 OP to BTC via Curve.",
+    "category": "swap",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Swap 1000 FTM tokens for OP with a maximum slippage of 0.5% 001021",
+    "intent": {
+      "action": "swap",
+      "token": "FTM",
+      "toToken": "OP",
+      "amount": "1000"
+    },
+    "ghostResponse": "Understood, Sovereign. I will execute a swap of 1000 FTM to OP via Uniswap.",
+    "category": "swap",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Execute a token swap: 2 BTC → SOL via Aave 001022",
+    "intent": {
+      "action": "swap",
+      "token": "BTC",
+      "toToken": "SOL",
+      "amount": "2"
+    },
+    "ghostResponse": "Understood, Sovereign. I will execute a swap of 2 BTC to SOL via Aave.",
+    "category": "swap",
+    "difficulty": "easy"
+  },
+  {
+    "input": "I would like to swap 25 ETH for AVAX using Curve 001023",
+    "intent": {
+      "action": "swap",
+      "token": "ETH",
+      "toToken": "AVAX",
+      "amount": "25"
+    },
+    "ghostResponse": "Understood, Sovereign. I will execute a swap of 25 ETH to AVAX via Curve.",
+    "category": "swap",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Convert 25 ETH to ARB at the current market rate 001024",
+    "intent": {
+      "action": "swap",
+      "token": "ETH",
+      "toToken": "ARB",
+      "amount": "25"
+    },
+    "ghostResponse": "Understood, Sovereign. I will execute a swap of 25 ETH to ARB via Curve.",
+    "category": "swap",
+    "difficulty": "easy"
+  },
+  {
+    "input": "I'd like to exchange my OP position of 500 for ETH 001025",
+    "intent": {
+      "action": "swap",
+      "token": "OP",
+      "toToken": "ETH",
+      "amount": "500"
+    },
+    "ghostResponse": "Understood, Sovereign. I will execute a swap of 500 OP to ETH via Aave.",
+    "category": "swap",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Execute a token swap: 50 BTC → USDT via Aave 001026",
+    "intent": {
+      "action": "swap",
+      "token": "BTC",
+      "toToken": "USDT",
+      "amount": "50"
+    },
+    "ghostResponse": "Understood, Sovereign. I will execute a swap of 50 BTC to USDT via Aave.",
+    "category": "swap",
+    "difficulty": "easy"
+  },
+  {
+    "input": "I'd like to exchange my ETH position of 5 for AVAX 001027",
+    "intent": {
+      "action": "swap",
+      "token": "ETH",
+      "toToken": "AVAX",
+      "amount": "5"
+    },
+    "ghostResponse": "Understood, Sovereign. I will execute a swap of 5 ETH to AVAX via Compound.",
+    "category": "swap",
+    "difficulty": "easy"
+  },
+  {
+    "input": "I would like to swap 1000 FTM for VEIL using Uniswap 001028",
+    "intent": {
+      "action": "swap",
+      "token": "FTM",
+      "toToken": "VEIL",
+      "amount": "1000"
+    },
+    "ghostResponse": "Understood, Sovereign. I will execute a swap of 1000 FTM to VEIL via Uniswap.",
+    "category": "swap",
+    "difficulty": "easy"
+  },
+  {
+    "input": "I'd like to exchange my USDT position of 1 for VEIL 001029",
+    "intent": {
+      "action": "swap",
+      "token": "USDT",
+      "toToken": "VEIL",
+      "amount": "1"
+    },
+    "ghostResponse": "Understood, Sovereign. I will execute a swap of 1 USDT to VEIL via Uniswap.",
+    "category": "swap",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Execute a token swap: 5 FTM → ARB via Compound 001030",
+    "intent": {
+      "action": "swap",
+      "token": "FTM",
+      "toToken": "ARB",
+      "amount": "5"
+    },
+    "ghostResponse": "Understood, Sovereign. I will execute a swap of 5 FTM to ARB via Compound.",
+    "category": "swap",
+    "difficulty": "easy"
+  },
+  {
+    "input": "I'd like to exchange my FTM position of 100 for USDC 001031",
+    "intent": {
+      "action": "swap",
+      "token": "FTM",
+      "toToken": "USDC",
+      "amount": "100"
+    },
+    "ghostResponse": "Understood, Sovereign. I will execute a swap of 100 FTM to USDC via Aerodrome.",
+    "category": "swap",
+    "difficulty": "easy"
+  },
+  {
+    "input": "I'd like to exchange my SOL position of 2 for BTC 001032",
+    "intent": {
+      "action": "swap",
+      "token": "SOL",
+      "toToken": "BTC",
+      "amount": "2"
+    },
+    "ghostResponse": "Understood, Sovereign. I will execute a swap of 2 SOL to BTC via Curve.",
+    "category": "swap",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Execute a token swap: 200 OP → BNB via Compound 001033",
+    "intent": {
+      "action": "swap",
+      "token": "OP",
+      "toToken": "BNB",
+      "amount": "200"
+    },
+    "ghostResponse": "Understood, Sovereign. I will execute a swap of 200 OP to BNB via Compound.",
+    "category": "swap",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Convert 2 ARB to AVAX at the current market rate 001034",
+    "intent": {
+      "action": "swap",
+      "token": "ARB",
+      "toToken": "AVAX",
+      "amount": "2"
+    },
+    "ghostResponse": "Understood, Sovereign. I will execute a swap of 2 ARB to AVAX via Aerodrome.",
+    "category": "swap",
+    "difficulty": "easy"
+  },
+  {
+    "input": "I'd like to exchange my ARB position of 0.1 for USDC 001035",
+    "intent": {
+      "action": "swap",
+      "token": "ARB",
+      "toToken": "USDC",
+      "amount": "0.1"
+    },
+    "ghostResponse": "Understood, Sovereign. I will execute a swap of 0.1 ARB to USDC via Lido.",
+    "category": "swap",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Convert 100 USDT to ETH at the current market rate 001036",
+    "intent": {
+      "action": "swap",
+      "token": "USDT",
+      "toToken": "ETH",
+      "amount": "100"
+    },
+    "ghostResponse": "Understood, Sovereign. I will execute a swap of 100 USDT to ETH via Aerodrome.",
+    "category": "swap",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Please execute a AVAX to SOL swap for 25 tokens 001037",
+    "intent": {
+      "action": "swap",
+      "token": "AVAX",
+      "toToken": "SOL",
+      "amount": "25"
+    },
+    "ghostResponse": "Understood, Sovereign. I will execute a swap of 25 AVAX to SOL via Aave.",
+    "category": "swap",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Please execute a FTM to OP swap for 2 tokens 001038",
+    "intent": {
+      "action": "swap",
+      "token": "FTM",
+      "toToken": "OP",
+      "amount": "2"
+    },
+    "ghostResponse": "Understood, Sovereign. I will execute a swap of 2 FTM to OP via Compound.",
+    "category": "swap",
+    "difficulty": "easy"
+  },
+  {
+    "input": "I would like to swap 0.1 USDC for VEIL using Lido 001039",
+    "intent": {
+      "action": "swap",
+      "token": "USDC",
+      "toToken": "VEIL",
+      "amount": "0.1"
+    },
+    "ghostResponse": "Understood, Sovereign. I will execute a swap of 0.1 USDC to VEIL via Lido.",
+    "category": "swap",
+    "difficulty": "easy"
+  },
+  {
+    "input": "I'd like to exchange my USDT position of 25 for AVAX 001040",
+    "intent": {
+      "action": "swap",
+      "token": "USDT",
+      "toToken": "AVAX",
+      "amount": "25"
+    },
+    "ghostResponse": "Understood, Sovereign. I will execute a swap of 25 USDT to AVAX via Aave.",
+    "category": "swap",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Swap 25 BNB tokens for FTM with a maximum slippage of 0.5% 001041",
+    "intent": {
+      "action": "swap",
+      "token": "BNB",
+      "toToken": "FTM",
+      "amount": "25"
+    },
+    "ghostResponse": "Understood, Sovereign. I will execute a swap of 25 BNB to FTM via Uniswap.",
+    "category": "swap",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Execute a token swap: 0.5 ETH → OP via Uniswap 001042",
+    "intent": {
+      "action": "swap",
+      "token": "ETH",
+      "toToken": "OP",
+      "amount": "0.5"
+    },
+    "ghostResponse": "Understood, Sovereign. I will execute a swap of 0.5 ETH to OP via Uniswap.",
+    "category": "swap",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Swap 10 VEIL tokens for OP with a maximum slippage of 0.5% 001043",
+    "intent": {
+      "action": "swap",
+      "token": "VEIL",
+      "toToken": "OP",
+      "amount": "10"
+    },
+    "ghostResponse": "Understood, Sovereign. I will execute a swap of 10 VEIL to OP via Aave.",
+    "category": "swap",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Swap 200 SOL tokens for FTM with a maximum slippage of 0.5% 001044",
+    "intent": {
+      "action": "swap",
+      "token": "SOL",
+      "toToken": "FTM",
+      "amount": "200"
+    },
+    "ghostResponse": "Understood, Sovereign. I will execute a swap of 200 SOL to FTM via Aerodrome.",
+    "category": "swap",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Swap 200 SOL tokens for BTC with a maximum slippage of 0.5% 001045",
+    "intent": {
+      "action": "swap",
+      "token": "SOL",
+      "toToken": "BTC",
+      "amount": "200"
+    },
+    "ghostResponse": "Understood, Sovereign. I will execute a swap of 200 SOL to BTC via Curve.",
+    "category": "swap",
+    "difficulty": "easy"
+  },
+  {
+    "input": "I'd like to exchange my ETH position of 1000 for AVAX 001046",
+    "intent": {
+      "action": "swap",
+      "token": "ETH",
+      "toToken": "AVAX",
+      "amount": "1000"
+    },
+    "ghostResponse": "Understood, Sovereign. I will execute a swap of 1000 ETH to AVAX via Compound.",
+    "category": "swap",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Execute a token swap: 200 BNB → ARB via Lido 001047",
+    "intent": {
+      "action": "swap",
+      "token": "BNB",
+      "toToken": "ARB",
+      "amount": "200"
+    },
+    "ghostResponse": "Understood, Sovereign. I will execute a swap of 200 BNB to ARB via Lido.",
+    "category": "swap",
+    "difficulty": "easy"
+  },
+  {
+    "input": "I'd like to exchange my ARB position of 0.5 for ETH 001048",
+    "intent": {
+      "action": "swap",
+      "token": "ARB",
+      "toToken": "ETH",
+      "amount": "0.5"
+    },
+    "ghostResponse": "Understood, Sovereign. I will execute a swap of 0.5 ARB to ETH via Compound.",
+    "category": "swap",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Please execute a VEIL to AVAX swap for 0.1 tokens 001049",
+    "intent": {
+      "action": "swap",
+      "token": "VEIL",
+      "toToken": "AVAX",
+      "amount": "0.1"
+    },
+    "ghostResponse": "Understood, Sovereign. I will execute a swap of 0.1 VEIL to AVAX via Aave.",
+    "category": "swap",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Swap 0.5 OP tokens for SOL with a maximum slippage of 0.5% 001050",
+    "intent": {
+      "action": "swap",
+      "token": "OP",
+      "toToken": "SOL",
+      "amount": "0.5"
+    },
+    "ghostResponse": "Understood, Sovereign. I will execute a swap of 0.5 OP to SOL via Aave.",
+    "category": "swap",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Please execute a BTC to USDT swap for 25 tokens 001051",
+    "intent": {
+      "action": "swap",
+      "token": "BTC",
+      "toToken": "USDT",
+      "amount": "25"
+    },
+    "ghostResponse": "Understood, Sovereign. I will execute a swap of 25 BTC to USDT via Curve.",
+    "category": "swap",
+    "difficulty": "easy"
+  },
+  {
+    "input": "I would like to swap 50 FTM for AVAX using Aave 001052",
+    "intent": {
+      "action": "swap",
+      "token": "FTM",
+      "toToken": "AVAX",
+      "amount": "50"
+    },
+    "ghostResponse": "Understood, Sovereign. I will execute a swap of 50 FTM to AVAX via Aave.",
+    "category": "swap",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Convert 0.1 VEIL to ARB at the current market rate 001053",
+    "intent": {
+      "action": "swap",
+      "token": "VEIL",
+      "toToken": "ARB",
+      "amount": "0.1"
+    },
+    "ghostResponse": "Understood, Sovereign. I will execute a swap of 0.1 VEIL to ARB via Compound.",
+    "category": "swap",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Swap 500 ETH tokens for AVAX with a maximum slippage of 0.5% 001054",
+    "intent": {
+      "action": "swap",
+      "token": "ETH",
+      "toToken": "AVAX",
+      "amount": "500"
+    },
+    "ghostResponse": "Understood, Sovereign. I will execute a swap of 500 ETH to AVAX via Curve.",
+    "category": "swap",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Convert 10 BTC to ARB at the current market rate 001055",
+    "intent": {
+      "action": "swap",
+      "token": "BTC",
+      "toToken": "ARB",
+      "amount": "10"
+    },
+    "ghostResponse": "Understood, Sovereign. I will execute a swap of 10 BTC to ARB via Lido.",
+    "category": "swap",
+    "difficulty": "easy"
+  },
+  {
+    "input": "I would like to swap 50 ETH for SOL using Compound 001056",
+    "intent": {
+      "action": "swap",
+      "token": "ETH",
+      "toToken": "SOL",
+      "amount": "50"
+    },
+    "ghostResponse": "Understood, Sovereign. I will execute a swap of 50 ETH to SOL via Compound.",
+    "category": "swap",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Please execute a OP to USDT swap for 0.5 tokens 001057",
+    "intent": {
+      "action": "swap",
+      "token": "OP",
+      "toToken": "USDT",
+      "amount": "0.5"
+    },
+    "ghostResponse": "Understood, Sovereign. I will execute a swap of 0.5 OP to USDT via Aave.",
+    "category": "swap",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Please execute a BNB to ETH swap for 10 tokens 001058",
+    "intent": {
+      "action": "swap",
+      "token": "BNB",
+      "toToken": "ETH",
+      "amount": "10"
+    },
+    "ghostResponse": "Understood, Sovereign. I will execute a swap of 10 BNB to ETH via Compound.",
+    "category": "swap",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Execute a token swap: 50 ETH → VEIL via Curve 001059",
+    "intent": {
+      "action": "swap",
+      "token": "ETH",
+      "toToken": "VEIL",
+      "amount": "50"
+    },
+    "ghostResponse": "Understood, Sovereign. I will execute a swap of 50 ETH to VEIL via Curve.",
+    "category": "swap",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Convert 1000 USDC to AVAX at the current market rate 001060",
+    "intent": {
+      "action": "swap",
+      "token": "USDC",
+      "toToken": "AVAX",
+      "amount": "1000"
+    },
+    "ghostResponse": "Understood, Sovereign. I will execute a swap of 1000 USDC to AVAX via Lido.",
+    "category": "swap",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Convert 200 USDC to AVAX at the current market rate 001061",
+    "intent": {
+      "action": "swap",
+      "token": "USDC",
+      "toToken": "AVAX",
+      "amount": "200"
+    },
+    "ghostResponse": "Understood, Sovereign. I will execute a swap of 200 USDC to AVAX via Compound.",
+    "category": "swap",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Please execute a USDT to ARB swap for 200 tokens 001062",
+    "intent": {
+      "action": "swap",
+      "token": "USDT",
+      "toToken": "ARB",
+      "amount": "200"
+    },
+    "ghostResponse": "Understood, Sovereign. I will execute a swap of 200 USDT to ARB via Aerodrome.",
+    "category": "swap",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Swap 10 VEIL tokens for AVAX with a maximum slippage of 0.5% 001063",
+    "intent": {
+      "action": "swap",
+      "token": "VEIL",
+      "toToken": "AVAX",
+      "amount": "10"
+    },
+    "ghostResponse": "Understood, Sovereign. I will execute a swap of 10 VEIL to AVAX via Aave.",
+    "category": "swap",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Execute a token swap: 100 OP → BNB via Uniswap 001064",
+    "intent": {
+      "action": "swap",
+      "token": "OP",
+      "toToken": "BNB",
+      "amount": "100"
+    },
+    "ghostResponse": "Understood, Sovereign. I will execute a swap of 100 OP to BNB via Uniswap.",
+    "category": "swap",
+    "difficulty": "easy"
+  },
+  {
+    "input": "I'd like to exchange my VEIL position of 1 for SOL 001065",
+    "intent": {
+      "action": "swap",
+      "token": "VEIL",
+      "toToken": "SOL",
+      "amount": "1"
+    },
+    "ghostResponse": "Understood, Sovereign. I will execute a swap of 1 VEIL to SOL via Compound.",
+    "category": "swap",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Convert 0.1 VEIL to FTM at the current market rate 001066",
+    "intent": {
+      "action": "swap",
+      "token": "VEIL",
+      "toToken": "FTM",
+      "amount": "0.1"
+    },
+    "ghostResponse": "Understood, Sovereign. I will execute a swap of 0.1 VEIL to FTM via Aerodrome.",
+    "category": "swap",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Execute a token swap: 1 VEIL → FTM via Lido 001067",
+    "intent": {
+      "action": "swap",
+      "token": "VEIL",
+      "toToken": "FTM",
+      "amount": "1"
+    },
+    "ghostResponse": "Understood, Sovereign. I will execute a swap of 1 VEIL to FTM via Lido.",
+    "category": "swap",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Convert 0.5 ETH to ARB at the current market rate 001068",
+    "intent": {
+      "action": "swap",
+      "token": "ETH",
+      "toToken": "ARB",
+      "amount": "0.5"
+    },
+    "ghostResponse": "Understood, Sovereign. I will execute a swap of 0.5 ETH to ARB via Uniswap.",
+    "category": "swap",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Swap 2 BTC tokens for BNB with a maximum slippage of 0.5% 001069",
+    "intent": {
+      "action": "swap",
+      "token": "BTC",
+      "toToken": "BNB",
+      "amount": "2"
+    },
+    "ghostResponse": "Understood, Sovereign. I will execute a swap of 2 BTC to BNB via Aave.",
+    "category": "swap",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Swap 1000 AVAX tokens for FTM with a maximum slippage of 0.5% 001070",
+    "intent": {
+      "action": "swap",
+      "token": "AVAX",
+      "toToken": "FTM",
+      "amount": "1000"
+    },
+    "ghostResponse": "Understood, Sovereign. I will execute a swap of 1000 AVAX to FTM via Aave.",
+    "category": "swap",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Swap 500 FTM tokens for SOL with a maximum slippage of 0.5% 001071",
+    "intent": {
+      "action": "swap",
+      "token": "FTM",
+      "toToken": "SOL",
+      "amount": "500"
+    },
+    "ghostResponse": "Understood, Sovereign. I will execute a swap of 500 FTM to SOL via Curve.",
+    "category": "swap",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Please execute a ARB to SOL swap for 10 tokens 001072",
+    "intent": {
+      "action": "swap",
+      "token": "ARB",
+      "toToken": "SOL",
+      "amount": "10"
+    },
+    "ghostResponse": "Understood, Sovereign. I will execute a swap of 10 ARB to SOL via Uniswap.",
+    "category": "swap",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Swap 100 FTM tokens for AVAX with a maximum slippage of 0.5% 001073",
+    "intent": {
+      "action": "swap",
+      "token": "FTM",
+      "toToken": "AVAX",
+      "amount": "100"
+    },
+    "ghostResponse": "Understood, Sovereign. I will execute a swap of 100 FTM to AVAX via Uniswap.",
+    "category": "swap",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Swap 2 BNB tokens for USDC with a maximum slippage of 0.5% 001074",
+    "intent": {
+      "action": "swap",
+      "token": "BNB",
+      "toToken": "USDC",
+      "amount": "2"
+    },
+    "ghostResponse": "Understood, Sovereign. I will execute a swap of 2 BNB to USDC via Aave.",
+    "category": "swap",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Swap 25 SOL tokens for USDC with a maximum slippage of 0.5% 001075",
+    "intent": {
+      "action": "swap",
+      "token": "SOL",
+      "toToken": "USDC",
+      "amount": "25"
+    },
+    "ghostResponse": "Understood, Sovereign. I will execute a swap of 25 SOL to USDC via Aave.",
+    "category": "swap",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Convert 50 BNB to ARB at the current market rate 001076",
+    "intent": {
+      "action": "swap",
+      "token": "BNB",
+      "toToken": "ARB",
+      "amount": "50"
+    },
+    "ghostResponse": "Understood, Sovereign. I will execute a swap of 50 BNB to ARB via Aave.",
+    "category": "swap",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Swap 25 BTC tokens for BNB with a maximum slippage of 0.5% 001077",
+    "intent": {
+      "action": "swap",
+      "token": "BTC",
+      "toToken": "BNB",
+      "amount": "25"
+    },
+    "ghostResponse": "Understood, Sovereign. I will execute a swap of 25 BTC to BNB via Curve.",
+    "category": "swap",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Execute a token swap: 500 VEIL → FTM via Aerodrome 001078",
+    "intent": {
+      "action": "swap",
+      "token": "VEIL",
+      "toToken": "FTM",
+      "amount": "500"
+    },
+    "ghostResponse": "Understood, Sovereign. I will execute a swap of 500 VEIL to FTM via Aerodrome.",
+    "category": "swap",
+    "difficulty": "easy"
+  },
+  {
+    "input": "I would like to swap 1000 USDT for BNB using Aave 001079",
+    "intent": {
+      "action": "swap",
+      "token": "USDT",
+      "toToken": "BNB",
+      "amount": "1000"
+    },
+    "ghostResponse": "Understood, Sovereign. I will execute a swap of 1000 USDT to BNB via Aave.",
+    "category": "swap",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Swap 100 SOL tokens for FTM with a maximum slippage of 0.5% 001080",
+    "intent": {
+      "action": "swap",
+      "token": "SOL",
+      "toToken": "FTM",
+      "amount": "100"
+    },
+    "ghostResponse": "Understood, Sovereign. I will execute a swap of 100 SOL to FTM via Uniswap.",
+    "category": "swap",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Execute a token swap: 500 ETH → BTC via Aerodrome 001081",
+    "intent": {
+      "action": "swap",
+      "token": "ETH",
+      "toToken": "BTC",
+      "amount": "500"
+    },
+    "ghostResponse": "Understood, Sovereign. I will execute a swap of 500 ETH to BTC via Aerodrome.",
+    "category": "swap",
+    "difficulty": "easy"
+  },
+  {
+    "input": "I would like to swap 0.1 FTM for USDC using Aave 001082",
+    "intent": {
+      "action": "swap",
+      "token": "FTM",
+      "toToken": "USDC",
+      "amount": "0.1"
+    },
+    "ghostResponse": "Understood, Sovereign. I will execute a swap of 0.1 FTM to USDC via Aave.",
+    "category": "swap",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Please execute a BNB to OP swap for 1 tokens 001083",
+    "intent": {
+      "action": "swap",
+      "token": "BNB",
+      "toToken": "OP",
+      "amount": "1"
+    },
+    "ghostResponse": "Understood, Sovereign. I will execute a swap of 1 BNB to OP via Aave.",
+    "category": "swap",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Execute a token swap: 2 ARB → OP via Aave 001084",
+    "intent": {
+      "action": "swap",
+      "token": "ARB",
+      "toToken": "OP",
+      "amount": "2"
+    },
+    "ghostResponse": "Understood, Sovereign. I will execute a swap of 2 ARB to OP via Aave.",
+    "category": "swap",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Convert 25 USDC to BTC at the current market rate 001085",
+    "intent": {
+      "action": "swap",
+      "token": "USDC",
+      "toToken": "BTC",
+      "amount": "25"
+    },
+    "ghostResponse": "Understood, Sovereign. I will execute a swap of 25 USDC to BTC via Uniswap.",
+    "category": "swap",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Please execute a FTM to OP swap for 0.5 tokens 001086",
+    "intent": {
+      "action": "swap",
+      "token": "FTM",
+      "toToken": "OP",
+      "amount": "0.5"
+    },
+    "ghostResponse": "Understood, Sovereign. I will execute a swap of 0.5 FTM to OP via Aerodrome.",
+    "category": "swap",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Execute a token swap: 1 ETH → ARB via Uniswap 001087",
+    "intent": {
+      "action": "swap",
+      "token": "ETH",
+      "toToken": "ARB",
+      "amount": "1"
+    },
+    "ghostResponse": "Understood, Sovereign. I will execute a swap of 1 ETH to ARB via Uniswap.",
+    "category": "swap",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Execute a token swap: 0.5 AVAX → OP via Uniswap 001088",
+    "intent": {
+      "action": "swap",
+      "token": "AVAX",
+      "toToken": "OP",
+      "amount": "0.5"
+    },
+    "ghostResponse": "Understood, Sovereign. I will execute a swap of 0.5 AVAX to OP via Uniswap.",
+    "category": "swap",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Please execute a BNB to ARB swap for 2 tokens 001089",
+    "intent": {
+      "action": "swap",
+      "token": "BNB",
+      "toToken": "ARB",
+      "amount": "2"
+    },
+    "ghostResponse": "Understood, Sovereign. I will execute a swap of 2 BNB to ARB via Aave.",
+    "category": "swap",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Swap 25 BTC tokens for VEIL with a maximum slippage of 0.5% 001090",
+    "intent": {
+      "action": "swap",
+      "token": "BTC",
+      "toToken": "VEIL",
+      "amount": "25"
+    },
+    "ghostResponse": "Understood, Sovereign. I will execute a swap of 25 BTC to VEIL via Compound.",
+    "category": "swap",
+    "difficulty": "easy"
+  },
+  {
+    "input": "I would like to swap 10 FTM for BTC using Aave 001091",
+    "intent": {
+      "action": "swap",
+      "token": "FTM",
+      "toToken": "BTC",
+      "amount": "10"
+    },
+    "ghostResponse": "Understood, Sovereign. I will execute a swap of 10 FTM to BTC via Aave.",
+    "category": "swap",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Please execute a OP to BNB swap for 10 tokens 001092",
+    "intent": {
+      "action": "swap",
+      "token": "OP",
+      "toToken": "BNB",
+      "amount": "10"
+    },
+    "ghostResponse": "Understood, Sovereign. I will execute a swap of 10 OP to BNB via Aave.",
+    "category": "swap",
+    "difficulty": "easy"
+  },
+  {
+    "input": "I'd like to exchange my ARB position of 100 for OP 001093",
+    "intent": {
+      "action": "swap",
+      "token": "ARB",
+      "toToken": "OP",
+      "amount": "100"
+    },
+    "ghostResponse": "Understood, Sovereign. I will execute a swap of 100 ARB to OP via Lido.",
+    "category": "swap",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Swap 200 SOL tokens for FTM with a maximum slippage of 0.5% 001094",
+    "intent": {
+      "action": "swap",
+      "token": "SOL",
+      "toToken": "FTM",
+      "amount": "200"
+    },
+    "ghostResponse": "Understood, Sovereign. I will execute a swap of 200 SOL to FTM via Aerodrome.",
+    "category": "swap",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Swap 10 AVAX tokens for ETH with a maximum slippage of 0.5% 001095",
+    "intent": {
+      "action": "swap",
+      "token": "AVAX",
+      "toToken": "ETH",
+      "amount": "10"
+    },
+    "ghostResponse": "Understood, Sovereign. I will execute a swap of 10 AVAX to ETH via Curve.",
+    "category": "swap",
+    "difficulty": "easy"
+  },
+  {
+    "input": "I would like to swap 2 SOL for ARB using Lido 001096",
+    "intent": {
+      "action": "swap",
+      "token": "SOL",
+      "toToken": "ARB",
+      "amount": "2"
+    },
+    "ghostResponse": "Understood, Sovereign. I will execute a swap of 2 SOL to ARB via Lido.",
+    "category": "swap",
+    "difficulty": "easy"
+  },
+  {
+    "input": "I'd like to exchange my VEIL position of 2 for OP 001097",
+    "intent": {
+      "action": "swap",
+      "token": "VEIL",
+      "toToken": "OP",
+      "amount": "2"
+    },
+    "ghostResponse": "Understood, Sovereign. I will execute a swap of 2 VEIL to OP via Compound.",
+    "category": "swap",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Please execute a FTM to BTC swap for 0.1 tokens 001098",
+    "intent": {
+      "action": "swap",
+      "token": "FTM",
+      "toToken": "BTC",
+      "amount": "0.1"
+    },
+    "ghostResponse": "Understood, Sovereign. I will execute a swap of 0.1 FTM to BTC via Lido.",
+    "category": "swap",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Please execute a BNB to BTC swap for 50 tokens 001099",
+    "intent": {
+      "action": "swap",
+      "token": "BNB",
+      "toToken": "BTC",
+      "amount": "50"
+    },
+    "ghostResponse": "Understood, Sovereign. I will execute a swap of 50 BNB to BTC via Aerodrome.",
+    "category": "swap",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Swap 25 USDC tokens for ARB with a maximum slippage of 0.5% 001100",
+    "intent": {
+      "action": "swap",
+      "token": "USDC",
+      "toToken": "ARB",
+      "amount": "25"
+    },
+    "ghostResponse": "Understood, Sovereign. I will execute a swap of 25 USDC to ARB via Aave.",
+    "category": "swap",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Initiate a transfer of 50 OP to 0x5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f 001101",
+    "intent": {
+      "action": "send",
+      "token": "OP",
+      "toAddress": "0x5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f",
+      "amount": "50"
+    },
+    "ghostResponse": "Understood, Sovereign. I will transfer 50 OP to 0x5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f.",
+    "category": "send",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Transfer 0.1 FTM to recipient 0x7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b 001102",
+    "intent": {
+      "action": "send",
+      "token": "FTM",
+      "toAddress": "0x7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b",
+      "amount": "0.1"
+    },
+    "ghostResponse": "Understood, Sovereign. I will transfer 0.1 FTM to 0x7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b.",
+    "category": "send",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Send 5 VEIL to the wallet at 0x0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e 001103",
+    "intent": {
+      "action": "send",
+      "token": "VEIL",
+      "toAddress": "0x0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e",
+      "amount": "5"
+    },
+    "ghostResponse": "Understood, Sovereign. I will transfer 5 VEIL to 0x0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e.",
+    "category": "send",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Execute an on-chain transfer: 5 VEIL to 0x8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c 001104",
+    "intent": {
+      "action": "send",
+      "token": "VEIL",
+      "toAddress": "0x8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c",
+      "amount": "5"
+    },
+    "ghostResponse": "Understood, Sovereign. I will transfer 5 VEIL to 0x8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c.",
+    "category": "send",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Transfer 500 VEIL to recipient 0x4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e 001105",
+    "intent": {
+      "action": "send",
+      "token": "VEIL",
+      "toAddress": "0x4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e",
+      "amount": "500"
+    },
+    "ghostResponse": "Understood, Sovereign. I will transfer 500 VEIL to 0x4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e.",
+    "category": "send",
+    "difficulty": "easy"
+  },
+  {
+    "input": "I need to send 25 OP to this address: 0x9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d 001106",
+    "intent": {
+      "action": "send",
+      "token": "OP",
+      "toAddress": "0x9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d",
+      "amount": "25"
+    },
+    "ghostResponse": "Understood, Sovereign. I will transfer 25 OP to 0x9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d.",
+    "category": "send",
+    "difficulty": "easy"
+  },
+  {
+    "input": "I need to send 0.1 USDC to this address: 0x4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e 001107",
+    "intent": {
+      "action": "send",
+      "token": "USDC",
+      "toAddress": "0x4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e",
+      "amount": "0.1"
+    },
+    "ghostResponse": "Understood, Sovereign. I will transfer 0.1 USDC to 0x4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e.",
+    "category": "send",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Transfer 1 BNB to recipient 0x3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d 001108",
+    "intent": {
+      "action": "send",
+      "token": "BNB",
+      "toAddress": "0x3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d",
+      "amount": "1"
+    },
+    "ghostResponse": "Understood, Sovereign. I will transfer 1 BNB to 0x3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d.",
+    "category": "send",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Execute an on-chain transfer: 100 ARB to 0x6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a 001109",
+    "intent": {
+      "action": "send",
+      "token": "ARB",
+      "toAddress": "0x6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a",
+      "amount": "100"
+    },
+    "ghostResponse": "Understood, Sovereign. I will transfer 100 ARB to 0x6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a.",
+    "category": "send",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Transfer 5 OP to recipient 0x4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e 001110",
+    "intent": {
+      "action": "send",
+      "token": "OP",
+      "toAddress": "0x4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e",
+      "amount": "5"
+    },
+    "ghostResponse": "Understood, Sovereign. I will transfer 5 OP to 0x4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e.",
+    "category": "send",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Initiate a transfer of 10 USDT to 0x7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b 001111",
+    "intent": {
+      "action": "send",
+      "token": "USDT",
+      "toAddress": "0x7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b",
+      "amount": "10"
+    },
+    "ghostResponse": "Understood, Sovereign. I will transfer 10 USDT to 0x7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b.",
+    "category": "send",
+    "difficulty": "easy"
+  },
+  {
+    "input": "I need to send 10 USDT to this address: 0x7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b 001112",
+    "intent": {
+      "action": "send",
+      "token": "USDT",
+      "toAddress": "0x7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b",
+      "amount": "10"
+    },
+    "ghostResponse": "Understood, Sovereign. I will transfer 10 USDT to 0x7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b.",
+    "category": "send",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Execute an on-chain transfer: 2 ARB to 0x4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e 001113",
+    "intent": {
+      "action": "send",
+      "token": "ARB",
+      "toAddress": "0x4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e",
+      "amount": "2"
+    },
+    "ghostResponse": "Understood, Sovereign. I will transfer 2 ARB to 0x4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e.",
+    "category": "send",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Initiate a transfer of 0.5 AVAX to 0x7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b 001114",
+    "intent": {
+      "action": "send",
+      "token": "AVAX",
+      "toAddress": "0x7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b",
+      "amount": "0.5"
+    },
+    "ghostResponse": "Understood, Sovereign. I will transfer 0.5 AVAX to 0x7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b.",
+    "category": "send",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Initiate a transfer of 0.5 AVAX to 0x2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c 001115",
+    "intent": {
+      "action": "send",
+      "token": "AVAX",
+      "toAddress": "0x2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c",
+      "amount": "0.5"
+    },
+    "ghostResponse": "Understood, Sovereign. I will transfer 0.5 AVAX to 0x2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c.",
+    "category": "send",
+    "difficulty": "easy"
+  },
+  {
+    "input": "I need to send 100 ETH to this address: 0x3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d 001116",
+    "intent": {
+      "action": "send",
+      "token": "ETH",
+      "toAddress": "0x3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d",
+      "amount": "100"
+    },
+    "ghostResponse": "Understood, Sovereign. I will transfer 100 ETH to 0x3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d.",
+    "category": "send",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Transfer 1 USDT to recipient 0x5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f 001117",
+    "intent": {
+      "action": "send",
+      "token": "USDT",
+      "toAddress": "0x5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f",
+      "amount": "1"
+    },
+    "ghostResponse": "Understood, Sovereign. I will transfer 1 USDT to 0x5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f.",
+    "category": "send",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Send 500 BTC to the wallet at 0x8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c 001118",
+    "intent": {
+      "action": "send",
+      "token": "BTC",
+      "toAddress": "0x8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c",
+      "amount": "500"
+    },
+    "ghostResponse": "Understood, Sovereign. I will transfer 500 BTC to 0x8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c.",
+    "category": "send",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Execute an on-chain transfer: 50 VEIL to 0x9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d 001119",
+    "intent": {
+      "action": "send",
+      "token": "VEIL",
+      "toAddress": "0x9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d",
+      "amount": "50"
+    },
+    "ghostResponse": "Understood, Sovereign. I will transfer 50 VEIL to 0x9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d.",
+    "category": "send",
+    "difficulty": "easy"
+  },
+  {
+    "input": "I need to send 100 OP to this address: 0x4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e 001120",
+    "intent": {
+      "action": "send",
+      "token": "OP",
+      "toAddress": "0x4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e",
+      "amount": "100"
+    },
+    "ghostResponse": "Understood, Sovereign. I will transfer 100 OP to 0x4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e.",
+    "category": "send",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Send 0.5 AVAX to the wallet at 0x3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d 001121",
+    "intent": {
+      "action": "send",
+      "token": "AVAX",
+      "toAddress": "0x3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d",
+      "amount": "0.5"
+    },
+    "ghostResponse": "Understood, Sovereign. I will transfer 0.5 AVAX to 0x3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d.",
+    "category": "send",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Transfer 10 USDT to recipient 0x0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e 001122",
+    "intent": {
+      "action": "send",
+      "token": "USDT",
+      "toAddress": "0x0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e",
+      "amount": "10"
+    },
+    "ghostResponse": "Understood, Sovereign. I will transfer 10 USDT to 0x0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e.",
+    "category": "send",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Please transfer 1000 FTM to address 0x9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d 001123",
+    "intent": {
+      "action": "send",
+      "token": "FTM",
+      "toAddress": "0x9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d",
+      "amount": "1000"
+    },
+    "ghostResponse": "Understood, Sovereign. I will transfer 1000 FTM to 0x9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d.",
+    "category": "send",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Please transfer 5 VEIL to address 0x1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b 001124",
+    "intent": {
+      "action": "send",
+      "token": "VEIL",
+      "toAddress": "0x1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b",
+      "amount": "5"
+    },
+    "ghostResponse": "Understood, Sovereign. I will transfer 5 VEIL to 0x1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b.",
+    "category": "send",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Initiate a transfer of 5 AVAX to 0x0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e 001125",
+    "intent": {
+      "action": "send",
+      "token": "AVAX",
+      "toAddress": "0x0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e",
+      "amount": "5"
+    },
+    "ghostResponse": "Understood, Sovereign. I will transfer 5 AVAX to 0x0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e.",
+    "category": "send",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Send 50 SOL to the wallet at 0x0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e 001126",
+    "intent": {
+      "action": "send",
+      "token": "SOL",
+      "toAddress": "0x0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e",
+      "amount": "50"
+    },
+    "ghostResponse": "Understood, Sovereign. I will transfer 50 SOL to 0x0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e.",
+    "category": "send",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Transfer 50 BTC to recipient 0x0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e 001127",
+    "intent": {
+      "action": "send",
+      "token": "BTC",
+      "toAddress": "0x0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e",
+      "amount": "50"
+    },
+    "ghostResponse": "Understood, Sovereign. I will transfer 50 BTC to 0x0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e.",
+    "category": "send",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Initiate a transfer of 0.5 VEIL to 0x4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e 001128",
+    "intent": {
+      "action": "send",
+      "token": "VEIL",
+      "toAddress": "0x4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e",
+      "amount": "0.5"
+    },
+    "ghostResponse": "Understood, Sovereign. I will transfer 0.5 VEIL to 0x4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e.",
+    "category": "send",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Initiate a transfer of 0.1 BNB to 0x1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b 001129",
+    "intent": {
+      "action": "send",
+      "token": "BNB",
+      "toAddress": "0x1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b",
+      "amount": "0.1"
+    },
+    "ghostResponse": "Understood, Sovereign. I will transfer 0.1 BNB to 0x1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b.",
+    "category": "send",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Transfer 0.5 ARB to recipient 0x9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d 001130",
+    "intent": {
+      "action": "send",
+      "token": "ARB",
+      "toAddress": "0x9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d",
+      "amount": "0.5"
+    },
+    "ghostResponse": "Understood, Sovereign. I will transfer 0.5 ARB to 0x9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d.",
+    "category": "send",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Execute an on-chain transfer: 200 BNB to 0x6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a 001131",
+    "intent": {
+      "action": "send",
+      "token": "BNB",
+      "toAddress": "0x6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a",
+      "amount": "200"
+    },
+    "ghostResponse": "Understood, Sovereign. I will transfer 200 BNB to 0x6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a.",
+    "category": "send",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Transfer 0.1 BNB to recipient 0x9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d 001132",
+    "intent": {
+      "action": "send",
+      "token": "BNB",
+      "toAddress": "0x9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d",
+      "amount": "0.1"
+    },
+    "ghostResponse": "Understood, Sovereign. I will transfer 0.1 BNB to 0x9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d.",
+    "category": "send",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Execute an on-chain transfer: 500 ETH to 0x4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e 001133",
+    "intent": {
+      "action": "send",
+      "token": "ETH",
+      "toAddress": "0x4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e",
+      "amount": "500"
+    },
+    "ghostResponse": "Understood, Sovereign. I will transfer 500 ETH to 0x4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e.",
+    "category": "send",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Send 1000 AVAX to the wallet at 0x9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d 001134",
+    "intent": {
+      "action": "send",
+      "token": "AVAX",
+      "toAddress": "0x9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d",
+      "amount": "1000"
+    },
+    "ghostResponse": "Understood, Sovereign. I will transfer 1000 AVAX to 0x9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d.",
+    "category": "send",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Please transfer 25 BNB to address 0x9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d 001135",
+    "intent": {
+      "action": "send",
+      "token": "BNB",
+      "toAddress": "0x9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d",
+      "amount": "25"
+    },
+    "ghostResponse": "Understood, Sovereign. I will transfer 25 BNB to 0x9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d.",
+    "category": "send",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Execute an on-chain transfer: 0.5 USDC to 0x6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a 001136",
+    "intent": {
+      "action": "send",
+      "token": "USDC",
+      "toAddress": "0x6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a",
+      "amount": "0.5"
+    },
+    "ghostResponse": "Understood, Sovereign. I will transfer 0.5 USDC to 0x6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a.",
+    "category": "send",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Initiate a transfer of 10 AVAX to 0x4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e 001137",
+    "intent": {
+      "action": "send",
+      "token": "AVAX",
+      "toAddress": "0x4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e",
+      "amount": "10"
+    },
+    "ghostResponse": "Understood, Sovereign. I will transfer 10 AVAX to 0x4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e.",
+    "category": "send",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Initiate a transfer of 2 BNB to 0x7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b 001138",
+    "intent": {
+      "action": "send",
+      "token": "BNB",
+      "toAddress": "0x7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b",
+      "amount": "2"
+    },
+    "ghostResponse": "Understood, Sovereign. I will transfer 2 BNB to 0x7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b.",
+    "category": "send",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Transfer 1000 ETH to recipient 0x5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f 001139",
+    "intent": {
+      "action": "send",
+      "token": "ETH",
+      "toAddress": "0x5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f",
+      "amount": "1000"
+    },
+    "ghostResponse": "Understood, Sovereign. I will transfer 1000 ETH to 0x5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f.",
+    "category": "send",
+    "difficulty": "easy"
+  },
+  {
+    "input": "I need to send 2 USDT to this address: 0x3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d 001140",
+    "intent": {
+      "action": "send",
+      "token": "USDT",
+      "toAddress": "0x3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d",
+      "amount": "2"
+    },
+    "ghostResponse": "Understood, Sovereign. I will transfer 2 USDT to 0x3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d.",
+    "category": "send",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Execute an on-chain transfer: 25 ETH to 0x8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c 001141",
+    "intent": {
+      "action": "send",
+      "token": "ETH",
+      "toAddress": "0x8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c",
+      "amount": "25"
+    },
+    "ghostResponse": "Understood, Sovereign. I will transfer 25 ETH to 0x8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c.",
+    "category": "send",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Transfer 0.5 ARB to recipient 0x7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b 001142",
+    "intent": {
+      "action": "send",
+      "token": "ARB",
+      "toAddress": "0x7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b",
+      "amount": "0.5"
+    },
+    "ghostResponse": "Understood, Sovereign. I will transfer 0.5 ARB to 0x7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b.",
+    "category": "send",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Please transfer 100 VEIL to address 0x0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e 001143",
+    "intent": {
+      "action": "send",
+      "token": "VEIL",
+      "toAddress": "0x0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e",
+      "amount": "100"
+    },
+    "ghostResponse": "Understood, Sovereign. I will transfer 100 VEIL to 0x0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e.",
+    "category": "send",
+    "difficulty": "easy"
+  },
+  {
+    "input": "I need to send 0.5 AVAX to this address: 0x5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f 001144",
+    "intent": {
+      "action": "send",
+      "token": "AVAX",
+      "toAddress": "0x5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f",
+      "amount": "0.5"
+    },
+    "ghostResponse": "Understood, Sovereign. I will transfer 0.5 AVAX to 0x5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f.",
+    "category": "send",
+    "difficulty": "easy"
+  },
+  {
+    "input": "I need to send 1000 BTC to this address: 0x5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f 001145",
+    "intent": {
+      "action": "send",
+      "token": "BTC",
+      "toAddress": "0x5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f",
+      "amount": "1000"
+    },
+    "ghostResponse": "Understood, Sovereign. I will transfer 1000 BTC to 0x5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f.",
+    "category": "send",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Initiate a transfer of 1000 OP to 0x8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c 001146",
+    "intent": {
+      "action": "send",
+      "token": "OP",
+      "toAddress": "0x8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c",
+      "amount": "1000"
+    },
+    "ghostResponse": "Understood, Sovereign. I will transfer 1000 OP to 0x8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c.",
+    "category": "send",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Please transfer 500 ARB to address 0x0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e 001147",
+    "intent": {
+      "action": "send",
+      "token": "ARB",
+      "toAddress": "0x0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e",
+      "amount": "500"
+    },
+    "ghostResponse": "Understood, Sovereign. I will transfer 500 ARB to 0x0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e.",
+    "category": "send",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Initiate a transfer of 25 USDC to 0x4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e 001148",
+    "intent": {
+      "action": "send",
+      "token": "USDC",
+      "toAddress": "0x4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e",
+      "amount": "25"
+    },
+    "ghostResponse": "Understood, Sovereign. I will transfer 25 USDC to 0x4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e.",
+    "category": "send",
+    "difficulty": "easy"
+  },
+  {
+    "input": "I need to send 0.1 USDT to this address: 0x8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c 001149",
+    "intent": {
+      "action": "send",
+      "token": "USDT",
+      "toAddress": "0x8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c",
+      "amount": "0.1"
+    },
+    "ghostResponse": "Understood, Sovereign. I will transfer 0.1 USDT to 0x8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c.",
+    "category": "send",
+    "difficulty": "easy"
+  },
+  {
+    "input": "I need to send 1 ARB to this address: 0x1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b 001150",
+    "intent": {
+      "action": "send",
+      "token": "ARB",
+      "toAddress": "0x1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b",
+      "amount": "1"
+    },
+    "ghostResponse": "Understood, Sovereign. I will transfer 1 ARB to 0x1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b.",
+    "category": "send",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Send 10 VEIL to the wallet at 0x8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c 001151",
+    "intent": {
+      "action": "send",
+      "token": "VEIL",
+      "toAddress": "0x8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c",
+      "amount": "10"
+    },
+    "ghostResponse": "Understood, Sovereign. I will transfer 10 VEIL to 0x8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c.",
+    "category": "send",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Execute an on-chain transfer: 50 USDT to 0x0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e 001152",
+    "intent": {
+      "action": "send",
+      "token": "USDT",
+      "toAddress": "0x0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e",
+      "amount": "50"
+    },
+    "ghostResponse": "Understood, Sovereign. I will transfer 50 USDT to 0x0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e.",
+    "category": "send",
+    "difficulty": "easy"
+  },
+  {
+    "input": "I need to send 200 VEIL to this address: 0x9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d 001153",
+    "intent": {
+      "action": "send",
+      "token": "VEIL",
+      "toAddress": "0x9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d",
+      "amount": "200"
+    },
+    "ghostResponse": "Understood, Sovereign. I will transfer 200 VEIL to 0x9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d.",
+    "category": "send",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Please transfer 1000 FTM to address 0x4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e 001154",
+    "intent": {
+      "action": "send",
+      "token": "FTM",
+      "toAddress": "0x4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e",
+      "amount": "1000"
+    },
+    "ghostResponse": "Understood, Sovereign. I will transfer 1000 FTM to 0x4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e.",
+    "category": "send",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Send 200 AVAX to the wallet at 0x2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c 001155",
+    "intent": {
+      "action": "send",
+      "token": "AVAX",
+      "toAddress": "0x2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c",
+      "amount": "200"
+    },
+    "ghostResponse": "Understood, Sovereign. I will transfer 200 AVAX to 0x2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c.",
+    "category": "send",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Transfer 50 BNB to recipient 0x7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b 001156",
+    "intent": {
+      "action": "send",
+      "token": "BNB",
+      "toAddress": "0x7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b",
+      "amount": "50"
+    },
+    "ghostResponse": "Understood, Sovereign. I will transfer 50 BNB to 0x7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b.",
+    "category": "send",
+    "difficulty": "easy"
+  },
+  {
+    "input": "I need to send 2 AVAX to this address: 0x1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b 001157",
+    "intent": {
+      "action": "send",
+      "token": "AVAX",
+      "toAddress": "0x1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b",
+      "amount": "2"
+    },
+    "ghostResponse": "Understood, Sovereign. I will transfer 2 AVAX to 0x1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b.",
+    "category": "send",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Initiate a transfer of 10 AVAX to 0x3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d 001158",
+    "intent": {
+      "action": "send",
+      "token": "AVAX",
+      "toAddress": "0x3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d",
+      "amount": "10"
+    },
+    "ghostResponse": "Understood, Sovereign. I will transfer 10 AVAX to 0x3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d.",
+    "category": "send",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Please transfer 50 AVAX to address 0x7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b 001159",
+    "intent": {
+      "action": "send",
+      "token": "AVAX",
+      "toAddress": "0x7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b",
+      "amount": "50"
+    },
+    "ghostResponse": "Understood, Sovereign. I will transfer 50 AVAX to 0x7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b.",
+    "category": "send",
+    "difficulty": "easy"
+  },
+  {
+    "input": "I need to send 25 OP to this address: 0x2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c 001160",
+    "intent": {
+      "action": "send",
+      "token": "OP",
+      "toAddress": "0x2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c",
+      "amount": "25"
+    },
+    "ghostResponse": "Understood, Sovereign. I will transfer 25 OP to 0x2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c.",
+    "category": "send",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Please transfer 5 USDT to address 0x8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c 001161",
+    "intent": {
+      "action": "send",
+      "token": "USDT",
+      "toAddress": "0x8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c",
+      "amount": "5"
+    },
+    "ghostResponse": "Understood, Sovereign. I will transfer 5 USDT to 0x8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c.",
+    "category": "send",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Send 100 BTC to the wallet at 0x6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a 001162",
+    "intent": {
+      "action": "send",
+      "token": "BTC",
+      "toAddress": "0x6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a",
+      "amount": "100"
+    },
+    "ghostResponse": "Understood, Sovereign. I will transfer 100 BTC to 0x6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a.",
+    "category": "send",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Please transfer 1000 USDT to address 0x1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b 001163",
+    "intent": {
+      "action": "send",
+      "token": "USDT",
+      "toAddress": "0x1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b",
+      "amount": "1000"
+    },
+    "ghostResponse": "Understood, Sovereign. I will transfer 1000 USDT to 0x1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b.",
+    "category": "send",
+    "difficulty": "easy"
+  },
+  {
+    "input": "I need to send 10 AVAX to this address: 0x7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b 001164",
+    "intent": {
+      "action": "send",
+      "token": "AVAX",
+      "toAddress": "0x7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b",
+      "amount": "10"
+    },
+    "ghostResponse": "Understood, Sovereign. I will transfer 10 AVAX to 0x7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b.",
+    "category": "send",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Please transfer 200 FTM to address 0x3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d 001165",
+    "intent": {
+      "action": "send",
+      "token": "FTM",
+      "toAddress": "0x3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d",
+      "amount": "200"
+    },
+    "ghostResponse": "Understood, Sovereign. I will transfer 200 FTM to 0x3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d.",
+    "category": "send",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Execute an on-chain transfer: 0.5 USDT to 0x6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a 001166",
+    "intent": {
+      "action": "send",
+      "token": "USDT",
+      "toAddress": "0x6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a",
+      "amount": "0.5"
+    },
+    "ghostResponse": "Understood, Sovereign. I will transfer 0.5 USDT to 0x6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a.",
+    "category": "send",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Execute an on-chain transfer: 5 BTC to 0x6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a 001167",
+    "intent": {
+      "action": "send",
+      "token": "BTC",
+      "toAddress": "0x6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a",
+      "amount": "5"
+    },
+    "ghostResponse": "Understood, Sovereign. I will transfer 5 BTC to 0x6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a.",
+    "category": "send",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Please transfer 5 ARB to address 0x0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e 001168",
+    "intent": {
+      "action": "send",
+      "token": "ARB",
+      "toAddress": "0x0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e",
+      "amount": "5"
+    },
+    "ghostResponse": "Understood, Sovereign. I will transfer 5 ARB to 0x0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e.",
+    "category": "send",
+    "difficulty": "easy"
+  },
+  {
+    "input": "I need to send 500 OP to this address: 0x0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e 001169",
+    "intent": {
+      "action": "send",
+      "token": "OP",
+      "toAddress": "0x0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e",
+      "amount": "500"
+    },
+    "ghostResponse": "Understood, Sovereign. I will transfer 500 OP to 0x0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e.",
+    "category": "send",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Please transfer 2 ARB to address 0x5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f 001170",
+    "intent": {
+      "action": "send",
+      "token": "ARB",
+      "toAddress": "0x5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f",
+      "amount": "2"
+    },
+    "ghostResponse": "Understood, Sovereign. I will transfer 2 ARB to 0x5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f.",
+    "category": "send",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Execute an on-chain transfer: 200 AVAX to 0x9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d 001171",
+    "intent": {
+      "action": "send",
+      "token": "AVAX",
+      "toAddress": "0x9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d",
+      "amount": "200"
+    },
+    "ghostResponse": "Understood, Sovereign. I will transfer 200 AVAX to 0x9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d.",
+    "category": "send",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Transfer 0.1 USDC to recipient 0x1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b 001172",
+    "intent": {
+      "action": "send",
+      "token": "USDC",
+      "toAddress": "0x1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b",
+      "amount": "0.1"
+    },
+    "ghostResponse": "Understood, Sovereign. I will transfer 0.1 USDC to 0x1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b.",
+    "category": "send",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Execute an on-chain transfer: 5 AVAX to 0x7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b 001173",
+    "intent": {
+      "action": "send",
+      "token": "AVAX",
+      "toAddress": "0x7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b",
+      "amount": "5"
+    },
+    "ghostResponse": "Understood, Sovereign. I will transfer 5 AVAX to 0x7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b.",
+    "category": "send",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Initiate a transfer of 1 BNB to 0x1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b 001174",
+    "intent": {
+      "action": "send",
+      "token": "BNB",
+      "toAddress": "0x1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b",
+      "amount": "1"
+    },
+    "ghostResponse": "Understood, Sovereign. I will transfer 1 BNB to 0x1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b.",
+    "category": "send",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Transfer 50 FTM to recipient 0x1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b 001175",
+    "intent": {
+      "action": "send",
+      "token": "FTM",
+      "toAddress": "0x1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b",
+      "amount": "50"
+    },
+    "ghostResponse": "Understood, Sovereign. I will transfer 50 FTM to 0x1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b.",
+    "category": "send",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Initiate a transfer of 100 USDT to 0x2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c 001176",
+    "intent": {
+      "action": "send",
+      "token": "USDT",
+      "toAddress": "0x2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c",
+      "amount": "100"
+    },
+    "ghostResponse": "Understood, Sovereign. I will transfer 100 USDT to 0x2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c.",
+    "category": "send",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Transfer 500 OP to recipient 0x1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b 001177",
+    "intent": {
+      "action": "send",
+      "token": "OP",
+      "toAddress": "0x1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b",
+      "amount": "500"
+    },
+    "ghostResponse": "Understood, Sovereign. I will transfer 500 OP to 0x1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b.",
+    "category": "send",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Execute an on-chain transfer: 25 ARB to 0x1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b 001178",
+    "intent": {
+      "action": "send",
+      "token": "ARB",
+      "toAddress": "0x1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b",
+      "amount": "25"
+    },
+    "ghostResponse": "Understood, Sovereign. I will transfer 25 ARB to 0x1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b.",
+    "category": "send",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Initiate a transfer of 2 FTM to 0x8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c 001179",
+    "intent": {
+      "action": "send",
+      "token": "FTM",
+      "toAddress": "0x8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c",
+      "amount": "2"
+    },
+    "ghostResponse": "Understood, Sovereign. I will transfer 2 FTM to 0x8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c.",
+    "category": "send",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Execute an on-chain transfer: 0.5 ETH to 0x4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e 001180",
+    "intent": {
+      "action": "send",
+      "token": "ETH",
+      "toAddress": "0x4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e",
+      "amount": "0.5"
+    },
+    "ghostResponse": "Understood, Sovereign. I will transfer 0.5 ETH to 0x4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e.",
+    "category": "send",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Initiate a transfer of 500 USDC to 0x0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e 001181",
+    "intent": {
+      "action": "send",
+      "token": "USDC",
+      "toAddress": "0x0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e",
+      "amount": "500"
+    },
+    "ghostResponse": "Understood, Sovereign. I will transfer 500 USDC to 0x0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e.",
+    "category": "send",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Send 50 VEIL to the wallet at 0x8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c 001182",
+    "intent": {
+      "action": "send",
+      "token": "VEIL",
+      "toAddress": "0x8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c",
+      "amount": "50"
+    },
+    "ghostResponse": "Understood, Sovereign. I will transfer 50 VEIL to 0x8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c.",
+    "category": "send",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Send 200 SOL to the wallet at 0x7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b 001183",
+    "intent": {
+      "action": "send",
+      "token": "SOL",
+      "toAddress": "0x7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b",
+      "amount": "200"
+    },
+    "ghostResponse": "Understood, Sovereign. I will transfer 200 SOL to 0x7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b.",
+    "category": "send",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Please transfer 5 USDT to address 0x4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e 001184",
+    "intent": {
+      "action": "send",
+      "token": "USDT",
+      "toAddress": "0x4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e",
+      "amount": "5"
+    },
+    "ghostResponse": "Understood, Sovereign. I will transfer 5 USDT to 0x4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e.",
+    "category": "send",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Send 0.1 BTC to the wallet at 0x7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b 001185",
+    "intent": {
+      "action": "send",
+      "token": "BTC",
+      "toAddress": "0x7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b",
+      "amount": "0.1"
+    },
+    "ghostResponse": "Understood, Sovereign. I will transfer 0.1 BTC to 0x7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b.",
+    "category": "send",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Send 1000 AVAX to the wallet at 0x7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b 001186",
+    "intent": {
+      "action": "send",
+      "token": "AVAX",
+      "toAddress": "0x7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b",
+      "amount": "1000"
+    },
+    "ghostResponse": "Understood, Sovereign. I will transfer 1000 AVAX to 0x7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b.",
+    "category": "send",
+    "difficulty": "easy"
+  },
+  {
+    "input": "I need to send 0.5 USDT to this address: 0x8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c 001187",
+    "intent": {
+      "action": "send",
+      "token": "USDT",
+      "toAddress": "0x8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c",
+      "amount": "0.5"
+    },
+    "ghostResponse": "Understood, Sovereign. I will transfer 0.5 USDT to 0x8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c.",
+    "category": "send",
+    "difficulty": "easy"
+  },
+  {
+    "input": "I need to send 0.1 OP to this address: 0x7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b 001188",
+    "intent": {
+      "action": "send",
+      "token": "OP",
+      "toAddress": "0x7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b",
+      "amount": "0.1"
+    },
+    "ghostResponse": "Understood, Sovereign. I will transfer 0.1 OP to 0x7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b.",
+    "category": "send",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Please transfer 0.1 SOL to address 0x6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a 001189",
+    "intent": {
+      "action": "send",
+      "token": "SOL",
+      "toAddress": "0x6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a",
+      "amount": "0.1"
+    },
+    "ghostResponse": "Understood, Sovereign. I will transfer 0.1 SOL to 0x6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a.",
+    "category": "send",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Send 50 ARB to the wallet at 0x7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b 001190",
+    "intent": {
+      "action": "send",
+      "token": "ARB",
+      "toAddress": "0x7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b",
+      "amount": "50"
+    },
+    "ghostResponse": "Understood, Sovereign. I will transfer 50 ARB to 0x7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b.",
+    "category": "send",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Execute an on-chain transfer: 25 BNB to 0x5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f 001191",
+    "intent": {
+      "action": "send",
+      "token": "BNB",
+      "toAddress": "0x5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f",
+      "amount": "25"
+    },
+    "ghostResponse": "Understood, Sovereign. I will transfer 25 BNB to 0x5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f.",
+    "category": "send",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Initiate a transfer of 500 ETH to 0x5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f 001192",
+    "intent": {
+      "action": "send",
+      "token": "ETH",
+      "toAddress": "0x5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f",
+      "amount": "500"
+    },
+    "ghostResponse": "Understood, Sovereign. I will transfer 500 ETH to 0x5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f.",
+    "category": "send",
+    "difficulty": "easy"
+  },
+  {
+    "input": "I need to send 25 BTC to this address: 0x9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d 001193",
+    "intent": {
+      "action": "send",
+      "token": "BTC",
+      "toAddress": "0x9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d",
+      "amount": "25"
+    },
+    "ghostResponse": "Understood, Sovereign. I will transfer 25 BTC to 0x9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d.",
+    "category": "send",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Execute an on-chain transfer: 1 FTM to 0x9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d 001194",
+    "intent": {
+      "action": "send",
+      "token": "FTM",
+      "toAddress": "0x9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d",
+      "amount": "1"
+    },
+    "ghostResponse": "Understood, Sovereign. I will transfer 1 FTM to 0x9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d.",
+    "category": "send",
+    "difficulty": "easy"
+  },
+  {
+    "input": "I need to send 1 USDT to this address: 0x8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c 001195",
+    "intent": {
+      "action": "send",
+      "token": "USDT",
+      "toAddress": "0x8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c",
+      "amount": "1"
+    },
+    "ghostResponse": "Understood, Sovereign. I will transfer 1 USDT to 0x8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c.",
+    "category": "send",
+    "difficulty": "easy"
+  },
+  {
+    "input": "I need to send 1000 USDC to this address: 0x5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f 001196",
+    "intent": {
+      "action": "send",
+      "token": "USDC",
+      "toAddress": "0x5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f",
+      "amount": "1000"
+    },
+    "ghostResponse": "Understood, Sovereign. I will transfer 1000 USDC to 0x5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f.",
+    "category": "send",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Initiate a transfer of 1000 ARB to 0x6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a 001197",
+    "intent": {
+      "action": "send",
+      "token": "ARB",
+      "toAddress": "0x6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a",
+      "amount": "1000"
+    },
+    "ghostResponse": "Understood, Sovereign. I will transfer 1000 ARB to 0x6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a.",
+    "category": "send",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Transfer 1000 AVAX to recipient 0x2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c 001198",
+    "intent": {
+      "action": "send",
+      "token": "AVAX",
+      "toAddress": "0x2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c",
+      "amount": "1000"
+    },
+    "ghostResponse": "Understood, Sovereign. I will transfer 1000 AVAX to 0x2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c.",
+    "category": "send",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Please transfer 25 BTC to address 0x0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e 001199",
+    "intent": {
+      "action": "send",
+      "token": "BTC",
+      "toAddress": "0x0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e",
+      "amount": "25"
+    },
+    "ghostResponse": "Understood, Sovereign. I will transfer 25 BTC to 0x0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e.",
+    "category": "send",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Send 25 USDC to the wallet at 0x9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d 001200",
+    "intent": {
+      "action": "send",
+      "token": "USDC",
+      "toAddress": "0x9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d",
+      "amount": "25"
+    },
+    "ghostResponse": "Understood, Sovereign. I will transfer 25 USDC to 0x9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d.",
+    "category": "send",
+    "difficulty": "easy"
+  },
+  {
+    "input": "I would like to stake 100 BNB on Uniswap for yield 001201",
+    "intent": {
+      "action": "earn",
+      "token": "BNB",
+      "protocol": "Uniswap",
+      "amount": "100"
+    },
+    "ghostResponse": "Understood, Sovereign. I will deposit 100 BNB into Uniswap. Current estimated APY: 7.8%.",
+    "category": "earn",
+    "difficulty": "easy"
+  },
+  {
+    "input": "What is the current BTC yield on Curve? 001202",
+    "intent": {
+      "action": "earn",
+      "token": "BTC",
+      "protocol": "Curve",
+      "amount": "0.1"
+    },
+    "ghostResponse": "Understood, Sovereign. I will deposit 0.1 BTC into Curve. Current estimated APY: 3.4%.",
+    "category": "earn",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Please deposit 1000 ETH into Aerodrome's liquidity pool 001203",
+    "intent": {
+      "action": "earn",
+      "token": "ETH",
+      "protocol": "Aerodrome",
+      "amount": "1000"
+    },
+    "ghostResponse": "Understood, Sovereign. I will deposit 1000 ETH into Aerodrome. Current estimated APY: 8.9%.",
+    "category": "earn",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Show me the available APY rates for SOL across protocols 001204",
+    "intent": {
+      "action": "earn",
+      "token": "SOL",
+      "protocol": "Lido",
+      "amount": "200"
+    },
+    "ghostResponse": "Understood, Sovereign. I will deposit 200 SOL into Lido. Current estimated APY: 4.2%.",
+    "category": "earn",
+    "difficulty": "easy"
+  },
+  {
+    "input": "I want to optimize my USDC yield using Compound 001205",
+    "intent": {
+      "action": "earn",
+      "token": "USDC",
+      "protocol": "Compound",
+      "amount": "100"
+    },
+    "ghostResponse": "Understood, Sovereign. I will deposit 100 USDC into Compound. Current estimated APY: 12.1%.",
+    "category": "earn",
+    "difficulty": "easy"
+  },
+  {
+    "input": "I want to optimize my USDT yield using Aave 001206",
+    "intent": {
+      "action": "earn",
+      "token": "USDT",
+      "protocol": "Aave",
+      "amount": "0.5"
+    },
+    "ghostResponse": "Understood, Sovereign. I will deposit 0.5 USDT into Aave. Current estimated APY: 8.9%.",
+    "category": "earn",
+    "difficulty": "easy"
+  },
+  {
+    "input": "I want to optimize my USDC yield using Uniswap 001207",
+    "intent": {
+      "action": "earn",
+      "token": "USDC",
+      "protocol": "Uniswap",
+      "amount": "2"
+    },
+    "ghostResponse": "Understood, Sovereign. I will deposit 2 USDC into Uniswap. Current estimated APY: 5.1%.",
+    "category": "earn",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Stake 0.5 USDC on Uniswap — current APY is 12.1% 001208",
+    "intent": {
+      "action": "earn",
+      "token": "USDC",
+      "protocol": "Uniswap",
+      "amount": "0.5"
+    },
+    "ghostResponse": "Understood, Sovereign. I will deposit 0.5 USDC into Uniswap. Current estimated APY: 12.1%.",
+    "category": "earn",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Please deposit 1000 BTC into Aave's liquidity pool 001209",
+    "intent": {
+      "action": "earn",
+      "token": "BTC",
+      "protocol": "Aave",
+      "amount": "1000"
+    },
+    "ghostResponse": "Understood, Sovereign. I will deposit 1000 BTC into Aave. Current estimated APY: 7.8%.",
+    "category": "earn",
+    "difficulty": "easy"
+  },
+  {
+    "input": "What is the current ETH yield on Lido? 001210",
+    "intent": {
+      "action": "earn",
+      "token": "ETH",
+      "protocol": "Lido",
+      "amount": "500"
+    },
+    "ghostResponse": "Understood, Sovereign. I will deposit 500 ETH into Lido. Current estimated APY: 3.4%.",
+    "category": "earn",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Stake 500 BTC on Curve — current APY is 3.4% 001211",
+    "intent": {
+      "action": "earn",
+      "token": "BTC",
+      "protocol": "Curve",
+      "amount": "500"
+    },
+    "ghostResponse": "Understood, Sovereign. I will deposit 500 BTC into Curve. Current estimated APY: 3.4%.",
+    "category": "earn",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Please deposit 200 USDC into Aerodrome's liquidity pool 001212",
+    "intent": {
+      "action": "earn",
+      "token": "USDC",
+      "protocol": "Aerodrome",
+      "amount": "200"
+    },
+    "ghostResponse": "Understood, Sovereign. I will deposit 200 USDC into Aerodrome. Current estimated APY: 3.4%.",
+    "category": "earn",
+    "difficulty": "easy"
+  },
+  {
+    "input": "What is the current ARB yield on Uniswap? 001213",
+    "intent": {
+      "action": "earn",
+      "token": "ARB",
+      "protocol": "Uniswap",
+      "amount": "200"
+    },
+    "ghostResponse": "Understood, Sovereign. I will deposit 200 ARB into Uniswap. Current estimated APY: 7.8%.",
+    "category": "earn",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Please deposit 100 FTM into Curve's liquidity pool 001214",
+    "intent": {
+      "action": "earn",
+      "token": "FTM",
+      "protocol": "Curve",
+      "amount": "100"
+    },
+    "ghostResponse": "Understood, Sovereign. I will deposit 100 FTM into Curve. Current estimated APY: 2.1%.",
+    "category": "earn",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Please deposit 0.5 BNB into Aave's liquidity pool 001215",
+    "intent": {
+      "action": "earn",
+      "token": "BNB",
+      "protocol": "Aave",
+      "amount": "0.5"
+    },
+    "ghostResponse": "Understood, Sovereign. I will deposit 0.5 BNB into Aave. Current estimated APY: 5.1%.",
+    "category": "earn",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Stake 200 SOL on Curve — current APY is 2.1% 001216",
+    "intent": {
+      "action": "earn",
+      "token": "SOL",
+      "protocol": "Curve",
+      "amount": "200"
+    },
+    "ghostResponse": "Understood, Sovereign. I will deposit 200 SOL into Curve. Current estimated APY: 2.1%.",
+    "category": "earn",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Stake 0.1 AVAX on Compound — current APY is 8.9% 001217",
+    "intent": {
+      "action": "earn",
+      "token": "AVAX",
+      "protocol": "Compound",
+      "amount": "0.1"
+    },
+    "ghostResponse": "Understood, Sovereign. I will deposit 0.1 AVAX into Compound. Current estimated APY: 8.9%.",
+    "category": "earn",
+    "difficulty": "easy"
+  },
+  {
+    "input": "I would like to stake 0.1 OP on Compound for yield 001218",
+    "intent": {
+      "action": "earn",
+      "token": "OP",
+      "protocol": "Compound",
+      "amount": "0.1"
+    },
+    "ghostResponse": "Understood, Sovereign. I will deposit 0.1 OP into Compound. Current estimated APY: 8.9%.",
+    "category": "earn",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Stake 0.5 BNB on Compound — current APY is 12.1% 001219",
+    "intent": {
+      "action": "earn",
+      "token": "BNB",
+      "protocol": "Compound",
+      "amount": "0.5"
+    },
+    "ghostResponse": "Understood, Sovereign. I will deposit 0.5 BNB into Compound. Current estimated APY: 12.1%.",
+    "category": "earn",
+    "difficulty": "easy"
+  },
+  {
+    "input": "What is the current FTM yield on Lido? 001220",
+    "intent": {
+      "action": "earn",
+      "token": "FTM",
+      "protocol": "Lido",
+      "amount": "5"
+    },
+    "ghostResponse": "Understood, Sovereign. I will deposit 5 FTM into Lido. Current estimated APY: 7.8%.",
+    "category": "earn",
+    "difficulty": "easy"
+  },
+  {
+    "input": "I want to optimize my USDC yield using Aerodrome 001221",
+    "intent": {
+      "action": "earn",
+      "token": "USDC",
+      "protocol": "Aerodrome",
+      "amount": "50"
+    },
+    "ghostResponse": "Understood, Sovereign. I will deposit 50 USDC into Aerodrome. Current estimated APY: 5.1%.",
+    "category": "earn",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Please deposit 500 BTC into Uniswap's liquidity pool 001222",
+    "intent": {
+      "action": "earn",
+      "token": "BTC",
+      "protocol": "Uniswap",
+      "amount": "500"
+    },
+    "ghostResponse": "Understood, Sovereign. I will deposit 500 BTC into Uniswap. Current estimated APY: 6.3%.",
+    "category": "earn",
+    "difficulty": "easy"
+  },
+  {
+    "input": "I want to optimize my OP yield using Lido 001223",
+    "intent": {
+      "action": "earn",
+      "token": "OP",
+      "protocol": "Lido",
+      "amount": "500"
+    },
+    "ghostResponse": "Understood, Sovereign. I will deposit 500 OP into Lido. Current estimated APY: 4.2%.",
+    "category": "earn",
+    "difficulty": "easy"
+  },
+  {
+    "input": "I would like to stake 200 ARB on Aerodrome for yield 001224",
+    "intent": {
+      "action": "earn",
+      "token": "ARB",
+      "protocol": "Aerodrome",
+      "amount": "200"
+    },
+    "ghostResponse": "Understood, Sovereign. I will deposit 200 ARB into Aerodrome. Current estimated APY: 8.9%.",
+    "category": "earn",
+    "difficulty": "easy"
+  },
+  {
+    "input": "I want to optimize my BNB yield using Uniswap 001225",
+    "intent": {
+      "action": "earn",
+      "token": "BNB",
+      "protocol": "Uniswap",
+      "amount": "100"
+    },
+    "ghostResponse": "Understood, Sovereign. I will deposit 100 BNB into Uniswap. Current estimated APY: 7.8%.",
+    "category": "earn",
+    "difficulty": "easy"
+  },
+  {
+    "input": "What is the current AVAX yield on Uniswap? 001226",
+    "intent": {
+      "action": "earn",
+      "token": "AVAX",
+      "protocol": "Uniswap",
+      "amount": "1"
+    },
+    "ghostResponse": "Understood, Sovereign. I will deposit 1 AVAX into Uniswap. Current estimated APY: 8.9%.",
+    "category": "earn",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Stake 25 SOL on Compound — current APY is 12.1% 001227",
+    "intent": {
+      "action": "earn",
+      "token": "SOL",
+      "protocol": "Compound",
+      "amount": "25"
+    },
+    "ghostResponse": "Understood, Sovereign. I will deposit 25 SOL into Compound. Current estimated APY: 12.1%.",
+    "category": "earn",
+    "difficulty": "easy"
+  },
+  {
+    "input": "I want to optimize my USDT yield using Compound 001228",
+    "intent": {
+      "action": "earn",
+      "token": "USDT",
+      "protocol": "Compound",
+      "amount": "500"
+    },
+    "ghostResponse": "Understood, Sovereign. I will deposit 500 USDT into Compound. Current estimated APY: 12.1%.",
+    "category": "earn",
+    "difficulty": "easy"
+  },
+  {
+    "input": "I would like to stake 10 ETH on Uniswap for yield 001229",
+    "intent": {
+      "action": "earn",
+      "token": "ETH",
+      "protocol": "Uniswap",
+      "amount": "10"
+    },
+    "ghostResponse": "Understood, Sovereign. I will deposit 10 ETH into Uniswap. Current estimated APY: 3.4%.",
+    "category": "earn",
+    "difficulty": "easy"
+  },
+  {
+    "input": "What is the current BTC yield on Curve? 001230",
+    "intent": {
+      "action": "earn",
+      "token": "BTC",
+      "protocol": "Curve",
+      "amount": "1"
+    },
+    "ghostResponse": "Understood, Sovereign. I will deposit 1 BTC into Curve. Current estimated APY: 6.3%.",
+    "category": "earn",
+    "difficulty": "easy"
+  },
+  {
+    "input": "I would like to stake 1 SOL on Aerodrome for yield 001231",
+    "intent": {
+      "action": "earn",
+      "token": "SOL",
+      "protocol": "Aerodrome",
+      "amount": "1"
+    },
+    "ghostResponse": "Understood, Sovereign. I will deposit 1 SOL into Aerodrome. Current estimated APY: 3.4%.",
+    "category": "earn",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Please deposit 2 BTC into Uniswap's liquidity pool 001232",
+    "intent": {
+      "action": "earn",
+      "token": "BTC",
+      "protocol": "Uniswap",
+      "amount": "2"
+    },
+    "ghostResponse": "Understood, Sovereign. I will deposit 2 BTC into Uniswap. Current estimated APY: 6.3%.",
+    "category": "earn",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Show me the available APY rates for FTM across protocols 001233",
+    "intent": {
+      "action": "earn",
+      "token": "FTM",
+      "protocol": "Curve",
+      "amount": "500"
+    },
+    "ghostResponse": "Understood, Sovereign. I will deposit 500 FTM into Curve. Current estimated APY: 12.1%.",
+    "category": "earn",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Show me the available APY rates for USDT across protocols 001234",
+    "intent": {
+      "action": "earn",
+      "token": "USDT",
+      "protocol": "Compound",
+      "amount": "100"
+    },
+    "ghostResponse": "Understood, Sovereign. I will deposit 100 USDT into Compound. Current estimated APY: 7.8%.",
+    "category": "earn",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Stake 100 USDC on Aerodrome — current APY is 2.1% 001235",
+    "intent": {
+      "action": "earn",
+      "token": "USDC",
+      "protocol": "Aerodrome",
+      "amount": "100"
+    },
+    "ghostResponse": "Understood, Sovereign. I will deposit 100 USDC into Aerodrome. Current estimated APY: 2.1%.",
+    "category": "earn",
+    "difficulty": "easy"
+  },
+  {
+    "input": "I want to optimize my USDT yield using Uniswap 001236",
+    "intent": {
+      "action": "earn",
+      "token": "USDT",
+      "protocol": "Uniswap",
+      "amount": "200"
+    },
+    "ghostResponse": "Understood, Sovereign. I will deposit 200 USDT into Uniswap. Current estimated APY: 3.4%.",
+    "category": "earn",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Show me the available APY rates for ETH across protocols 001237",
+    "intent": {
+      "action": "earn",
+      "token": "ETH",
+      "protocol": "Compound",
+      "amount": "0.5"
+    },
+    "ghostResponse": "Understood, Sovereign. I will deposit 0.5 ETH into Compound. Current estimated APY: 2.1%.",
+    "category": "earn",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Show me the available APY rates for AVAX across protocols 001238",
+    "intent": {
+      "action": "earn",
+      "token": "AVAX",
+      "protocol": "Uniswap",
+      "amount": "0.1"
+    },
+    "ghostResponse": "Understood, Sovereign. I will deposit 0.1 AVAX into Uniswap. Current estimated APY: 7.8%.",
+    "category": "earn",
+    "difficulty": "easy"
+  },
+  {
+    "input": "I would like to stake 100 FTM on Compound for yield 001239",
+    "intent": {
+      "action": "earn",
+      "token": "FTM",
+      "protocol": "Compound",
+      "amount": "100"
+    },
+    "ghostResponse": "Understood, Sovereign. I will deposit 100 FTM into Compound. Current estimated APY: 4.2%.",
+    "category": "earn",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Please deposit 2 ETH into Uniswap's liquidity pool 001240",
+    "intent": {
+      "action": "earn",
+      "token": "ETH",
+      "protocol": "Uniswap",
+      "amount": "2"
+    },
+    "ghostResponse": "Understood, Sovereign. I will deposit 2 ETH into Uniswap. Current estimated APY: 8.9%.",
+    "category": "earn",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Please deposit 200 FTM into Compound's liquidity pool 001241",
+    "intent": {
+      "action": "earn",
+      "token": "FTM",
+      "protocol": "Compound",
+      "amount": "200"
+    },
+    "ghostResponse": "Understood, Sovereign. I will deposit 200 FTM into Compound. Current estimated APY: 3.4%.",
+    "category": "earn",
+    "difficulty": "easy"
+  },
+  {
+    "input": "What is the current OP yield on Curve? 001242",
+    "intent": {
+      "action": "earn",
+      "token": "OP",
+      "protocol": "Curve",
+      "amount": "25"
+    },
+    "ghostResponse": "Understood, Sovereign. I will deposit 25 OP into Curve. Current estimated APY: 5.1%.",
+    "category": "earn",
+    "difficulty": "easy"
+  },
+  {
+    "input": "What is the current BTC yield on Lido? 001243",
+    "intent": {
+      "action": "earn",
+      "token": "BTC",
+      "protocol": "Lido",
+      "amount": "50"
+    },
+    "ghostResponse": "Understood, Sovereign. I will deposit 50 BTC into Lido. Current estimated APY: 4.2%.",
+    "category": "earn",
+    "difficulty": "easy"
+  },
+  {
+    "input": "I would like to stake 0.1 OP on Aave for yield 001244",
+    "intent": {
+      "action": "earn",
+      "token": "OP",
+      "protocol": "Aave",
+      "amount": "0.1"
+    },
+    "ghostResponse": "Understood, Sovereign. I will deposit 0.1 OP into Aave. Current estimated APY: 6.3%.",
+    "category": "earn",
+    "difficulty": "easy"
+  },
+  {
+    "input": "I would like to stake 0.5 FTM on Uniswap for yield 001245",
+    "intent": {
+      "action": "earn",
+      "token": "FTM",
+      "protocol": "Uniswap",
+      "amount": "0.5"
+    },
+    "ghostResponse": "Understood, Sovereign. I will deposit 0.5 FTM into Uniswap. Current estimated APY: 2.1%.",
+    "category": "earn",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Stake 0.1 ETH on Uniswap — current APY is 5.1% 001246",
+    "intent": {
+      "action": "earn",
+      "token": "ETH",
+      "protocol": "Uniswap",
+      "amount": "0.1"
+    },
+    "ghostResponse": "Understood, Sovereign. I will deposit 0.1 ETH into Uniswap. Current estimated APY: 5.1%.",
+    "category": "earn",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Show me the available APY rates for SOL across protocols 001247",
+    "intent": {
+      "action": "earn",
+      "token": "SOL",
+      "protocol": "Lido",
+      "amount": "0.1"
+    },
+    "ghostResponse": "Understood, Sovereign. I will deposit 0.1 SOL into Lido. Current estimated APY: 3.4%.",
+    "category": "earn",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Please deposit 0.1 FTM into Uniswap's liquidity pool 001248",
+    "intent": {
+      "action": "earn",
+      "token": "FTM",
+      "protocol": "Uniswap",
+      "amount": "0.1"
+    },
+    "ghostResponse": "Understood, Sovereign. I will deposit 0.1 FTM into Uniswap. Current estimated APY: 6.3%.",
+    "category": "earn",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Stake 25 OP on Compound — current APY is 7.8% 001249",
+    "intent": {
+      "action": "earn",
+      "token": "OP",
+      "protocol": "Compound",
+      "amount": "25"
+    },
+    "ghostResponse": "Understood, Sovereign. I will deposit 25 OP into Compound. Current estimated APY: 7.8%.",
+    "category": "earn",
+    "difficulty": "easy"
+  },
+  {
+    "input": "I would like to stake 5 USDT on Compound for yield 001250",
+    "intent": {
+      "action": "earn",
+      "token": "USDT",
+      "protocol": "Compound",
+      "amount": "5"
+    },
+    "ghostResponse": "Understood, Sovereign. I will deposit 5 USDT into Compound. Current estimated APY: 5.1%.",
+    "category": "earn",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Stake 5 VEIL on Aave — current APY is 6.3% 001251",
+    "intent": {
+      "action": "earn",
+      "token": "VEIL",
+      "protocol": "Aave",
+      "amount": "5"
+    },
+    "ghostResponse": "Understood, Sovereign. I will deposit 5 VEIL into Aave. Current estimated APY: 6.3%.",
+    "category": "earn",
+    "difficulty": "easy"
+  },
+  {
+    "input": "I would like to stake 500 VEIL on Curve for yield 001252",
+    "intent": {
+      "action": "earn",
+      "token": "VEIL",
+      "protocol": "Curve",
+      "amount": "500"
+    },
+    "ghostResponse": "Understood, Sovereign. I will deposit 500 VEIL into Curve. Current estimated APY: 2.1%.",
+    "category": "earn",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Please deposit 10 AVAX into Uniswap's liquidity pool 001253",
+    "intent": {
+      "action": "earn",
+      "token": "AVAX",
+      "protocol": "Uniswap",
+      "amount": "10"
+    },
+    "ghostResponse": "Understood, Sovereign. I will deposit 10 AVAX into Uniswap. Current estimated APY: 8.9%.",
+    "category": "earn",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Show me the available APY rates for USDC across protocols 001254",
+    "intent": {
+      "action": "earn",
+      "token": "USDC",
+      "protocol": "Curve",
+      "amount": "2"
+    },
+    "ghostResponse": "Understood, Sovereign. I will deposit 2 USDC into Curve. Current estimated APY: 12.1%.",
+    "category": "earn",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Stake 500 BTC on Uniswap — current APY is 6.3% 001255",
+    "intent": {
+      "action": "earn",
+      "token": "BTC",
+      "protocol": "Uniswap",
+      "amount": "500"
+    },
+    "ghostResponse": "Understood, Sovereign. I will deposit 500 BTC into Uniswap. Current estimated APY: 6.3%.",
+    "category": "earn",
+    "difficulty": "easy"
+  },
+  {
+    "input": "What is the current USDT yield on Lido? 001256",
+    "intent": {
+      "action": "earn",
+      "token": "USDT",
+      "protocol": "Lido",
+      "amount": "50"
+    },
+    "ghostResponse": "Understood, Sovereign. I will deposit 50 USDT into Lido. Current estimated APY: 4.2%.",
+    "category": "earn",
+    "difficulty": "easy"
+  },
+  {
+    "input": "I would like to stake 1000 VEIL on Uniswap for yield 001257",
+    "intent": {
+      "action": "earn",
+      "token": "VEIL",
+      "protocol": "Uniswap",
+      "amount": "1000"
+    },
+    "ghostResponse": "Understood, Sovereign. I will deposit 1000 VEIL into Uniswap. Current estimated APY: 4.2%.",
+    "category": "earn",
+    "difficulty": "easy"
+  },
+  {
+    "input": "What is the current BNB yield on Uniswap? 001258",
+    "intent": {
+      "action": "earn",
+      "token": "BNB",
+      "protocol": "Uniswap",
+      "amount": "50"
+    },
+    "ghostResponse": "Understood, Sovereign. I will deposit 50 BNB into Uniswap. Current estimated APY: 3.4%.",
+    "category": "earn",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Stake 50 BNB on Uniswap — current APY is 5.1% 001259",
+    "intent": {
+      "action": "earn",
+      "token": "BNB",
+      "protocol": "Uniswap",
+      "amount": "50"
+    },
+    "ghostResponse": "Understood, Sovereign. I will deposit 50 BNB into Uniswap. Current estimated APY: 5.1%.",
+    "category": "earn",
+    "difficulty": "easy"
+  },
+  {
+    "input": "What is the current USDC yield on Uniswap? 001260",
+    "intent": {
+      "action": "earn",
+      "token": "USDC",
+      "protocol": "Uniswap",
+      "amount": "1"
+    },
+    "ghostResponse": "Understood, Sovereign. I will deposit 1 USDC into Uniswap. Current estimated APY: 8.9%.",
+    "category": "earn",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Please deposit 2 OP into Compound's liquidity pool 001261",
+    "intent": {
+      "action": "earn",
+      "token": "OP",
+      "protocol": "Compound",
+      "amount": "2"
+    },
+    "ghostResponse": "Understood, Sovereign. I will deposit 2 OP into Compound. Current estimated APY: 2.1%.",
+    "category": "earn",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Stake 2 SOL on Uniswap — current APY is 5.1% 001262",
+    "intent": {
+      "action": "earn",
+      "token": "SOL",
+      "protocol": "Uniswap",
+      "amount": "2"
+    },
+    "ghostResponse": "Understood, Sovereign. I will deposit 2 SOL into Uniswap. Current estimated APY: 5.1%.",
+    "category": "earn",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Show me the available APY rates for OP across protocols 001263",
+    "intent": {
+      "action": "earn",
+      "token": "OP",
+      "protocol": "Lido",
+      "amount": "0.1"
+    },
+    "ghostResponse": "Understood, Sovereign. I will deposit 0.1 OP into Lido. Current estimated APY: 2.1%.",
+    "category": "earn",
+    "difficulty": "easy"
+  },
+  {
+    "input": "I want to optimize my SOL yield using Curve 001264",
+    "intent": {
+      "action": "earn",
+      "token": "SOL",
+      "protocol": "Curve",
+      "amount": "0.1"
+    },
+    "ghostResponse": "Understood, Sovereign. I will deposit 0.1 SOL into Curve. Current estimated APY: 7.8%.",
+    "category": "earn",
+    "difficulty": "easy"
+  },
+  {
+    "input": "What is the current BNB yield on Aave? 001265",
+    "intent": {
+      "action": "earn",
+      "token": "BNB",
+      "protocol": "Aave",
+      "amount": "0.5"
+    },
+    "ghostResponse": "Understood, Sovereign. I will deposit 0.5 BNB into Aave. Current estimated APY: 12.1%.",
+    "category": "earn",
+    "difficulty": "easy"
+  },
+  {
+    "input": "I would like to stake 200 USDT on Aave for yield 001266",
+    "intent": {
+      "action": "earn",
+      "token": "USDT",
+      "protocol": "Aave",
+      "amount": "200"
+    },
+    "ghostResponse": "Understood, Sovereign. I will deposit 200 USDT into Aave. Current estimated APY: 2.1%.",
+    "category": "earn",
+    "difficulty": "easy"
+  },
+  {
+    "input": "I want to optimize my USDT yield using Lido 001267",
+    "intent": {
+      "action": "earn",
+      "token": "USDT",
+      "protocol": "Lido",
+      "amount": "50"
+    },
+    "ghostResponse": "Understood, Sovereign. I will deposit 50 USDT into Lido. Current estimated APY: 4.2%.",
+    "category": "earn",
+    "difficulty": "easy"
+  },
+  {
+    "input": "What is the current BNB yield on Uniswap? 001268",
+    "intent": {
+      "action": "earn",
+      "token": "BNB",
+      "protocol": "Uniswap",
+      "amount": "10"
+    },
+    "ghostResponse": "Understood, Sovereign. I will deposit 10 BNB into Uniswap. Current estimated APY: 3.4%.",
+    "category": "earn",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Please deposit 500 AVAX into Aave's liquidity pool 001269",
+    "intent": {
+      "action": "earn",
+      "token": "AVAX",
+      "protocol": "Aave",
+      "amount": "500"
+    },
+    "ghostResponse": "Understood, Sovereign. I will deposit 500 AVAX into Aave. Current estimated APY: 3.4%.",
+    "category": "earn",
+    "difficulty": "easy"
+  },
+  {
+    "input": "What is the current SOL yield on Lido? 001270",
+    "intent": {
+      "action": "earn",
+      "token": "SOL",
+      "protocol": "Lido",
+      "amount": "100"
+    },
+    "ghostResponse": "Understood, Sovereign. I will deposit 100 SOL into Lido. Current estimated APY: 5.1%.",
+    "category": "earn",
+    "difficulty": "easy"
+  },
+  {
+    "input": "I want to optimize my BNB yield using Curve 001271",
+    "intent": {
+      "action": "earn",
+      "token": "BNB",
+      "protocol": "Curve",
+      "amount": "1000"
+    },
+    "ghostResponse": "Understood, Sovereign. I will deposit 1000 BNB into Curve. Current estimated APY: 3.4%.",
+    "category": "earn",
+    "difficulty": "easy"
+  },
+  {
+    "input": "I want to optimize my BTC yield using Lido 001272",
+    "intent": {
+      "action": "earn",
+      "token": "BTC",
+      "protocol": "Lido",
+      "amount": "5"
+    },
+    "ghostResponse": "Understood, Sovereign. I will deposit 5 BTC into Lido. Current estimated APY: 8.9%.",
+    "category": "earn",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Show me the available APY rates for USDT across protocols 001273",
+    "intent": {
+      "action": "earn",
+      "token": "USDT",
+      "protocol": "Aave",
+      "amount": "0.5"
+    },
+    "ghostResponse": "Understood, Sovereign. I will deposit 0.5 USDT into Aave. Current estimated APY: 6.3%.",
+    "category": "earn",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Stake 2 VEIL on Aave — current APY is 6.3% 001274",
+    "intent": {
+      "action": "earn",
+      "token": "VEIL",
+      "protocol": "Aave",
+      "amount": "2"
+    },
+    "ghostResponse": "Understood, Sovereign. I will deposit 2 VEIL into Aave. Current estimated APY: 6.3%.",
+    "category": "earn",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Stake 50 SOL on Lido — current APY is 3.4% 001275",
+    "intent": {
+      "action": "earn",
+      "token": "SOL",
+      "protocol": "Lido",
+      "amount": "50"
+    },
+    "ghostResponse": "Understood, Sovereign. I will deposit 50 SOL into Lido. Current estimated APY: 3.4%.",
+    "category": "earn",
+    "difficulty": "easy"
+  },
+  {
+    "input": "I would like to stake 0.1 BTC on Compound for yield 001276",
+    "intent": {
+      "action": "earn",
+      "token": "BTC",
+      "protocol": "Compound",
+      "amount": "0.1"
+    },
+    "ghostResponse": "Understood, Sovereign. I will deposit 0.1 BTC into Compound. Current estimated APY: 3.4%.",
+    "category": "earn",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Please deposit 500 FTM into Uniswap's liquidity pool 001277",
+    "intent": {
+      "action": "earn",
+      "token": "FTM",
+      "protocol": "Uniswap",
+      "amount": "500"
+    },
+    "ghostResponse": "Understood, Sovereign. I will deposit 500 FTM into Uniswap. Current estimated APY: 4.2%.",
+    "category": "earn",
+    "difficulty": "easy"
+  },
+  {
+    "input": "I want to optimize my ARB yield using Lido 001278",
+    "intent": {
+      "action": "earn",
+      "token": "ARB",
+      "protocol": "Lido",
+      "amount": "200"
+    },
+    "ghostResponse": "Understood, Sovereign. I will deposit 200 ARB into Lido. Current estimated APY: 8.9%.",
+    "category": "earn",
+    "difficulty": "easy"
+  },
+  {
+    "input": "I want to optimize my OP yield using Uniswap 001279",
+    "intent": {
+      "action": "earn",
+      "token": "OP",
+      "protocol": "Uniswap",
+      "amount": "10"
+    },
+    "ghostResponse": "Understood, Sovereign. I will deposit 10 OP into Uniswap. Current estimated APY: 5.1%.",
+    "category": "earn",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Please deposit 0.1 BNB into Aave's liquidity pool 001280",
+    "intent": {
+      "action": "earn",
+      "token": "BNB",
+      "protocol": "Aave",
+      "amount": "0.1"
+    },
+    "ghostResponse": "Understood, Sovereign. I will deposit 0.1 BNB into Aave. Current estimated APY: 8.9%.",
+    "category": "earn",
+    "difficulty": "easy"
+  },
+  {
+    "input": "What is the current AVAX yield on Aerodrome? 001281",
+    "intent": {
+      "action": "earn",
+      "token": "AVAX",
+      "protocol": "Aerodrome",
+      "amount": "50"
+    },
+    "ghostResponse": "Understood, Sovereign. I will deposit 50 AVAX into Aerodrome. Current estimated APY: 3.4%.",
+    "category": "earn",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Show me the available APY rates for USDT across protocols 001282",
+    "intent": {
+      "action": "earn",
+      "token": "USDT",
+      "protocol": "Uniswap",
+      "amount": "500"
+    },
+    "ghostResponse": "Understood, Sovereign. I will deposit 500 USDT into Uniswap. Current estimated APY: 7.8%.",
+    "category": "earn",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Show me the available APY rates for USDT across protocols 001283",
+    "intent": {
+      "action": "earn",
+      "token": "USDT",
+      "protocol": "Uniswap",
+      "amount": "25"
+    },
+    "ghostResponse": "Understood, Sovereign. I will deposit 25 USDT into Uniswap. Current estimated APY: 7.8%.",
+    "category": "earn",
+    "difficulty": "easy"
+  },
+  {
+    "input": "What is the current VEIL yield on Lido? 001284",
+    "intent": {
+      "action": "earn",
+      "token": "VEIL",
+      "protocol": "Lido",
+      "amount": "25"
+    },
+    "ghostResponse": "Understood, Sovereign. I will deposit 25 VEIL into Lido. Current estimated APY: 5.1%.",
+    "category": "earn",
+    "difficulty": "easy"
+  },
+  {
+    "input": "What is the current FTM yield on Compound? 001285",
+    "intent": {
+      "action": "earn",
+      "token": "FTM",
+      "protocol": "Compound",
+      "amount": "0.5"
+    },
+    "ghostResponse": "Understood, Sovereign. I will deposit 0.5 FTM into Compound. Current estimated APY: 5.1%.",
+    "category": "earn",
+    "difficulty": "easy"
+  },
+  {
+    "input": "I want to optimize my FTM yield using Lido 001286",
+    "intent": {
+      "action": "earn",
+      "token": "FTM",
+      "protocol": "Lido",
+      "amount": "50"
+    },
+    "ghostResponse": "Understood, Sovereign. I will deposit 50 FTM into Lido. Current estimated APY: 8.9%.",
+    "category": "earn",
+    "difficulty": "easy"
+  },
+  {
+    "input": "I would like to stake 200 SOL on Lido for yield 001287",
+    "intent": {
+      "action": "earn",
+      "token": "SOL",
+      "protocol": "Lido",
+      "amount": "200"
+    },
+    "ghostResponse": "Understood, Sovereign. I will deposit 200 SOL into Lido. Current estimated APY: 4.2%.",
+    "category": "earn",
+    "difficulty": "easy"
+  },
+  {
+    "input": "What is the current OP yield on Uniswap? 001288",
+    "intent": {
+      "action": "earn",
+      "token": "OP",
+      "protocol": "Uniswap",
+      "amount": "500"
+    },
+    "ghostResponse": "Understood, Sovereign. I will deposit 500 OP into Uniswap. Current estimated APY: 3.4%.",
+    "category": "earn",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Show me the available APY rates for VEIL across protocols 001289",
+    "intent": {
+      "action": "earn",
+      "token": "VEIL",
+      "protocol": "Uniswap",
+      "amount": "500"
+    },
+    "ghostResponse": "Understood, Sovereign. I will deposit 500 VEIL into Uniswap. Current estimated APY: 2.1%.",
+    "category": "earn",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Please deposit 1000 OP into Lido's liquidity pool 001290",
+    "intent": {
+      "action": "earn",
+      "token": "OP",
+      "protocol": "Lido",
+      "amount": "1000"
+    },
+    "ghostResponse": "Understood, Sovereign. I will deposit 1000 OP into Lido. Current estimated APY: 2.1%.",
+    "category": "earn",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Show me the available APY rates for FTM across protocols 001291",
+    "intent": {
+      "action": "earn",
+      "token": "FTM",
+      "protocol": "Curve",
+      "amount": "2"
+    },
+    "ghostResponse": "Understood, Sovereign. I will deposit 2 FTM into Curve. Current estimated APY: 6.3%.",
+    "category": "earn",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Show me the available APY rates for USDC across protocols 001292",
+    "intent": {
+      "action": "earn",
+      "token": "USDC",
+      "protocol": "Compound",
+      "amount": "1"
+    },
+    "ghostResponse": "Understood, Sovereign. I will deposit 1 USDC into Compound. Current estimated APY: 7.8%.",
+    "category": "earn",
+    "difficulty": "easy"
+  },
+  {
+    "input": "I would like to stake 25 AVAX on Curve for yield 001293",
+    "intent": {
+      "action": "earn",
+      "token": "AVAX",
+      "protocol": "Curve",
+      "amount": "25"
+    },
+    "ghostResponse": "Understood, Sovereign. I will deposit 25 AVAX into Curve. Current estimated APY: 4.2%.",
+    "category": "earn",
+    "difficulty": "easy"
+  },
+  {
+    "input": "What is the current ETH yield on Curve? 001294",
+    "intent": {
+      "action": "earn",
+      "token": "ETH",
+      "protocol": "Curve",
+      "amount": "1000"
+    },
+    "ghostResponse": "Understood, Sovereign. I will deposit 1000 ETH into Curve. Current estimated APY: 5.1%.",
+    "category": "earn",
+    "difficulty": "easy"
+  },
+  {
+    "input": "I would like to stake 1 USDC on Uniswap for yield 001295",
+    "intent": {
+      "action": "earn",
+      "token": "USDC",
+      "protocol": "Uniswap",
+      "amount": "1"
+    },
+    "ghostResponse": "Understood, Sovereign. I will deposit 1 USDC into Uniswap. Current estimated APY: 12.1%.",
+    "category": "earn",
+    "difficulty": "easy"
+  },
+  {
+    "input": "What is the current ETH yield on Aave? 001296",
+    "intent": {
+      "action": "earn",
+      "token": "ETH",
+      "protocol": "Aave",
+      "amount": "25"
+    },
+    "ghostResponse": "Understood, Sovereign. I will deposit 25 ETH into Aave. Current estimated APY: 3.4%.",
+    "category": "earn",
+    "difficulty": "easy"
+  },
+  {
+    "input": "What is the current USDC yield on Uniswap? 001297",
+    "intent": {
+      "action": "earn",
+      "token": "USDC",
+      "protocol": "Uniswap",
+      "amount": "50"
+    },
+    "ghostResponse": "Understood, Sovereign. I will deposit 50 USDC into Uniswap. Current estimated APY: 8.9%.",
+    "category": "earn",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Please deposit 0.1 SOL into Lido's liquidity pool 001298",
+    "intent": {
+      "action": "earn",
+      "token": "SOL",
+      "protocol": "Lido",
+      "amount": "0.1"
+    },
+    "ghostResponse": "Understood, Sovereign. I will deposit 0.1 SOL into Lido. Current estimated APY: 12.1%.",
+    "category": "earn",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Show me the available APY rates for ETH across protocols 001299",
+    "intent": {
+      "action": "earn",
+      "token": "ETH",
+      "protocol": "Curve",
+      "amount": "1000"
+    },
+    "ghostResponse": "Understood, Sovereign. I will deposit 1000 ETH into Curve. Current estimated APY: 2.1%.",
+    "category": "earn",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Stake 1000 FTM on Aerodrome — current APY is 2.1% 001300",
+    "intent": {
+      "action": "earn",
+      "token": "FTM",
+      "protocol": "Aerodrome",
+      "amount": "1000"
+    },
+    "ghostResponse": "Understood, Sovereign. I will deposit 1000 FTM into Aerodrome. Current estimated APY: 2.1%.",
+    "category": "earn",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Please display my complete portfolio breakdown 001301",
+    "intent": {
+      "action": "query",
+      "queryType": "balance",
+      "token": "ETH"
+    },
+    "ghostResponse": "Understood, Sovereign. Retrieving your ETH portfolio data now.",
+    "category": "query",
+    "difficulty": "easy"
+  },
+  {
+    "input": "What is my current OP balance? 001302",
+    "intent": {
+      "action": "query",
+      "queryType": "balance",
+      "token": "OP"
+    },
+    "ghostResponse": "Understood, Sovereign. Retrieving your OP portfolio data now.",
+    "category": "query",
+    "difficulty": "easy"
+  },
+  {
+    "input": "What is the total value of my portfolio in USD? 001303",
+    "intent": {
+      "action": "query",
+      "queryType": "balance",
+      "token": "FTM"
+    },
+    "ghostResponse": "Understood, Sovereign. Retrieving your FTM portfolio data now.",
+    "category": "query",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Show all swaps executed in the past 7 days 001304",
+    "intent": {
+      "action": "query",
+      "queryType": "balance",
+      "token": "ETH"
+    },
+    "ghostResponse": "Understood, Sovereign. Retrieving your ETH portfolio data now.",
+    "category": "query",
+    "difficulty": "easy"
+  },
+  {
+    "input": "What is my current OP balance? 001305",
+    "intent": {
+      "action": "query",
+      "queryType": "balance",
+      "token": "OP"
+    },
+    "ghostResponse": "Understood, Sovereign. Retrieving your OP portfolio data now.",
+    "category": "query",
+    "difficulty": "easy"
+  },
+  {
+    "input": "I'd like to review my transaction history for this month 001306",
+    "intent": {
+      "action": "query",
+      "queryType": "balance",
+      "token": "VEIL"
+    },
+    "ghostResponse": "Understood, Sovereign. Retrieving your VEIL portfolio data now.",
+    "category": "query",
+    "difficulty": "easy"
+  },
+  {
+    "input": "What is my current AVAX balance? 001307",
+    "intent": {
+      "action": "query",
+      "queryType": "balance",
+      "token": "AVAX"
+    },
+    "ghostResponse": "Understood, Sovereign. Retrieving your AVAX portfolio data now.",
+    "category": "query",
+    "difficulty": "easy"
+  },
+  {
+    "input": "I'd like to review my transaction history for this month 001308",
+    "intent": {
+      "action": "query",
+      "queryType": "balance",
+      "token": "BNB"
+    },
+    "ghostResponse": "Understood, Sovereign. Retrieving your BNB portfolio data now.",
+    "category": "query",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Show all swaps executed in the past 7 days 001309",
+    "intent": {
+      "action": "query",
+      "queryType": "balance",
+      "token": "ARB"
+    },
+    "ghostResponse": "Understood, Sovereign. Retrieving your ARB portfolio data now.",
+    "category": "query",
+    "difficulty": "easy"
+  },
+  {
+    "input": "What is the total value of my portfolio in USD? 001310",
+    "intent": {
+      "action": "query",
+      "queryType": "balance",
+      "token": "SOL"
+    },
+    "ghostResponse": "Understood, Sovereign. Retrieving your SOL portfolio data now.",
+    "category": "query",
+    "difficulty": "easy"
+  },
+  {
+    "input": "What is the current allocation of my portfolio? 001311",
+    "intent": {
+      "action": "query",
+      "queryType": "balance",
+      "token": "BTC"
+    },
+    "ghostResponse": "Understood, Sovereign. Retrieving your BTC portfolio data now.",
+    "category": "query",
+    "difficulty": "easy"
+  },
+  {
+    "input": "What is the current allocation of my portfolio? 001312",
+    "intent": {
+      "action": "query",
+      "queryType": "balance",
+      "token": "BNB"
+    },
+    "ghostResponse": "Understood, Sovereign. Retrieving your BNB portfolio data now.",
+    "category": "query",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Show me my current holdings and their USD value 001313",
+    "intent": {
+      "action": "query",
+      "queryType": "balance",
+      "token": "USDC"
+    },
+    "ghostResponse": "Understood, Sovereign. Retrieving your USDC portfolio data now.",
+    "category": "query",
+    "difficulty": "easy"
+  },
+  {
+    "input": "What is the total value of my portfolio in USD? 001314",
+    "intent": {
+      "action": "query",
+      "queryType": "balance",
+      "token": "ETH"
+    },
+    "ghostResponse": "Understood, Sovereign. Retrieving your ETH portfolio data now.",
+    "category": "query",
+    "difficulty": "easy"
+  },
+  {
+    "input": "What is my current FTM balance? 001315",
+    "intent": {
+      "action": "query",
+      "queryType": "balance",
+      "token": "FTM"
+    },
+    "ghostResponse": "Understood, Sovereign. Retrieving your FTM portfolio data now.",
+    "category": "query",
+    "difficulty": "easy"
+  },
+  {
+    "input": "I'd like to review my transaction history for this month 001316",
+    "intent": {
+      "action": "query",
+      "queryType": "balance",
+      "token": "AVAX"
+    },
+    "ghostResponse": "Understood, Sovereign. Retrieving your AVAX portfolio data now.",
+    "category": "query",
+    "difficulty": "easy"
+  },
+  {
+    "input": "I'd like to review my transaction history for this month 001317",
+    "intent": {
+      "action": "query",
+      "queryType": "balance",
+      "token": "ARB"
+    },
+    "ghostResponse": "Understood, Sovereign. Retrieving your ARB portfolio data now.",
+    "category": "query",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Please display my complete portfolio breakdown 001318",
+    "intent": {
+      "action": "query",
+      "queryType": "balance",
+      "token": "USDC"
+    },
+    "ghostResponse": "Understood, Sovereign. Retrieving your USDC portfolio data now.",
+    "category": "query",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Please display my complete portfolio breakdown 001319",
+    "intent": {
+      "action": "query",
+      "queryType": "balance",
+      "token": "USDT"
+    },
+    "ghostResponse": "Understood, Sovereign. Retrieving your USDT portfolio data now.",
+    "category": "query",
+    "difficulty": "easy"
+  },
+  {
+    "input": "What is the total value of my portfolio in USD? 001320",
+    "intent": {
+      "action": "query",
+      "queryType": "balance",
+      "token": "AVAX"
+    },
+    "ghostResponse": "Understood, Sovereign. Retrieving your AVAX portfolio data now.",
+    "category": "query",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Show all swaps executed in the past 7 days 001321",
+    "intent": {
+      "action": "query",
+      "queryType": "balance",
+      "token": "USDC"
+    },
+    "ghostResponse": "Understood, Sovereign. Retrieving your USDC portfolio data now.",
+    "category": "query",
+    "difficulty": "easy"
+  },
+  {
+    "input": "What is my current USDT balance? 001322",
+    "intent": {
+      "action": "query",
+      "queryType": "balance",
+      "token": "USDT"
+    },
+    "ghostResponse": "Understood, Sovereign. Retrieving your USDT portfolio data now.",
+    "category": "query",
+    "difficulty": "easy"
+  },
+  {
+    "input": "I'd like to review my transaction history for this month 001323",
+    "intent": {
+      "action": "query",
+      "queryType": "balance",
+      "token": "BNB"
+    },
+    "ghostResponse": "Understood, Sovereign. Retrieving your BNB portfolio data now.",
+    "category": "query",
+    "difficulty": "easy"
+  },
+  {
+    "input": "I'd like to review my transaction history for this month 001324",
+    "intent": {
+      "action": "query",
+      "queryType": "balance",
+      "token": "FTM"
+    },
+    "ghostResponse": "Understood, Sovereign. Retrieving your FTM portfolio data now.",
+    "category": "query",
+    "difficulty": "easy"
+  },
+  {
+    "input": "What is my current FTM balance? 001325",
+    "intent": {
+      "action": "query",
+      "queryType": "balance",
+      "token": "FTM"
+    },
+    "ghostResponse": "Understood, Sovereign. Retrieving your FTM portfolio data now.",
+    "category": "query",
+    "difficulty": "easy"
+  },
+  {
+    "input": "I'd like to review my transaction history for this month 001326",
+    "intent": {
+      "action": "query",
+      "queryType": "balance",
+      "token": "BTC"
+    },
+    "ghostResponse": "Understood, Sovereign. Retrieving your BTC portfolio data now.",
+    "category": "query",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Please display my complete portfolio breakdown 001327",
+    "intent": {
+      "action": "query",
+      "queryType": "balance",
+      "token": "AVAX"
+    },
+    "ghostResponse": "Understood, Sovereign. Retrieving your AVAX portfolio data now.",
+    "category": "query",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Show me my current holdings and their USD value 001328",
+    "intent": {
+      "action": "query",
+      "queryType": "balance",
+      "token": "SOL"
+    },
+    "ghostResponse": "Understood, Sovereign. Retrieving your SOL portfolio data now.",
+    "category": "query",
+    "difficulty": "easy"
+  },
+  {
+    "input": "What is my current BTC balance? 001329",
+    "intent": {
+      "action": "query",
+      "queryType": "balance",
+      "token": "BTC"
+    },
+    "ghostResponse": "Understood, Sovereign. Retrieving your BTC portfolio data now.",
+    "category": "query",
+    "difficulty": "easy"
+  },
+  {
+    "input": "What is the total value of my portfolio in USD? 001330",
+    "intent": {
+      "action": "query",
+      "queryType": "balance",
+      "token": "FTM"
+    },
+    "ghostResponse": "Understood, Sovereign. Retrieving your FTM portfolio data now.",
+    "category": "query",
+    "difficulty": "easy"
+  },
+  {
+    "input": "What is my current BTC balance? 001331",
+    "intent": {
+      "action": "query",
+      "queryType": "balance",
+      "token": "BTC"
+    },
+    "ghostResponse": "Understood, Sovereign. Retrieving your BTC portfolio data now.",
+    "category": "query",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Display my FTM position and unrealized P&L 001332",
+    "intent": {
+      "action": "query",
+      "queryType": "balance",
+      "token": "FTM"
+    },
+    "ghostResponse": "Understood, Sovereign. Retrieving your FTM portfolio data now.",
+    "category": "query",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Show me my current holdings and their USD value 001333",
+    "intent": {
+      "action": "query",
+      "queryType": "balance",
+      "token": "USDC"
+    },
+    "ghostResponse": "Understood, Sovereign. Retrieving your USDC portfolio data now.",
+    "category": "query",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Please display my complete portfolio breakdown 001334",
+    "intent": {
+      "action": "query",
+      "queryType": "balance",
+      "token": "AVAX"
+    },
+    "ghostResponse": "Understood, Sovereign. Retrieving your AVAX portfolio data now.",
+    "category": "query",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Display my BTC position and unrealized P&L 001335",
+    "intent": {
+      "action": "query",
+      "queryType": "balance",
+      "token": "BTC"
+    },
+    "ghostResponse": "Understood, Sovereign. Retrieving your BTC portfolio data now.",
+    "category": "query",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Display my FTM position and unrealized P&L 001336",
+    "intent": {
+      "action": "query",
+      "queryType": "balance",
+      "token": "FTM"
+    },
+    "ghostResponse": "Understood, Sovereign. Retrieving your FTM portfolio data now.",
+    "category": "query",
+    "difficulty": "easy"
+  },
+  {
+    "input": "What is the total value of my portfolio in USD? 001337",
+    "intent": {
+      "action": "query",
+      "queryType": "balance",
+      "token": "OP"
+    },
+    "ghostResponse": "Understood, Sovereign. Retrieving your OP portfolio data now.",
+    "category": "query",
+    "difficulty": "easy"
+  },
+  {
+    "input": "What is the total value of my portfolio in USD? 001338",
+    "intent": {
+      "action": "query",
+      "queryType": "balance",
+      "token": "USDC"
+    },
+    "ghostResponse": "Understood, Sovereign. Retrieving your USDC portfolio data now.",
+    "category": "query",
+    "difficulty": "easy"
+  },
+  {
+    "input": "What is my current VEIL balance? 001339",
+    "intent": {
+      "action": "query",
+      "queryType": "balance",
+      "token": "VEIL"
+    },
+    "ghostResponse": "Understood, Sovereign. Retrieving your VEIL portfolio data now.",
+    "category": "query",
+    "difficulty": "easy"
+  },
+  {
+    "input": "What is the current allocation of my portfolio? 001340",
+    "intent": {
+      "action": "query",
+      "queryType": "balance",
+      "token": "AVAX"
+    },
+    "ghostResponse": "Understood, Sovereign. Retrieving your AVAX portfolio data now.",
+    "category": "query",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Please display my complete portfolio breakdown 001341",
+    "intent": {
+      "action": "query",
+      "queryType": "balance",
+      "token": "USDC"
+    },
+    "ghostResponse": "Understood, Sovereign. Retrieving your USDC portfolio data now.",
+    "category": "query",
+    "difficulty": "easy"
+  },
+  {
+    "input": "What is the total value of my portfolio in USD? 001342",
+    "intent": {
+      "action": "query",
+      "queryType": "balance",
+      "token": "USDC"
+    },
+    "ghostResponse": "Understood, Sovereign. Retrieving your USDC portfolio data now.",
+    "category": "query",
+    "difficulty": "easy"
+  },
+  {
+    "input": "I'd like to review my transaction history for this month 001343",
+    "intent": {
+      "action": "query",
+      "queryType": "balance",
+      "token": "ETH"
+    },
+    "ghostResponse": "Understood, Sovereign. Retrieving your ETH portfolio data now.",
+    "category": "query",
+    "difficulty": "easy"
+  },
+  {
+    "input": "What is my current VEIL balance? 001344",
+    "intent": {
+      "action": "query",
+      "queryType": "balance",
+      "token": "VEIL"
+    },
+    "ghostResponse": "Understood, Sovereign. Retrieving your VEIL portfolio data now.",
+    "category": "query",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Display my FTM position and unrealized P&L 001345",
+    "intent": {
+      "action": "query",
+      "queryType": "balance",
+      "token": "FTM"
+    },
+    "ghostResponse": "Understood, Sovereign. Retrieving your FTM portfolio data now.",
+    "category": "query",
+    "difficulty": "easy"
+  },
+  {
+    "input": "I'd like to review my transaction history for this month 001346",
+    "intent": {
+      "action": "query",
+      "queryType": "balance",
+      "token": "USDT"
+    },
+    "ghostResponse": "Understood, Sovereign. Retrieving your USDT portfolio data now.",
+    "category": "query",
+    "difficulty": "easy"
+  },
+  {
+    "input": "I'd like to review my transaction history for this month 001347",
+    "intent": {
+      "action": "query",
+      "queryType": "balance",
+      "token": "ARB"
+    },
+    "ghostResponse": "Understood, Sovereign. Retrieving your ARB portfolio data now.",
+    "category": "query",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Please display my complete portfolio breakdown 001348",
+    "intent": {
+      "action": "query",
+      "queryType": "balance",
+      "token": "BNB"
+    },
+    "ghostResponse": "Understood, Sovereign. Retrieving your BNB portfolio data now.",
+    "category": "query",
+    "difficulty": "easy"
+  },
+  {
+    "input": "What is the total value of my portfolio in USD? 001349",
+    "intent": {
+      "action": "query",
+      "queryType": "balance",
+      "token": "SOL"
+    },
+    "ghostResponse": "Understood, Sovereign. Retrieving your SOL portfolio data now.",
+    "category": "query",
+    "difficulty": "easy"
+  },
+  {
+    "input": "I'd like to review my transaction history for this month 001350",
+    "intent": {
+      "action": "query",
+      "queryType": "balance",
+      "token": "FTM"
+    },
+    "ghostResponse": "Understood, Sovereign. Retrieving your FTM portfolio data now.",
+    "category": "query",
+    "difficulty": "easy"
+  },
+  {
+    "input": "I'd like to review my transaction history for this month 001351",
+    "intent": {
+      "action": "query",
+      "queryType": "balance",
+      "token": "ETH"
+    },
+    "ghostResponse": "Understood, Sovereign. Retrieving your ETH portfolio data now.",
+    "category": "query",
+    "difficulty": "easy"
+  },
+  {
+    "input": "I'd like to review my transaction history for this month 001352",
+    "intent": {
+      "action": "query",
+      "queryType": "balance",
+      "token": "BTC"
+    },
+    "ghostResponse": "Understood, Sovereign. Retrieving your BTC portfolio data now.",
+    "category": "query",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Display my USDC position and unrealized P&L 001353",
+    "intent": {
+      "action": "query",
+      "queryType": "balance",
+      "token": "USDC"
+    },
+    "ghostResponse": "Understood, Sovereign. Retrieving your USDC portfolio data now.",
+    "category": "query",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Please display my complete portfolio breakdown 001354",
+    "intent": {
+      "action": "query",
+      "queryType": "balance",
+      "token": "USDT"
+    },
+    "ghostResponse": "Understood, Sovereign. Retrieving your USDT portfolio data now.",
+    "category": "query",
+    "difficulty": "easy"
+  },
+  {
+    "input": "I'd like to review my transaction history for this month 001355",
+    "intent": {
+      "action": "query",
+      "queryType": "balance",
+      "token": "SOL"
+    },
+    "ghostResponse": "Understood, Sovereign. Retrieving your SOL portfolio data now.",
+    "category": "query",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Display my USDT position and unrealized P&L 001356",
+    "intent": {
+      "action": "query",
+      "queryType": "balance",
+      "token": "USDT"
+    },
+    "ghostResponse": "Understood, Sovereign. Retrieving your USDT portfolio data now.",
+    "category": "query",
+    "difficulty": "easy"
+  },
+  {
+    "input": "I'd like to review my transaction history for this month 001357",
+    "intent": {
+      "action": "query",
+      "queryType": "balance",
+      "token": "ETH"
+    },
+    "ghostResponse": "Understood, Sovereign. Retrieving your ETH portfolio data now.",
+    "category": "query",
+    "difficulty": "easy"
+  },
+  {
+    "input": "What is the current allocation of my portfolio? 001358",
+    "intent": {
+      "action": "query",
+      "queryType": "balance",
+      "token": "ETH"
+    },
+    "ghostResponse": "Understood, Sovereign. Retrieving your ETH portfolio data now.",
+    "category": "query",
+    "difficulty": "easy"
+  },
+  {
+    "input": "What is the total value of my portfolio in USD? 001359",
+    "intent": {
+      "action": "query",
+      "queryType": "balance",
+      "token": "ARB"
+    },
+    "ghostResponse": "Understood, Sovereign. Retrieving your ARB portfolio data now.",
+    "category": "query",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Show all swaps executed in the past 7 days 001360",
+    "intent": {
+      "action": "query",
+      "queryType": "balance",
+      "token": "OP"
+    },
+    "ghostResponse": "Understood, Sovereign. Retrieving your OP portfolio data now.",
+    "category": "query",
+    "difficulty": "easy"
+  },
+  {
+    "input": "What is the total value of my portfolio in USD? 001361",
+    "intent": {
+      "action": "query",
+      "queryType": "balance",
+      "token": "BNB"
+    },
+    "ghostResponse": "Understood, Sovereign. Retrieving your BNB portfolio data now.",
+    "category": "query",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Display my USDT position and unrealized P&L 001362",
+    "intent": {
+      "action": "query",
+      "queryType": "balance",
+      "token": "USDT"
+    },
+    "ghostResponse": "Understood, Sovereign. Retrieving your USDT portfolio data now.",
+    "category": "query",
+    "difficulty": "easy"
+  },
+  {
+    "input": "What is the total value of my portfolio in USD? 001363",
+    "intent": {
+      "action": "query",
+      "queryType": "balance",
+      "token": "AVAX"
+    },
+    "ghostResponse": "Understood, Sovereign. Retrieving your AVAX portfolio data now.",
+    "category": "query",
+    "difficulty": "easy"
+  },
+  {
+    "input": "What is my current BTC balance? 001364",
+    "intent": {
+      "action": "query",
+      "queryType": "balance",
+      "token": "BTC"
+    },
+    "ghostResponse": "Understood, Sovereign. Retrieving your BTC portfolio data now.",
+    "category": "query",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Please display my complete portfolio breakdown 001365",
+    "intent": {
+      "action": "query",
+      "queryType": "balance",
+      "token": "BTC"
+    },
+    "ghostResponse": "Understood, Sovereign. Retrieving your BTC portfolio data now.",
+    "category": "query",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Show all swaps executed in the past 7 days 001366",
+    "intent": {
+      "action": "query",
+      "queryType": "balance",
+      "token": "USDT"
+    },
+    "ghostResponse": "Understood, Sovereign. Retrieving your USDT portfolio data now.",
+    "category": "query",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Display my OP position and unrealized P&L 001367",
+    "intent": {
+      "action": "query",
+      "queryType": "balance",
+      "token": "OP"
+    },
+    "ghostResponse": "Understood, Sovereign. Retrieving your OP portfolio data now.",
+    "category": "query",
+    "difficulty": "easy"
+  },
+  {
+    "input": "What is the current allocation of my portfolio? 001368",
+    "intent": {
+      "action": "query",
+      "queryType": "balance",
+      "token": "BNB"
+    },
+    "ghostResponse": "Understood, Sovereign. Retrieving your BNB portfolio data now.",
+    "category": "query",
+    "difficulty": "easy"
+  },
+  {
+    "input": "I'd like to review my transaction history for this month 001369",
+    "intent": {
+      "action": "query",
+      "queryType": "balance",
+      "token": "BTC"
+    },
+    "ghostResponse": "Understood, Sovereign. Retrieving your BTC portfolio data now.",
+    "category": "query",
+    "difficulty": "easy"
+  },
+  {
+    "input": "What is the total value of my portfolio in USD? 001370",
+    "intent": {
+      "action": "query",
+      "queryType": "balance",
+      "token": "ARB"
+    },
+    "ghostResponse": "Understood, Sovereign. Retrieving your ARB portfolio data now.",
+    "category": "query",
+    "difficulty": "easy"
+  },
+  {
+    "input": "What is my current SOL balance? 001371",
+    "intent": {
+      "action": "query",
+      "queryType": "balance",
+      "token": "SOL"
+    },
+    "ghostResponse": "Understood, Sovereign. Retrieving your SOL portfolio data now.",
+    "category": "query",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Show me my current holdings and their USD value 001372",
+    "intent": {
+      "action": "query",
+      "queryType": "balance",
+      "token": "ARB"
+    },
+    "ghostResponse": "Understood, Sovereign. Retrieving your ARB portfolio data now.",
+    "category": "query",
+    "difficulty": "easy"
+  },
+  {
+    "input": "I'd like to review my transaction history for this month 001373",
+    "intent": {
+      "action": "query",
+      "queryType": "balance",
+      "token": "FTM"
+    },
+    "ghostResponse": "Understood, Sovereign. Retrieving your FTM portfolio data now.",
+    "category": "query",
+    "difficulty": "easy"
+  },
+  {
+    "input": "I'd like to review my transaction history for this month 001374",
+    "intent": {
+      "action": "query",
+      "queryType": "balance",
+      "token": "USDC"
+    },
+    "ghostResponse": "Understood, Sovereign. Retrieving your USDC portfolio data now.",
+    "category": "query",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Please display my complete portfolio breakdown 001375",
+    "intent": {
+      "action": "query",
+      "queryType": "balance",
+      "token": "OP"
+    },
+    "ghostResponse": "Understood, Sovereign. Retrieving your OP portfolio data now.",
+    "category": "query",
+    "difficulty": "easy"
+  },
+  {
+    "input": "What is the total value of my portfolio in USD? 001376",
+    "intent": {
+      "action": "query",
+      "queryType": "balance",
+      "token": "BNB"
+    },
+    "ghostResponse": "Understood, Sovereign. Retrieving your BNB portfolio data now.",
+    "category": "query",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Display my USDC position and unrealized P&L 001377",
+    "intent": {
+      "action": "query",
+      "queryType": "balance",
+      "token": "USDC"
+    },
+    "ghostResponse": "Understood, Sovereign. Retrieving your USDC portfolio data now.",
+    "category": "query",
+    "difficulty": "easy"
+  },
+  {
+    "input": "What is the total value of my portfolio in USD? 001378",
+    "intent": {
+      "action": "query",
+      "queryType": "balance",
+      "token": "OP"
+    },
+    "ghostResponse": "Understood, Sovereign. Retrieving your OP portfolio data now.",
+    "category": "query",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Show all swaps executed in the past 7 days 001379",
+    "intent": {
+      "action": "query",
+      "queryType": "balance",
+      "token": "OP"
+    },
+    "ghostResponse": "Understood, Sovereign. Retrieving your OP portfolio data now.",
+    "category": "query",
+    "difficulty": "easy"
+  },
+  {
+    "input": "What is my current VEIL balance? 001380",
+    "intent": {
+      "action": "query",
+      "queryType": "balance",
+      "token": "VEIL"
+    },
+    "ghostResponse": "Understood, Sovereign. Retrieving your VEIL portfolio data now.",
+    "category": "query",
+    "difficulty": "easy"
+  },
+  {
+    "input": "What is the total value of my portfolio in USD? 001381",
+    "intent": {
+      "action": "query",
+      "queryType": "balance",
+      "token": "VEIL"
+    },
+    "ghostResponse": "Understood, Sovereign. Retrieving your VEIL portfolio data now.",
+    "category": "query",
+    "difficulty": "easy"
+  },
+  {
+    "input": "What is the current allocation of my portfolio? 001382",
+    "intent": {
+      "action": "query",
+      "queryType": "balance",
+      "token": "USDT"
+    },
+    "ghostResponse": "Understood, Sovereign. Retrieving your USDT portfolio data now.",
+    "category": "query",
+    "difficulty": "easy"
+  },
+  {
+    "input": "I'd like to review my transaction history for this month 001383",
+    "intent": {
+      "action": "query",
+      "queryType": "balance",
+      "token": "VEIL"
+    },
+    "ghostResponse": "Understood, Sovereign. Retrieving your VEIL portfolio data now.",
+    "category": "query",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Show me my current holdings and their USD value 001384",
+    "intent": {
+      "action": "query",
+      "queryType": "balance",
+      "token": "VEIL"
+    },
+    "ghostResponse": "Understood, Sovereign. Retrieving your VEIL portfolio data now.",
+    "category": "query",
+    "difficulty": "easy"
+  },
+  {
+    "input": "I'd like to review my transaction history for this month 001385",
+    "intent": {
+      "action": "query",
+      "queryType": "balance",
+      "token": "FTM"
+    },
+    "ghostResponse": "Understood, Sovereign. Retrieving your FTM portfolio data now.",
+    "category": "query",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Display my FTM position and unrealized P&L 001386",
+    "intent": {
+      "action": "query",
+      "queryType": "balance",
+      "token": "FTM"
+    },
+    "ghostResponse": "Understood, Sovereign. Retrieving your FTM portfolio data now.",
+    "category": "query",
+    "difficulty": "easy"
+  },
+  {
+    "input": "What is the total value of my portfolio in USD? 001387",
+    "intent": {
+      "action": "query",
+      "queryType": "balance",
+      "token": "BNB"
+    },
+    "ghostResponse": "Understood, Sovereign. Retrieving your BNB portfolio data now.",
+    "category": "query",
+    "difficulty": "easy"
+  },
+  {
+    "input": "I'd like to review my transaction history for this month 001388",
+    "intent": {
+      "action": "query",
+      "queryType": "balance",
+      "token": "USDT"
+    },
+    "ghostResponse": "Understood, Sovereign. Retrieving your USDT portfolio data now.",
+    "category": "query",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Please display my complete portfolio breakdown 001389",
+    "intent": {
+      "action": "query",
+      "queryType": "balance",
+      "token": "OP"
+    },
+    "ghostResponse": "Understood, Sovereign. Retrieving your OP portfolio data now.",
+    "category": "query",
+    "difficulty": "easy"
+  },
+  {
+    "input": "What is my current ETH balance? 001390",
+    "intent": {
+      "action": "query",
+      "queryType": "balance",
+      "token": "ETH"
+    },
+    "ghostResponse": "Understood, Sovereign. Retrieving your ETH portfolio data now.",
+    "category": "query",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Please display my complete portfolio breakdown 001391",
+    "intent": {
+      "action": "query",
+      "queryType": "balance",
+      "token": "USDC"
+    },
+    "ghostResponse": "Understood, Sovereign. Retrieving your USDC portfolio data now.",
+    "category": "query",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Display my OP position and unrealized P&L 001392",
+    "intent": {
+      "action": "query",
+      "queryType": "balance",
+      "token": "OP"
+    },
+    "ghostResponse": "Understood, Sovereign. Retrieving your OP portfolio data now.",
+    "category": "query",
+    "difficulty": "easy"
+  },
+  {
+    "input": "I'd like to review my transaction history for this month 001393",
+    "intent": {
+      "action": "query",
+      "queryType": "balance",
+      "token": "ETH"
+    },
+    "ghostResponse": "Understood, Sovereign. Retrieving your ETH portfolio data now.",
+    "category": "query",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Display my BNB position and unrealized P&L 001394",
+    "intent": {
+      "action": "query",
+      "queryType": "balance",
+      "token": "BNB"
+    },
+    "ghostResponse": "Understood, Sovereign. Retrieving your BNB portfolio data now.",
+    "category": "query",
+    "difficulty": "easy"
+  },
+  {
+    "input": "What is my current BTC balance? 001395",
+    "intent": {
+      "action": "query",
+      "queryType": "balance",
+      "token": "BTC"
+    },
+    "ghostResponse": "Understood, Sovereign. Retrieving your BTC portfolio data now.",
+    "category": "query",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Show all swaps executed in the past 7 days 001396",
+    "intent": {
+      "action": "query",
+      "queryType": "balance",
+      "token": "SOL"
+    },
+    "ghostResponse": "Understood, Sovereign. Retrieving your SOL portfolio data now.",
+    "category": "query",
+    "difficulty": "easy"
+  },
+  {
+    "input": "What is my current SOL balance? 001397",
+    "intent": {
+      "action": "query",
+      "queryType": "balance",
+      "token": "SOL"
+    },
+    "ghostResponse": "Understood, Sovereign. Retrieving your SOL portfolio data now.",
+    "category": "query",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Please display my complete portfolio breakdown 001398",
+    "intent": {
+      "action": "query",
+      "queryType": "balance",
+      "token": "AVAX"
+    },
+    "ghostResponse": "Understood, Sovereign. Retrieving your AVAX portfolio data now.",
+    "category": "query",
+    "difficulty": "easy"
+  },
+  {
+    "input": "What is my current USDT balance? 001399",
+    "intent": {
+      "action": "query",
+      "queryType": "balance",
+      "token": "USDT"
+    },
+    "ghostResponse": "Understood, Sovereign. Retrieving your USDT portfolio data now.",
+    "category": "query",
+    "difficulty": "easy"
+  },
+  {
+    "input": "What is the current allocation of my portfolio? 001400",
+    "intent": {
+      "action": "query",
+      "queryType": "balance",
+      "token": "ARB"
+    },
+    "ghostResponse": "Understood, Sovereign. Retrieving your ARB portfolio data now.",
+    "category": "query",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Please process the x402 payment using USDC 001401",
+    "intent": {
+      "action": "pay",
+      "token": "USDC",
+      "amount": "25",
+      "protocol": "x402"
+    },
+    "ghostResponse": "Understood, Sovereign. x402 payment of 25 USDC has been authorized.",
+    "category": "pay/x402",
+    "difficulty": "easy"
+  },
+  {
+    "input": "I would like to set a spending limit of 1000 ETH for automated payments 001402",
+    "intent": {
+      "action": "pay",
+      "token": "ETH",
+      "amount": "1000",
+      "protocol": "x402"
+    },
+    "ghostResponse": "Understood, Sovereign. x402 payment of 1000 ETH has been authorized.",
+    "category": "pay/x402",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Enable Ghost to autonomously handle x402 payments up to 2 USDC 001403",
+    "intent": {
+      "action": "pay",
+      "token": "USDC",
+      "amount": "2",
+      "protocol": "x402"
+    },
+    "ghostResponse": "Understood, Sovereign. x402 payment of 2 USDC has been authorized.",
+    "category": "pay/x402",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Configure automated API payments: max 2 USDC per request 001404",
+    "intent": {
+      "action": "pay",
+      "token": "USDC",
+      "amount": "2",
+      "protocol": "x402"
+    },
+    "ghostResponse": "Understood, Sovereign. x402 payment of 2 USDC has been authorized.",
+    "category": "pay/x402",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Please process the x402 payment using USDT 001405",
+    "intent": {
+      "action": "pay",
+      "token": "USDT",
+      "amount": "50",
+      "protocol": "x402"
+    },
+    "ghostResponse": "Understood, Sovereign. x402 payment of 50 USDT has been authorized.",
+    "category": "pay/x402",
+    "difficulty": "easy"
+  },
+  {
+    "input": "I would like to set a spending limit of 5 USDT for automated payments 001406",
+    "intent": {
+      "action": "pay",
+      "token": "USDT",
+      "amount": "5",
+      "protocol": "x402"
+    },
+    "ghostResponse": "Understood, Sovereign. x402 payment of 5 USDT has been authorized.",
+    "category": "pay/x402",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Please process the x402 payment using ETH 001407",
+    "intent": {
+      "action": "pay",
+      "token": "ETH",
+      "amount": "1",
+      "protocol": "x402"
+    },
+    "ghostResponse": "Understood, Sovereign. x402 payment of 1 ETH has been authorized.",
+    "category": "pay/x402",
+    "difficulty": "easy"
+  },
+  {
+    "input": "I would like to set a spending limit of 10 ETH for automated payments 001408",
+    "intent": {
+      "action": "pay",
+      "token": "ETH",
+      "amount": "10",
+      "protocol": "x402"
+    },
+    "ghostResponse": "Understood, Sovereign. x402 payment of 10 ETH has been authorized.",
+    "category": "pay/x402",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Approve the x402 payment protocol with a 1000 USDT budget 001409",
+    "intent": {
+      "action": "pay",
+      "token": "USDT",
+      "amount": "1000",
+      "protocol": "x402"
+    },
+    "ghostResponse": "Understood, Sovereign. x402 payment of 1000 USDT has been authorized.",
+    "category": "pay/x402",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Approve the x402 payment protocol with a 1 USDT budget 001410",
+    "intent": {
+      "action": "pay",
+      "token": "USDT",
+      "amount": "1",
+      "protocol": "x402"
+    },
+    "ghostResponse": "Understood, Sovereign. x402 payment of 1 USDT has been authorized.",
+    "category": "pay/x402",
+    "difficulty": "easy"
+  },
+  {
+    "input": "I would like to set a spending limit of 500 USDT for automated payments 001411",
+    "intent": {
+      "action": "pay",
+      "token": "USDT",
+      "amount": "500",
+      "protocol": "x402"
+    },
+    "ghostResponse": "Understood, Sovereign. x402 payment of 500 USDT has been authorized.",
+    "category": "pay/x402",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Enable Ghost to autonomously handle x402 payments up to 5 USDC 001412",
+    "intent": {
+      "action": "pay",
+      "token": "USDC",
+      "amount": "5",
+      "protocol": "x402"
+    },
+    "ghostResponse": "Understood, Sovereign. x402 payment of 5 USDC has been authorized.",
+    "category": "pay/x402",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Configure automated API payments: max 200 USDC per request 001413",
+    "intent": {
+      "action": "pay",
+      "token": "USDC",
+      "amount": "200",
+      "protocol": "x402"
+    },
+    "ghostResponse": "Understood, Sovereign. x402 payment of 200 USDC has been authorized.",
+    "category": "pay/x402",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Approve the x402 payment protocol with a 2 USDC budget 001414",
+    "intent": {
+      "action": "pay",
+      "token": "USDC",
+      "amount": "2",
+      "protocol": "x402"
+    },
+    "ghostResponse": "Understood, Sovereign. x402 payment of 2 USDC has been authorized.",
+    "category": "pay/x402",
+    "difficulty": "easy"
+  },
+  {
+    "input": "I would like to set a spending limit of 5 USDC for automated payments 001415",
+    "intent": {
+      "action": "pay",
+      "token": "USDC",
+      "amount": "5",
+      "protocol": "x402"
+    },
+    "ghostResponse": "Understood, Sovereign. x402 payment of 5 USDC has been authorized.",
+    "category": "pay/x402",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Configure automated API payments: max 100 USDC per request 001416",
+    "intent": {
+      "action": "pay",
+      "token": "USDC",
+      "amount": "100",
+      "protocol": "x402"
+    },
+    "ghostResponse": "Understood, Sovereign. x402 payment of 100 USDC has been authorized.",
+    "category": "pay/x402",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Approve the x402 payment protocol with a 10 ETH budget 001417",
+    "intent": {
+      "action": "pay",
+      "token": "ETH",
+      "amount": "10",
+      "protocol": "x402"
+    },
+    "ghostResponse": "Understood, Sovereign. x402 payment of 10 ETH has been authorized.",
+    "category": "pay/x402",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Enable Ghost to autonomously handle x402 payments up to 5 USDC 001418",
+    "intent": {
+      "action": "pay",
+      "token": "USDC",
+      "amount": "5",
+      "protocol": "x402"
+    },
+    "ghostResponse": "Understood, Sovereign. x402 payment of 5 USDC has been authorized.",
+    "category": "pay/x402",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Authorize an x402 payment of 500 ETH for this API request 001419",
+    "intent": {
+      "action": "pay",
+      "token": "ETH",
+      "amount": "500",
+      "protocol": "x402"
+    },
+    "ghostResponse": "Understood, Sovereign. x402 payment of 500 ETH has been authorized.",
+    "category": "pay/x402",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Enable Ghost to autonomously handle x402 payments up to 500 USDC 001420",
+    "intent": {
+      "action": "pay",
+      "token": "USDC",
+      "amount": "500",
+      "protocol": "x402"
+    },
+    "ghostResponse": "Understood, Sovereign. x402 payment of 500 USDC has been authorized.",
+    "category": "pay/x402",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Please process the x402 payment using USDC 001421",
+    "intent": {
+      "action": "pay",
+      "token": "USDC",
+      "amount": "0.5",
+      "protocol": "x402"
+    },
+    "ghostResponse": "Understood, Sovereign. x402 payment of 0.5 USDC has been authorized.",
+    "category": "pay/x402",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Approve the x402 payment protocol with a 5 USDT budget 001422",
+    "intent": {
+      "action": "pay",
+      "token": "USDT",
+      "amount": "5",
+      "protocol": "x402"
+    },
+    "ghostResponse": "Understood, Sovereign. x402 payment of 5 USDT has been authorized.",
+    "category": "pay/x402",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Please process the x402 payment using ETH 001423",
+    "intent": {
+      "action": "pay",
+      "token": "ETH",
+      "amount": "100",
+      "protocol": "x402"
+    },
+    "ghostResponse": "Understood, Sovereign. x402 payment of 100 ETH has been authorized.",
+    "category": "pay/x402",
+    "difficulty": "easy"
+  },
+  {
+    "input": "I would like to set a spending limit of 50 USDT for automated payments 001424",
+    "intent": {
+      "action": "pay",
+      "token": "USDT",
+      "amount": "50",
+      "protocol": "x402"
+    },
+    "ghostResponse": "Understood, Sovereign. x402 payment of 50 USDT has been authorized.",
+    "category": "pay/x402",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Enable Ghost to autonomously handle x402 payments up to 200 ETH 001425",
+    "intent": {
+      "action": "pay",
+      "token": "ETH",
+      "amount": "200",
+      "protocol": "x402"
+    },
+    "ghostResponse": "Understood, Sovereign. x402 payment of 200 ETH has been authorized.",
+    "category": "pay/x402",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Please process the x402 payment using ETH 001426",
+    "intent": {
+      "action": "pay",
+      "token": "ETH",
+      "amount": "500",
+      "protocol": "x402"
+    },
+    "ghostResponse": "Understood, Sovereign. x402 payment of 500 ETH has been authorized.",
+    "category": "pay/x402",
+    "difficulty": "easy"
+  },
+  {
+    "input": "I would like to set a spending limit of 200 USDT for automated payments 001427",
+    "intent": {
+      "action": "pay",
+      "token": "USDT",
+      "amount": "200",
+      "protocol": "x402"
+    },
+    "ghostResponse": "Understood, Sovereign. x402 payment of 200 USDT has been authorized.",
+    "category": "pay/x402",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Enable Ghost to autonomously handle x402 payments up to 500 USDC 001428",
+    "intent": {
+      "action": "pay",
+      "token": "USDC",
+      "amount": "500",
+      "protocol": "x402"
+    },
+    "ghostResponse": "Understood, Sovereign. x402 payment of 500 USDC has been authorized.",
+    "category": "pay/x402",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Configure automated API payments: max 0.1 USDT per request 001429",
+    "intent": {
+      "action": "pay",
+      "token": "USDT",
+      "amount": "0.1",
+      "protocol": "x402"
+    },
+    "ghostResponse": "Understood, Sovereign. x402 payment of 0.1 USDT has been authorized.",
+    "category": "pay/x402",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Please process the x402 payment using USDT 001430",
+    "intent": {
+      "action": "pay",
+      "token": "USDT",
+      "amount": "1000",
+      "protocol": "x402"
+    },
+    "ghostResponse": "Understood, Sovereign. x402 payment of 1000 USDT has been authorized.",
+    "category": "pay/x402",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Approve the x402 payment protocol with a 500 USDC budget 001431",
+    "intent": {
+      "action": "pay",
+      "token": "USDC",
+      "amount": "500",
+      "protocol": "x402"
+    },
+    "ghostResponse": "Understood, Sovereign. x402 payment of 500 USDC has been authorized.",
+    "category": "pay/x402",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Approve the x402 payment protocol with a 1000 USDC budget 001432",
+    "intent": {
+      "action": "pay",
+      "token": "USDC",
+      "amount": "1000",
+      "protocol": "x402"
+    },
+    "ghostResponse": "Understood, Sovereign. x402 payment of 1000 USDC has been authorized.",
+    "category": "pay/x402",
+    "difficulty": "easy"
+  },
+  {
+    "input": "I would like to set a spending limit of 200 USDC for automated payments 001433",
+    "intent": {
+      "action": "pay",
+      "token": "USDC",
+      "amount": "200",
+      "protocol": "x402"
+    },
+    "ghostResponse": "Understood, Sovereign. x402 payment of 200 USDC has been authorized.",
+    "category": "pay/x402",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Authorize an x402 payment of 50 USDT for this API request 001434",
+    "intent": {
+      "action": "pay",
+      "token": "USDT",
+      "amount": "50",
+      "protocol": "x402"
+    },
+    "ghostResponse": "Understood, Sovereign. x402 payment of 50 USDT has been authorized.",
+    "category": "pay/x402",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Please process the x402 payment using ETH 001435",
+    "intent": {
+      "action": "pay",
+      "token": "ETH",
+      "amount": "25",
+      "protocol": "x402"
+    },
+    "ghostResponse": "Understood, Sovereign. x402 payment of 25 ETH has been authorized.",
+    "category": "pay/x402",
+    "difficulty": "easy"
+  },
+  {
+    "input": "I would like to set a spending limit of 100 USDC for automated payments 001436",
+    "intent": {
+      "action": "pay",
+      "token": "USDC",
+      "amount": "100",
+      "protocol": "x402"
+    },
+    "ghostResponse": "Understood, Sovereign. x402 payment of 100 USDC has been authorized.",
+    "category": "pay/x402",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Configure automated API payments: max 5 USDT per request 001437",
+    "intent": {
+      "action": "pay",
+      "token": "USDT",
+      "amount": "5",
+      "protocol": "x402"
+    },
+    "ghostResponse": "Understood, Sovereign. x402 payment of 5 USDT has been authorized.",
+    "category": "pay/x402",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Configure automated API payments: max 1000 ETH per request 001438",
+    "intent": {
+      "action": "pay",
+      "token": "ETH",
+      "amount": "1000",
+      "protocol": "x402"
+    },
+    "ghostResponse": "Understood, Sovereign. x402 payment of 1000 ETH has been authorized.",
+    "category": "pay/x402",
+    "difficulty": "easy"
+  },
+  {
+    "input": "I would like to set a spending limit of 200 ETH for automated payments 001439",
+    "intent": {
+      "action": "pay",
+      "token": "ETH",
+      "amount": "200",
+      "protocol": "x402"
+    },
+    "ghostResponse": "Understood, Sovereign. x402 payment of 200 ETH has been authorized.",
+    "category": "pay/x402",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Approve the x402 payment protocol with a 0.5 ETH budget 001440",
+    "intent": {
+      "action": "pay",
+      "token": "ETH",
+      "amount": "0.5",
+      "protocol": "x402"
+    },
+    "ghostResponse": "Understood, Sovereign. x402 payment of 0.5 ETH has been authorized.",
+    "category": "pay/x402",
+    "difficulty": "easy"
+  },
+  {
+    "input": "I would like to set a spending limit of 50 ETH for automated payments 001441",
+    "intent": {
+      "action": "pay",
+      "token": "ETH",
+      "amount": "50",
+      "protocol": "x402"
+    },
+    "ghostResponse": "Understood, Sovereign. x402 payment of 50 ETH has been authorized.",
+    "category": "pay/x402",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Please process the x402 payment using USDT 001442",
+    "intent": {
+      "action": "pay",
+      "token": "USDT",
+      "amount": "200",
+      "protocol": "x402"
+    },
+    "ghostResponse": "Understood, Sovereign. x402 payment of 200 USDT has been authorized.",
+    "category": "pay/x402",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Approve the x402 payment protocol with a 25 USDC budget 001443",
+    "intent": {
+      "action": "pay",
+      "token": "USDC",
+      "amount": "25",
+      "protocol": "x402"
+    },
+    "ghostResponse": "Understood, Sovereign. x402 payment of 25 USDC has been authorized.",
+    "category": "pay/x402",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Configure automated API payments: max 50 USDC per request 001444",
+    "intent": {
+      "action": "pay",
+      "token": "USDC",
+      "amount": "50",
+      "protocol": "x402"
+    },
+    "ghostResponse": "Understood, Sovereign. x402 payment of 50 USDC has been authorized.",
+    "category": "pay/x402",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Authorize an x402 payment of 2 USDT for this API request 001445",
+    "intent": {
+      "action": "pay",
+      "token": "USDT",
+      "amount": "2",
+      "protocol": "x402"
+    },
+    "ghostResponse": "Understood, Sovereign. x402 payment of 2 USDT has been authorized.",
+    "category": "pay/x402",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Enable Ghost to autonomously handle x402 payments up to 5 USDT 001446",
+    "intent": {
+      "action": "pay",
+      "token": "USDT",
+      "amount": "5",
+      "protocol": "x402"
+    },
+    "ghostResponse": "Understood, Sovereign. x402 payment of 5 USDT has been authorized.",
+    "category": "pay/x402",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Configure automated API payments: max 1 USDC per request 001447",
+    "intent": {
+      "action": "pay",
+      "token": "USDC",
+      "amount": "1",
+      "protocol": "x402"
+    },
+    "ghostResponse": "Understood, Sovereign. x402 payment of 1 USDC has been authorized.",
+    "category": "pay/x402",
+    "difficulty": "easy"
+  },
+  {
+    "input": "I would like to set a spending limit of 0.1 USDC for automated payments 001448",
+    "intent": {
+      "action": "pay",
+      "token": "USDC",
+      "amount": "0.1",
+      "protocol": "x402"
+    },
+    "ghostResponse": "Understood, Sovereign. x402 payment of 0.1 USDC has been authorized.",
+    "category": "pay/x402",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Approve the x402 payment protocol with a 25 USDC budget 001449",
+    "intent": {
+      "action": "pay",
+      "token": "USDC",
+      "amount": "25",
+      "protocol": "x402"
+    },
+    "ghostResponse": "Understood, Sovereign. x402 payment of 25 USDC has been authorized.",
+    "category": "pay/x402",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Authorize an x402 payment of 5 USDC for this API request 001450",
+    "intent": {
+      "action": "pay",
+      "token": "USDC",
+      "amount": "5",
+      "protocol": "x402"
+    },
+    "ghostResponse": "Understood, Sovereign. x402 payment of 5 USDC has been authorized.",
+    "category": "pay/x402",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Enable Ghost to autonomously handle x402 payments up to 0.1 ETH 001451",
+    "intent": {
+      "action": "pay",
+      "token": "ETH",
+      "amount": "0.1",
+      "protocol": "x402"
+    },
+    "ghostResponse": "Understood, Sovereign. x402 payment of 0.1 ETH has been authorized.",
+    "category": "pay/x402",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Authorize an x402 payment of 100 USDC for this API request 001452",
+    "intent": {
+      "action": "pay",
+      "token": "USDC",
+      "amount": "100",
+      "protocol": "x402"
+    },
+    "ghostResponse": "Understood, Sovereign. x402 payment of 100 USDC has been authorized.",
+    "category": "pay/x402",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Approve the x402 payment protocol with a 50 ETH budget 001453",
+    "intent": {
+      "action": "pay",
+      "token": "ETH",
+      "amount": "50",
+      "protocol": "x402"
+    },
+    "ghostResponse": "Understood, Sovereign. x402 payment of 50 ETH has been authorized.",
+    "category": "pay/x402",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Configure automated API payments: max 0.5 USDC per request 001454",
+    "intent": {
+      "action": "pay",
+      "token": "USDC",
+      "amount": "0.5",
+      "protocol": "x402"
+    },
+    "ghostResponse": "Understood, Sovereign. x402 payment of 0.5 USDC has been authorized.",
+    "category": "pay/x402",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Please process the x402 payment using ETH 001455",
+    "intent": {
+      "action": "pay",
+      "token": "ETH",
+      "amount": "100",
+      "protocol": "x402"
+    },
+    "ghostResponse": "Understood, Sovereign. x402 payment of 100 ETH has been authorized.",
+    "category": "pay/x402",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Configure automated API payments: max 0.5 USDC per request 001456",
+    "intent": {
+      "action": "pay",
+      "token": "USDC",
+      "amount": "0.5",
+      "protocol": "x402"
+    },
+    "ghostResponse": "Understood, Sovereign. x402 payment of 0.5 USDC has been authorized.",
+    "category": "pay/x402",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Approve the x402 payment protocol with a 1 USDT budget 001457",
+    "intent": {
+      "action": "pay",
+      "token": "USDT",
+      "amount": "1",
+      "protocol": "x402"
+    },
+    "ghostResponse": "Understood, Sovereign. x402 payment of 1 USDT has been authorized.",
+    "category": "pay/x402",
+    "difficulty": "easy"
+  },
+  {
+    "input": "I would like to set a spending limit of 0.5 ETH for automated payments 001458",
+    "intent": {
+      "action": "pay",
+      "token": "ETH",
+      "amount": "0.5",
+      "protocol": "x402"
+    },
+    "ghostResponse": "Understood, Sovereign. x402 payment of 0.5 ETH has been authorized.",
+    "category": "pay/x402",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Configure automated API payments: max 1000 USDT per request 001459",
+    "intent": {
+      "action": "pay",
+      "token": "USDT",
+      "amount": "1000",
+      "protocol": "x402"
+    },
+    "ghostResponse": "Understood, Sovereign. x402 payment of 1000 USDT has been authorized.",
+    "category": "pay/x402",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Approve the x402 payment protocol with a 50 USDT budget 001460",
+    "intent": {
+      "action": "pay",
+      "token": "USDT",
+      "amount": "50",
+      "protocol": "x402"
+    },
+    "ghostResponse": "Understood, Sovereign. x402 payment of 50 USDT has been authorized.",
+    "category": "pay/x402",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Configure automated API payments: max 200 ETH per request 001461",
+    "intent": {
+      "action": "pay",
+      "token": "ETH",
+      "amount": "200",
+      "protocol": "x402"
+    },
+    "ghostResponse": "Understood, Sovereign. x402 payment of 200 ETH has been authorized.",
+    "category": "pay/x402",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Authorize an x402 payment of 100 ETH for this API request 001462",
+    "intent": {
+      "action": "pay",
+      "token": "ETH",
+      "amount": "100",
+      "protocol": "x402"
+    },
+    "ghostResponse": "Understood, Sovereign. x402 payment of 100 ETH has been authorized.",
+    "category": "pay/x402",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Please process the x402 payment using USDT 001463",
+    "intent": {
+      "action": "pay",
+      "token": "USDT",
+      "amount": "5",
+      "protocol": "x402"
+    },
+    "ghostResponse": "Understood, Sovereign. x402 payment of 5 USDT has been authorized.",
+    "category": "pay/x402",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Please process the x402 payment using USDT 001464",
+    "intent": {
+      "action": "pay",
+      "token": "USDT",
+      "amount": "2",
+      "protocol": "x402"
+    },
+    "ghostResponse": "Understood, Sovereign. x402 payment of 2 USDT has been authorized.",
+    "category": "pay/x402",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Approve the x402 payment protocol with a 50 USDC budget 001465",
+    "intent": {
+      "action": "pay",
+      "token": "USDC",
+      "amount": "50",
+      "protocol": "x402"
+    },
+    "ghostResponse": "Understood, Sovereign. x402 payment of 50 USDC has been authorized.",
+    "category": "pay/x402",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Configure automated API payments: max 1000 USDT per request 001466",
+    "intent": {
+      "action": "pay",
+      "token": "USDT",
+      "amount": "1000",
+      "protocol": "x402"
+    },
+    "ghostResponse": "Understood, Sovereign. x402 payment of 1000 USDT has been authorized.",
+    "category": "pay/x402",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Authorize an x402 payment of 500 ETH for this API request 001467",
+    "intent": {
+      "action": "pay",
+      "token": "ETH",
+      "amount": "500",
+      "protocol": "x402"
+    },
+    "ghostResponse": "Understood, Sovereign. x402 payment of 500 ETH has been authorized.",
+    "category": "pay/x402",
+    "difficulty": "easy"
+  },
+  {
+    "input": "I would like to set a spending limit of 0.5 USDT for automated payments 001468",
+    "intent": {
+      "action": "pay",
+      "token": "USDT",
+      "amount": "0.5",
+      "protocol": "x402"
+    },
+    "ghostResponse": "Understood, Sovereign. x402 payment of 0.5 USDT has been authorized.",
+    "category": "pay/x402",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Approve the x402 payment protocol with a 0.1 USDT budget 001469",
+    "intent": {
+      "action": "pay",
+      "token": "USDT",
+      "amount": "0.1",
+      "protocol": "x402"
+    },
+    "ghostResponse": "Understood, Sovereign. x402 payment of 0.1 USDT has been authorized.",
+    "category": "pay/x402",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Authorize an x402 payment of 1 USDT for this API request 001470",
+    "intent": {
+      "action": "pay",
+      "token": "USDT",
+      "amount": "1",
+      "protocol": "x402"
+    },
+    "ghostResponse": "Understood, Sovereign. x402 payment of 1 USDT has been authorized.",
+    "category": "pay/x402",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Configure automated API payments: max 500 USDT per request 001471",
+    "intent": {
+      "action": "pay",
+      "token": "USDT",
+      "amount": "500",
+      "protocol": "x402"
+    },
+    "ghostResponse": "Understood, Sovereign. x402 payment of 500 USDT has been authorized.",
+    "category": "pay/x402",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Enable Ghost to autonomously handle x402 payments up to 200 USDC 001472",
+    "intent": {
+      "action": "pay",
+      "token": "USDC",
+      "amount": "200",
+      "protocol": "x402"
+    },
+    "ghostResponse": "Understood, Sovereign. x402 payment of 200 USDC has been authorized.",
+    "category": "pay/x402",
+    "difficulty": "easy"
+  },
+  {
+    "input": "I would like to set a spending limit of 1 USDC for automated payments 001473",
+    "intent": {
+      "action": "pay",
+      "token": "USDC",
+      "amount": "1",
+      "protocol": "x402"
+    },
+    "ghostResponse": "Understood, Sovereign. x402 payment of 1 USDC has been authorized.",
+    "category": "pay/x402",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Approve the x402 payment protocol with a 2 USDC budget 001474",
+    "intent": {
+      "action": "pay",
+      "token": "USDC",
+      "amount": "2",
+      "protocol": "x402"
+    },
+    "ghostResponse": "Understood, Sovereign. x402 payment of 2 USDC has been authorized.",
+    "category": "pay/x402",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Enable Ghost to autonomously handle x402 payments up to 500 USDC 001475",
+    "intent": {
+      "action": "pay",
+      "token": "USDC",
+      "amount": "500",
+      "protocol": "x402"
+    },
+    "ghostResponse": "Understood, Sovereign. x402 payment of 500 USDC has been authorized.",
+    "category": "pay/x402",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Enable Ghost to autonomously handle x402 payments up to 500 ETH 001476",
+    "intent": {
+      "action": "pay",
+      "token": "ETH",
+      "amount": "500",
+      "protocol": "x402"
+    },
+    "ghostResponse": "Understood, Sovereign. x402 payment of 500 ETH has been authorized.",
+    "category": "pay/x402",
+    "difficulty": "easy"
+  },
+  {
+    "input": "I would like to set a spending limit of 1000 ETH for automated payments 001477",
+    "intent": {
+      "action": "pay",
+      "token": "ETH",
+      "amount": "1000",
+      "protocol": "x402"
+    },
+    "ghostResponse": "Understood, Sovereign. x402 payment of 1000 ETH has been authorized.",
+    "category": "pay/x402",
+    "difficulty": "easy"
+  },
+  {
+    "input": "I would like to set a spending limit of 0.1 USDT for automated payments 001478",
+    "intent": {
+      "action": "pay",
+      "token": "USDT",
+      "amount": "0.1",
+      "protocol": "x402"
+    },
+    "ghostResponse": "Understood, Sovereign. x402 payment of 0.1 USDT has been authorized.",
+    "category": "pay/x402",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Enable Ghost to autonomously handle x402 payments up to 10 USDT 001479",
+    "intent": {
+      "action": "pay",
+      "token": "USDT",
+      "amount": "10",
+      "protocol": "x402"
+    },
+    "ghostResponse": "Understood, Sovereign. x402 payment of 10 USDT has been authorized.",
+    "category": "pay/x402",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Please process the x402 payment using USDT 001480",
+    "intent": {
+      "action": "pay",
+      "token": "USDT",
+      "amount": "5",
+      "protocol": "x402"
+    },
+    "ghostResponse": "Understood, Sovereign. x402 payment of 5 USDT has been authorized.",
+    "category": "pay/x402",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Enable Ghost to autonomously handle x402 payments up to 500 USDT 001481",
+    "intent": {
+      "action": "pay",
+      "token": "USDT",
+      "amount": "500",
+      "protocol": "x402"
+    },
+    "ghostResponse": "Understood, Sovereign. x402 payment of 500 USDT has been authorized.",
+    "category": "pay/x402",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Approve the x402 payment protocol with a 0.1 USDC budget 001482",
+    "intent": {
+      "action": "pay",
+      "token": "USDC",
+      "amount": "0.1",
+      "protocol": "x402"
+    },
+    "ghostResponse": "Understood, Sovereign. x402 payment of 0.1 USDC has been authorized.",
+    "category": "pay/x402",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Enable Ghost to autonomously handle x402 payments up to 10 ETH 001483",
+    "intent": {
+      "action": "pay",
+      "token": "ETH",
+      "amount": "10",
+      "protocol": "x402"
+    },
+    "ghostResponse": "Understood, Sovereign. x402 payment of 10 ETH has been authorized.",
+    "category": "pay/x402",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Enable Ghost to autonomously handle x402 payments up to 10 USDT 001484",
+    "intent": {
+      "action": "pay",
+      "token": "USDT",
+      "amount": "10",
+      "protocol": "x402"
+    },
+    "ghostResponse": "Understood, Sovereign. x402 payment of 10 USDT has been authorized.",
+    "category": "pay/x402",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Please process the x402 payment using USDT 001485",
+    "intent": {
+      "action": "pay",
+      "token": "USDT",
+      "amount": "100",
+      "protocol": "x402"
+    },
+    "ghostResponse": "Understood, Sovereign. x402 payment of 100 USDT has been authorized.",
+    "category": "pay/x402",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Authorize an x402 payment of 1000 USDT for this API request 001486",
+    "intent": {
+      "action": "pay",
+      "token": "USDT",
+      "amount": "1000",
+      "protocol": "x402"
+    },
+    "ghostResponse": "Understood, Sovereign. x402 payment of 1000 USDT has been authorized.",
+    "category": "pay/x402",
+    "difficulty": "easy"
+  },
+  {
+    "input": "I would like to set a spending limit of 500 USDC for automated payments 001487",
+    "intent": {
+      "action": "pay",
+      "token": "USDC",
+      "amount": "500",
+      "protocol": "x402"
+    },
+    "ghostResponse": "Understood, Sovereign. x402 payment of 500 USDC has been authorized.",
+    "category": "pay/x402",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Authorize an x402 payment of 2 USDC for this API request 001488",
+    "intent": {
+      "action": "pay",
+      "token": "USDC",
+      "amount": "2",
+      "protocol": "x402"
+    },
+    "ghostResponse": "Understood, Sovereign. x402 payment of 2 USDC has been authorized.",
+    "category": "pay/x402",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Authorize an x402 payment of 1 USDT for this API request 001489",
+    "intent": {
+      "action": "pay",
+      "token": "USDT",
+      "amount": "1",
+      "protocol": "x402"
+    },
+    "ghostResponse": "Understood, Sovereign. x402 payment of 1 USDT has been authorized.",
+    "category": "pay/x402",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Please process the x402 payment using USDC 001490",
+    "intent": {
+      "action": "pay",
+      "token": "USDC",
+      "amount": "10",
+      "protocol": "x402"
+    },
+    "ghostResponse": "Understood, Sovereign. x402 payment of 10 USDC has been authorized.",
+    "category": "pay/x402",
+    "difficulty": "easy"
+  },
+  {
+    "input": "I would like to set a spending limit of 50 USDT for automated payments 001491",
+    "intent": {
+      "action": "pay",
+      "token": "USDT",
+      "amount": "50",
+      "protocol": "x402"
+    },
+    "ghostResponse": "Understood, Sovereign. x402 payment of 50 USDT has been authorized.",
+    "category": "pay/x402",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Approve the x402 payment protocol with a 2 USDC budget 001492",
+    "intent": {
+      "action": "pay",
+      "token": "USDC",
+      "amount": "2",
+      "protocol": "x402"
+    },
+    "ghostResponse": "Understood, Sovereign. x402 payment of 2 USDC has been authorized.",
+    "category": "pay/x402",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Configure automated API payments: max 25 USDT per request 001493",
+    "intent": {
+      "action": "pay",
+      "token": "USDT",
+      "amount": "25",
+      "protocol": "x402"
+    },
+    "ghostResponse": "Understood, Sovereign. x402 payment of 25 USDT has been authorized.",
+    "category": "pay/x402",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Authorize an x402 payment of 1000 ETH for this API request 001494",
+    "intent": {
+      "action": "pay",
+      "token": "ETH",
+      "amount": "1000",
+      "protocol": "x402"
+    },
+    "ghostResponse": "Understood, Sovereign. x402 payment of 1000 ETH has been authorized.",
+    "category": "pay/x402",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Authorize an x402 payment of 1 ETH for this API request 001495",
+    "intent": {
+      "action": "pay",
+      "token": "ETH",
+      "amount": "1",
+      "protocol": "x402"
+    },
+    "ghostResponse": "Understood, Sovereign. x402 payment of 1 ETH has been authorized.",
+    "category": "pay/x402",
+    "difficulty": "easy"
+  },
+  {
+    "input": "I would like to set a spending limit of 2 USDT for automated payments 001496",
+    "intent": {
+      "action": "pay",
+      "token": "USDT",
+      "amount": "2",
+      "protocol": "x402"
+    },
+    "ghostResponse": "Understood, Sovereign. x402 payment of 2 USDT has been authorized.",
+    "category": "pay/x402",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Approve the x402 payment protocol with a 100 USDT budget 001497",
+    "intent": {
+      "action": "pay",
+      "token": "USDT",
+      "amount": "100",
+      "protocol": "x402"
+    },
+    "ghostResponse": "Understood, Sovereign. x402 payment of 100 USDT has been authorized.",
+    "category": "pay/x402",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Authorize an x402 payment of 0.5 ETH for this API request 001498",
+    "intent": {
+      "action": "pay",
+      "token": "ETH",
+      "amount": "0.5",
+      "protocol": "x402"
+    },
+    "ghostResponse": "Understood, Sovereign. x402 payment of 0.5 ETH has been authorized.",
+    "category": "pay/x402",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Configure automated API payments: max 5 ETH per request 001499",
+    "intent": {
+      "action": "pay",
+      "token": "ETH",
+      "amount": "5",
+      "protocol": "x402"
+    },
+    "ghostResponse": "Understood, Sovereign. x402 payment of 5 ETH has been authorized.",
+    "category": "pay/x402",
+    "difficulty": "easy"
+  },
+  {
+    "input": "Approve the x402 payment protocol with a 100 USDC budget 001500",
+    "intent": {
+      "action": "pay",
+      "token": "USDC",
+      "amount": "100",
+      "protocol": "x402"
+    },
+    "ghostResponse": "Understood, Sovereign. x402 payment of 100 USDC has been authorized.",
+    "category": "pay/x402",
+    "difficulty": "easy"
+  }
+]

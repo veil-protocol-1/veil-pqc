@@ -1,0 +1,72 @@
+{
+  "name": "veil-protocol",
+  "version": "1.0.0",
+  "description": "Quantum-resistant payments (ML-DSA-65 / x402-pqc) and private DeFi AI inference (Ghost via Octra Circles FHE) for autonomous agents.",
+  "license": "Apache-2.0",
+  "homepage": "https://veilprotocol.net",
+  "repository": "https://github.com/veil-protocol/veil-pqc",
+  "keywords": ["payments", "post-quantum", "defi", "privacy", "fhe", "mcp"],
+  "installation": {
+    "command": "npx",
+    "args": ["@veil_/agent-registry"]
+  },
+  "tools": [
+    {
+      "name": "veil_sign_payment",
+      "description": "Sign a quantum-resistant payment using ML-DSA-65 post-quantum cryptography via Veil Protocol's x402-pqc standard. Use when you need to make a payment that is secure against quantum computers.",
+      "inputSchema": {
+        "type": "object",
+        "required": ["amount", "currency", "recipient", "network"],
+        "properties": {
+          "amount":    { "type": "string", "description": "Decimal amount, e.g. \"12.50\"" },
+          "currency":  { "type": "string", "enum": ["USDC", "ETH", "VEIL"] },
+          "recipient": { "type": "string", "description": "0x recipient address" },
+          "network":   { "type": "string", "enum": ["base", "base-sepolia"] }
+        }
+      }
+    },
+    {
+      "name": "veil_verify_payment",
+      "description": "Verify a quantum-resistant x402-pqc payment signature. Use to confirm a payment was properly signed with post-quantum cryptography.",
+      "inputSchema": {
+        "type": "object",
+        "required": ["paymentHeader", "expectedAmount", "expectedRecipient"],
+        "properties": {
+          "paymentHeader":      { "type": "string" },
+          "expectedAmount":     { "type": "string" },
+          "expectedRecipient":  { "type": "string" }
+        }
+      }
+    },
+    {
+      "name": "veil_ghost_query",
+      "description": "Query Ghost, Veil's private AI agent, for DeFi intent parsing and execution planning. Ghost executes inside Octra Circles — sealed FHE environments where no node sees your instructions in plaintext.",
+      "inputSchema": {
+        "type": "object",
+        "required": ["instruction"],
+        "properties": {
+          "instruction": { "type": "string", "description": "Natural language DeFi intent" },
+          "context": {
+            "type": "object",
+            "properties": {
+              "balances": { "type": "object", "additionalProperties": { "type": "string" } },
+              "network":  { "type": "string" }
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "veil_encrypt_payload",
+      "description": "Encrypt a payload using ML-KEM-768 post-quantum key encapsulation. Use when you need quantum-resistant encryption for sensitive data.",
+      "inputSchema": {
+        "type": "object",
+        "required": ["payload", "recipientPublicKey"],
+        "properties": {
+          "payload":            { "type": "string" },
+          "recipientPublicKey": { "type": "string", "description": "Hex-encoded ML-KEM-768 public key" }
+        }
+      }
+    }
+  ]
+}

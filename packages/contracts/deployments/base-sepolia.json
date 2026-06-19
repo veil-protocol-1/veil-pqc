@@ -1,0 +1,13 @@
+{
+  "network": "base-sepolia",
+  "chainId": 84532,
+  "deployedAt": "2026-06-14T06:08:03.356Z",
+  "contracts": {
+    "VEILToken": "0xC6c640Dc728141F462c0BB5BacDFa6E334DC151b",
+    "VEILTreasury": "0x77761912b6435287f2b4DaAe93c02611351e7750",
+    "VEILVesting": "0x7f2D3896DEfb860747979166e5323a62D2ba90d3",
+    "VEILNodeRegistry": "0xed79Cf810eeF76F8a7379a79A1Be304f0CFE5f05",
+    "VEILPaymaster": "0xa2e27b86479D97a1d0914a6B288dA1a0B27597Bd",
+    "x402PQCPayments": "0x061e6F1D6C93302A0818150e44cE7c4abB400D6e"
+  }
+}

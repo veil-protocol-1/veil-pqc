@@ -1,0 +1,16 @@
+[Unit]
+Description=Veil API Node
+After=network.target
+
+[Service]
+Type=simple
+EnvironmentFile=/opt/veil-api/.env
+ExecStart=/usr/bin/node /opt/veil-api/bundle.js
+Restart=always
+RestartSec=5
+StandardOutput=journal
+StandardError=journal
+User=root
+
+[Install]
+WantedBy=multi-user.target

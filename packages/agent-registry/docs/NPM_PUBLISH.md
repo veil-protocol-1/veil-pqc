@@ -1,0 +1,46 @@
+# Publishing @veil/agent-registry to npm
+
+## Pre-publish checklist
+
+```bash
+pnpm --filter @veil/agent-registry typecheck
+pnpm --filter @veil/agent-registry test
+pnpm --filter @veil/agent-registry build
+```
+
+## Publish
+
+From the repo root, with an npm account that has access to the `@veil` org:
+
+```bash
+pnpm --filter @veil/agent-registry publish --access public --tag latest
+```
+
+## Pre-release tags
+
+For a release candidate before a marketplace submission is approved:
+
+```bash
+pnpm --filter @veil/agent-registry publish --access public --tag next
+```
+
+Install the pre-release with:
+
+```bash
+npm install @veil/agent-registry@next
+```
+
+## Verifying the MCP bin
+
+After publishing, confirm the `veil-mcp` bin resolves correctly:
+
+```bash
+npx @veil/agent-registry
+```
+
+This should start the MCP server on stdio with no errors.
+
+## Links
+
+- https://veilprotocol.net
+- https://veilprotocol.net/docs

@@ -1,0 +1,22 @@
+{
+  "name": "@veil/contracts",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Veil 2.0 core protocol smart contracts",
+  "scripts": {
+    "build": "hardhat compile",
+    "test": "hardhat test",
+    "deploy:base-sepolia": "hardhat run scripts/deploy.ts --network base-sepolia",
+    "verify": "hardhat run scripts/verify.ts --network base-sepolia",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "@openzeppelin/contracts": "^5.1.0",
+    "@types/node": "^20.0.0",
+    "dotenv": "^16.6.1",
+    "hardhat": "^2.22.0",
+    "ts-node": "^10.9.0",
+    "typescript": "^5.4.0"
+  }
+}

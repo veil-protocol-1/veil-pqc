@@ -1,0 +1,21 @@
+node_modules/
+dist/
+.next/
+.turbo/
+*.log
+.env
+.env.local
+.env.*.local
+*.local.env
+coverage/
+*.tsbuildinfo
+secrets/
+*.tgz
+.DS_Store
+
+# Nested repos (handle separately)
+apps/mobile/
+wallet-gen/
+# Hardhat generated
+packages/contracts/cache/
+packages/contracts/typechain-types/
