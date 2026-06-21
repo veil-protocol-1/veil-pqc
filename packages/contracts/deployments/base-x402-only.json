@@ -1,0 +1,12 @@
+{
+  "network": "base",
+  "label": "Base MAINNET (real funds)",
+  "chainId": 8453,
+  "deployedAt": "2026-06-21T17:01:58.082Z",
+  "contract": "x402PQCPayments",
+  "address": "0x8F446afA9877C79F3CCb5eaA5b6503752817223f",
+  "owner": "0xdEaD1f7583DEFE7A7fD701ea04ba49C14f871a0b",
+  "txHash": "0xa5944a29db48086fed450a4c71033d223ad1e00af97c0c73311f64c16ca1c87d",
+  "blockNumber": 47635981,
+  "gasUsed": "411897"
+}

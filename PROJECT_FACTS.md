@@ -55,6 +55,20 @@ Do not use `veilprotocol`, `veil-protocol`, or any other variation. The `-1` suf
 
 > Redeployed 2026-06-19: x402PQCPayments now overrides `renounceOwnership()` to always revert, preventing permanent owner lockout.
 
+## x402PQCPayments — Base MAINNET (real funds)
+
+| Field | Value |
+|-------|-------|
+| **Address** | `0x8F446afA9877C79F3CCb5eaA5b6503752817223f` |
+| **Owner** | `0xdEaD1f7583DEFE7A7fD701ea04ba49C14f871a0b` (Gnosis Safe) |
+| **Tx hash** | `0xa5944a29db48086fed450a4c71033d223ad1e00af97c0c73311f64c16ca1c87d` |
+| **Block** | `47635981` |
+| **Gas used** | `411,897` |
+| **Deployed** | 2026-06-21 |
+| **Manifest** | `packages/contracts/deployments/base-x402-only.json` |
+
+> Deployed 2026-06-21 via `scripts/deploy-x402-mainnet-only.ts`. owner() verified on-chain to return the Safe address (not the deployer EOA). Bytecode verified at 1532 bytes. This address is **Base mainnet** — do not confuse with the Sepolia address `0xd56F1D27d3ba06EF46F9712d050Dc88FE933131E`, which remains the testnet reference.
+
 **Mainnet status:** ALL contracts remain Base Sepolia testnet only, **EXCEPT one explicit, narrowly-scoped exception: x402PQCPayments.**
 
 This exception was deliberately approved (June 19 2026) because:
