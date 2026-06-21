@@ -46,10 +46,27 @@ Do not use `veilprotocol`, `veil-protocol`, or any other variation. The `-1` suf
 
 | Contract | Address |
 |----------|---------|
-| VEILTreasury | `0x77761912b6435287f2b4DaAe93c02611351e7750` |
-| x402PQCPayments | `0x061e6F1D6C93302A0818150e44cE7c4abB400D6e` |
+| VEILToken | `0x0b78b7281bAD9B77854CFce5d027E709168717f0` |
+| VEILTreasury | `0x6B20eE2Ad92504Ff1DBc550b86E65D8a5854Fd86` |
+| VEILVesting | `0xbA8AAf63d7ac994D9C00A351D47CF5F05aD1b893` |
+| VEILNodeRegistry | `0x6b34d54913fa90D12Ac26709B6BFb7958d80A5a7` |
+| VEILPaymaster | `0x6c1E31FC80ab77185558a7b60670A1637D6e9189` |
+| x402PQCPayments | `0xd56F1D27d3ba06EF46F9712d050Dc88FE933131E` |
 
-**Mainnet status:** ALL contracts remain Base Sepolia testnet only. Mainnet deployment is gated on a formal security audit and tied to the token launch. This gate does not move under deadline pressure — do not suggest or implement mainnet deployments.
+> Redeployed 2026-06-19: x402PQCPayments now overrides `renounceOwnership()` to always revert, preventing permanent owner lockout.
+
+**Mainnet status:** ALL contracts remain Base Sepolia testnet only, **EXCEPT one explicit, narrowly-scoped exception: x402PQCPayments.**
+
+This exception was deliberately approved (June 19 2026) because:
+- The contract has zero dependencies on VEILTreasury or VEILToken.
+- It never holds funds — it is a pure payment ledger (`onlyOwner registerPayment`).
+- `renounceOwnership()` is overridden to always revert, preventing permanent owner lockout.
+- Owner will be a Gnosis Safe (multisig) on Base mainnet, **not a hot wallet.**
+
+**Designated Safe owner (Base mainnet):** `0xdEaD1f7583DEFE7A7fD701ea04ba49C14f871a0b`
+> Verification status (checked 2026-06-21): Address is **not yet deployed on-chain** — it shows as an EOA with no transaction history on Basescan, and the Safe transaction service returns 404. This is consistent with a counterfactual Safe (CREATE2 pre-computed address before first transaction/deployment). Confirm deployment before transferring ownership on mainnet.
+
+This exception does **NOT** extend to any other contract. VEILTreasury, VEILToken, VEILVesting, VEILNodeRegistry, and VEILPaymaster remain fully gated on a formal security audit tied to the token launch. That gate does not move under deadline pressure — do not suggest or implement mainnet deployments for any other contract.
 
 ---
 
