@@ -1,3 +1,4 @@
+import "@nomicfoundation/hardhat-chai-matchers";
 import { expect } from "chai";
 import { ethers } from "hardhat";
 import { anyValue } from "@nomicfoundation/hardhat-chai-matchers/withArgs";
@@ -17,6 +18,25 @@ describe("Veil PQC Protocol", () => {
   let veilTreasury: VEILTreasury;
   let veilStaking: VeilStaking;
   let veilNodeRegistry: VEILNodeRegistry;
+
+  // ─── x402PQCPayments ─────────────────────────────────────────────────────────
+
+  describe("x402PQCPayments", () => {
+    it("renounceOwnership() always reverts", async () => {
+      const [signer] = await ethers.getSigners();
+      const Factory = await ethers.getContractFactory("x402PQCPayments");
+      const contract = await Factory.deploy(signer.address);
+      await contract.waitForDeployment();
+
+      let errorMsg = "";
+      try {
+        await contract.renounceOwnership();
+      } catch (err: unknown) {
+        errorMsg = (err as Error).message ?? "";
+      }
+      expect(errorMsg).to.include("disabled");
+    });
+  });
 
   beforeEach(async () => {
     [owner, user1, user2] = await ethers.getSigners();

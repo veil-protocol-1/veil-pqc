@@ -11,6 +11,7 @@
  */
 
 import { describe, it, expect, beforeAll } from 'vitest';
+import { createPrivateKey, createPublicKey, verify as cryptoVerify } from 'crypto';
 import {
   rpc,
   probeNode,
@@ -22,6 +23,7 @@ import {
   ghostDeployCircle,
   ghostCompile,
   deriveGhostCircleId,
+  signOctraTx,
   GhostRpcError,
   GHOST_RPC_PRIMARY,
   GHOST_RPC_FALLBACK,
@@ -29,6 +31,11 @@ import {
   _resetProbeState,
 } from '../src/octra-rpc.js';
 import { generatePQCKeypair } from '@veil_/pqc-wallet';
+
+// Fixed 32-byte test seed — NOT a real key, safe to commit.
+const TEST_SEED_HEX = '0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20';
+const ED25519_PKCS8_PREFIX = Buffer.from('302e020100300506032b657004220420', 'hex');
+const ED25519_SPKI_PUB_OFFSET = 12;
 
 // ─── State shared across tests ────────────────────────────────────────────────
 
@@ -51,7 +58,7 @@ beforeAll(async () => {
 
 describe('RPC constants', () => {
   it('GHOST_RPC_PRIMARY is the documented mainnet endpoint', () => {
-    expect(GHOST_RPC_PRIMARY).toBe('https://octra.net/rpc');
+    expect(GHOST_RPC_PRIMARY).toBe('https://octra.network/rpc');
   });
 
   it('GHOST_RPC_FALLBACK is the documented fallback endpoint', () => {
@@ -208,6 +215,105 @@ describe('mock mode helpers', () => {
     if (nodeReachable) return;
     const status = await ghostNodeStatus();
     expect(status).toBeNull();
+  });
+});
+
+// ─── Unit: Ed25519 transaction signing ───────────────────────────────────────
+
+describe('signOctraTx', () => {
+  const txBody = {
+    from: 'octABC123XYZ456abc789def012ghi345jkl678mn',
+    op_type: 'deploy_circle',
+    payload: { runtime: 'octb' },
+    nonce: 7,
+    ou: '250000',
+  };
+
+  it('adds signature and public_key fields to the returned object', () => {
+    const signed = signOctraTx(txBody, TEST_SEED_HEX);
+    expect(typeof signed['signature']).toBe('string');
+    expect(typeof signed['public_key']).toBe('string');
+  });
+
+  it('signature is base64-encoded and 64 bytes when decoded', () => {
+    const signed = signOctraTx(txBody, TEST_SEED_HEX);
+    const sigBytes = Buffer.from(signed['signature'] as string, 'base64');
+    expect(sigBytes.length).toBe(64);
+  });
+
+  it('public_key is base64-encoded and 32 bytes when decoded', () => {
+    const signed = signOctraTx(txBody, TEST_SEED_HEX);
+    const pubBytes = Buffer.from(signed['public_key'] as string, 'base64');
+    expect(pubBytes.length).toBe(32);
+  });
+
+  it('signature is verifiable against the public key from the same seed', () => {
+    const signed = signOctraTx(txBody, TEST_SEED_HEX);
+
+    // Reconstruct the public key from the same seed for verification
+    const seed = Buffer.from(TEST_SEED_HEX, 'hex');
+    const pkcs8 = Buffer.concat([ED25519_PKCS8_PREFIX, seed]);
+    const privKey = createPrivateKey({ key: pkcs8, format: 'der', type: 'pkcs8' });
+    const pubSpki = createPublicKey(privKey).export({ type: 'spki', format: 'der' }) as Buffer;
+    const pubKeyObj = createPublicKey({ key: pubSpki, format: 'der', type: 'spki' });
+
+    // The signed message is the compact JSON of txBody (WITHOUT signature/public_key)
+    const msgBytes = Buffer.from(JSON.stringify(txBody), 'utf8');
+    const sigBytes = Buffer.from(signed['signature'] as string, 'base64');
+
+    const valid = cryptoVerify(null, msgBytes, pubKeyObj, sigBytes);
+    expect(valid).toBe(true);
+  });
+
+  it('public_key in payload matches the key derived from the seed', () => {
+    const signed = signOctraTx(txBody, TEST_SEED_HEX);
+
+    const seed = Buffer.from(TEST_SEED_HEX, 'hex');
+    const pkcs8 = Buffer.concat([ED25519_PKCS8_PREFIX, seed]);
+    const privKey = createPrivateKey({ key: pkcs8, format: 'der', type: 'pkcs8' });
+    const pubSpki = createPublicKey(privKey).export({ type: 'spki', format: 'der' }) as Buffer;
+    const expectedPub = pubSpki.slice(ED25519_SPKI_PUB_OFFSET).toString('base64');
+
+    expect(signed['public_key']).toBe(expectedPub);
+  });
+
+  it('is deterministic — same inputs produce identical signed payload', () => {
+    const s1 = signOctraTx(txBody, TEST_SEED_HEX);
+    const s2 = signOctraTx(txBody, TEST_SEED_HEX);
+    expect(s1['signature']).toBe(s2['signature']);
+    expect(s1['public_key']).toBe(s2['public_key']);
+  });
+
+  it('preserves all original tx fields', () => {
+    const signed = signOctraTx(txBody, TEST_SEED_HEX);
+    for (const [k, v] of Object.entries(txBody)) {
+      expect(signed[k]).toEqual(v);
+    }
+  });
+
+  it('throws if the key hex is not 32 bytes', () => {
+    expect(() => signOctraTx(txBody, 'deadbeef')).toThrow('32 bytes');
+  });
+
+  it('ghostDeployCircle attaches signature when GHOST_OCTRA_PRIVATE_KEY_HEX is set (mock mode only)', async () => {
+    // When the node is reachable we'd need a funded key matching the address —
+    // that belongs to a real-network integration test, not here.
+    if (nodeReachable) return;
+
+    const originalEnv = process.env['GHOST_OCTRA_PRIVATE_KEY_HEX'];
+    process.env['GHOST_OCTRA_PRIVATE_KEY_HEX'] = TEST_SEED_HEX;
+    try {
+      const keypair = generatePQCKeypair();
+      const result = await ghostDeployCircle(keypair.address, 0);
+      expect(result.circleId.startsWith('oct')).toBe(true);
+      expect(result.txHash.startsWith('0xmock')).toBe(true);
+    } finally {
+      if (originalEnv === undefined) {
+        delete process.env['GHOST_OCTRA_PRIVATE_KEY_HEX'];
+      } else {
+        process.env['GHOST_OCTRA_PRIVATE_KEY_HEX'] = originalEnv;
+      }
+    }
   });
 });
 

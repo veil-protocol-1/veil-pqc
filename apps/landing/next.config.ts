@@ -15,9 +15,9 @@ const nextConfig: NextConfig = {
     }
     return config
   },
-  experimental: {
-    optimizePackageImports: ['framer-motion', 'gsap', 'three'],
-  },
+  // experimental: {
+  //   optimizePackageImports: ['framer-motion', 'gsap', 'three'],
+  // },
   async headers() {
     return [
       {

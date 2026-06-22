@@ -22,13 +22,13 @@ DeFi / Payments / Privacy
 ## Installation
 
 ```bash
-npm install @veil/agent-registry
+npm install @veil_/agent-registry
 ```
 
 or run the MCP server directly:
 
 ```bash
-npx @veil/agent-registry
+npx @veil_/agent-registry
 ```
 
 ## Tools
@@ -41,7 +41,7 @@ npx @veil/agent-registry
 ## Example agent usage
 
 ```ts
-import { veilFunctions, veilFunctionHandlers } from '@veil/agent-registry/openai';
+import { veilFunctions, veilFunctionHandlers } from '@veil_/agent-registry/openai';
 
 const result = await veilFunctionHandlers.veil_ghost_query({
   instruction: 'swap 100 USDC for ETH on base',

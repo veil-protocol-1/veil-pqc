@@ -1,6 +1,11 @@
-import { ethers } from "hardhat";
+import { ethers, network } from "hardhat";
 import * as fs from "fs";
 import * as path from "path";
+
+// Safe multisig that owns x402PQCPayments on Base mainnet.
+// All other networks (Sepolia, hardhat) use the deployer EOA so testnet
+// ops aren't gated on a multisig.
+const SAFE = "0xdEaD1f7583DEFE7A7fD701ea04ba49C14f871a0b";
 
 // ERC-4337 EntryPoint on Base Sepolia (v0.6)
 const ENTRY_POINT = "0x5FF137D4b0FDCD49DcA30c7CF57E578a026d2789";
@@ -91,9 +96,12 @@ async function main() {
   await verifyBytecode(paymasterAddress, "VEILPaymaster");
 
   // 6. x402PQCPayments
+  // Mainnet: owned by the Safe multisig. All other networks: owned by deployer.
+  const x402Owner = network.name === "base" ? SAFE : deployer.address;
   console.log("6/6  Deploying x402PQCPayments...");
+  console.log(`     initialOwner: ${x402Owner}${network.name === "base" ? " (Safe)" : " (deployer)"}`);
   const x402PQCPayments = await ethers.getContractFactory("x402PQCPayments");
-  const x402Payments = await x402PQCPayments.deploy(deployer.address);
+  const x402Payments = await x402PQCPayments.deploy(x402Owner);
   await x402Payments.waitForDeployment();
   const paymentsAddress = await x402Payments.getAddress();
   console.log(`     x402PQCPayments:  ${paymentsAddress}`);
@@ -104,8 +112,8 @@ async function main() {
   if (!fs.existsSync(deploymentsDir)) fs.mkdirSync(deploymentsDir, { recursive: true });
 
   const manifest = {
-    network: "base-sepolia",
-    chainId: 84532,
+    network: network.name,
+    chainId: Number(network.chainId),
     deployedAt: new Date().toISOString(),
     contracts: {
       VEILToken: tokenAddress,
@@ -115,9 +123,10 @@ async function main() {
       VEILPaymaster: paymasterAddress,
       x402PQCPayments: paymentsAddress,
     },
+    x402PQCPaymentsOwner: x402Owner,
   };
 
-  const outPath = path.join(deploymentsDir, "base-sepolia.json");
+  const outPath = path.join(deploymentsDir, `${network.name}.json`);
   fs.writeFileSync(outPath, JSON.stringify(manifest, null, 2));
 
   console.log("");

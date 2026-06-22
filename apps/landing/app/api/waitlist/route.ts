@@ -1,10 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { Redis } from '@upstash/redis'
 
-const redis = new Redis({
-  url: process.env.KV_REST_API_URL!,
-  token: process.env.KV_REST_API_TOKEN!,
-})
+const KV_URL = process.env.KV_REST_API_URL
+const KV_TOKEN = process.env.KV_REST_API_TOKEN
 
 function isValidEmail(email: string): boolean {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
@@ -19,7 +16,18 @@ function getIP(req: NextRequest): string {
 }
 
 export async function POST(req: NextRequest) {
+  if (!KV_URL || !KV_TOKEN) {
+    return NextResponse.json(
+      { error: 'Waitlist temporarily unavailable' },
+      { status: 503 }
+    )
+  }
+
   try {
+    // Lazy import so the module doesn't crash at load time when env vars are absent
+    const { Redis } = await import('@upstash/redis')
+    const redis = new Redis({ url: KV_URL, token: KV_TOKEN })
+
     const { email } = await req.json() as { email?: string }
 
     if (!email || !isValidEmail(email)) {

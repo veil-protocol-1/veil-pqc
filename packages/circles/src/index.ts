@@ -46,6 +46,7 @@ export {
   ghostNonce,
   ghostBalance,
   ghostSubmitTx,
+  signOctraTx,
   ghostPollTx,
   ghostCompile,
   ghostDeployCircle,

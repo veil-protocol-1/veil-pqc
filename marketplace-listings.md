@@ -285,7 +285,100 @@ if (call && call.function.name in veilFunctionHandlers) {
 
 ---
 
+## ClawHub (OpenClaw Bazaar)
+
+### Status: SKILL.md drafted at `skills/veil-protocol/SKILL.md` — needs ClawHub account + CLI publish
+
+ClawHub is the official skill registry for the OpenClaw agent ecosystem. Submission is
+**CLI-only** — no PR, no web form, no manifest.json. The SKILL.md file is the entire
+submission artifact.
+
+### File created
+
+`skills/veil-protocol/SKILL.md` — uses the [Agent Skills](https://agentskills.io/) format
+(same as skills.sh; one file serves both platforms).
+
+Key frontmatter declared:
+- No required env vars (the MCP server is self-contained)
+- `VEIL_NETWORK` declared as optional
+- Node install spec: `@veil_/agent-registry`
+- `emoji`, `homepage` set
+
+### Publish commands
+
+```bash
+# Install the ClawHub CLI
+npm install -g clawhub
+
+# Authenticate (one-time)
+clawhub login
+
+# Publish
+clawhub skill publish ./skills/veil-protocol
+
+# Optional: set a custom slug or tag
+clawhub skill publish ./skills/veil-protocol --slug veil-protocol --tags latest
+```
+
+### Notes
+
+- ClawHub derives the slug from the folder name (`veil-protocol`) by default.
+- All ClawHub skills are licensed MIT-0 (attribution-free). No paid skill option exists.
+- ClawHub runs automated security scans on publish; declarations in frontmatter must
+  match what the skill actually does or the scan will flag a mismatch.
+- Requires a GitHub account old enough to pass ClawHub's upload gate.
+
+---
+
+## Skills.sh
+
+### Status: SKILL.md drafted (same file as ClawHub) — push to GitHub; registration step TBD
+
+Skills.sh is Vercel's leaderboard/discovery platform for the open Agent Skills ecosystem.
+It indexes GitHub repositories, not a separate registry. The URL pattern is
+`skills.sh/{github-owner}/{github-repo}/{skill-name}` — for this repo that becomes
+`skills.sh/veil-protocol-1/veil-pqc/veil-protocol`.
+
+### How it works
+
+Skills.sh reads `SKILL.md` files from public GitHub repos. Once your repo is indexed,
+users install via:
+
+```bash
+npx skills add veil-protocol-1/veil-pqc
+# or targeting a specific skill:
+npx skills add veil-protocol-1/veil-pqc --skill veil-protocol
+```
+
+The `skills/` directory layout at the repo root follows the standard:
+
+```
+skills/
+└── veil-protocol/
+    └── SKILL.md    ← created
+```
+
+### What's needed from you
+
+The exact indexing trigger for skills.sh (auto-scan vs. manual repo registration) is
+**not publicly documented** on the skills.sh site. Two likely paths:
+
+1. **Auto-discovery on install**: Skills.sh may index a repo the first time someone runs
+   `npx skills add veil-protocol-1/veil-pqc`. To seed this, run that command yourself after
+   pushing, then check `skills.sh/veil-protocol-1/veil-pqc`.
+
+2. **Manual registration**: Check `skills.sh` for an "Add your repo" or contact form —
+   or open an issue/discussion on `github.com/vercel-labs/skills` asking how to list a repo.
+
+Neither path requires any code changes — the SKILL.md is already in place.
+
+---
+
 ## Prioritized Checklist
+
+### Code/config complete — no account needed
+
+- [x] **`skills/veil-protocol/SKILL.md`** — created, covers both ClawHub and Skills.sh.
 
 ### Tonight (code/config only — no account needed)
 
@@ -304,6 +397,11 @@ if (call && call.function.name in veilFunctionHandlers) {
 
 ### Requires manual signup / account action from you
 
+- [ ] **ClawHub (OpenClaw Bazaar)** — `clawhub login` then `clawhub skill publish ./skills/veil-protocol`.
+      Requires creating a ClawHub account at clawhub.io first. ~10 minutes.
+- [ ] **Skills.sh** — push `skills/veil-protocol/SKILL.md` to GitHub (`veil-protocol-1/veil-pqc`),
+      then either run `npx skills add veil-protocol-1/veil-pqc` to seed telemetry, or
+      check skills.sh for a repo registration form.
 - [ ] **Anthropic MCP Directory** — submit the form at mcp.anthropic.com after npm publish.
       Takes ~5 minutes once the package is live.
 - [ ] **LangChain Hub** — open a PR to `langchain-ai/langchainjs` *or* publish a prompt

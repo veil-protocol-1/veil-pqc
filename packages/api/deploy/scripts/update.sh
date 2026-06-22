@@ -6,7 +6,11 @@ set -euo pipefail
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 API_DIR="$(cd "${SCRIPT_DIR}/../.." && pwd)"
 BUNDLE="${API_DIR}/dist/bundle.js"
+GHOST_MODELS_DIR="${API_DIR}/../ghost/models"
 REMOTE_DIR="/opt/veil-api"
+
+ONNXRUNTIME_VERSION="1.27.0"
+XENOVA_VERSION="2.17.2"
 
 NODES=(
   "1:veil-node-1:45.63.6.252"
@@ -37,6 +41,37 @@ for entry in "${NODES[@]}"; do
   echo "── Updating ${node_id} (${ip}) ──────────────────────────────"
 
   rsync -az --progress "${BUNDLE}" "root@${ip}:${REMOTE_DIR}/bundle.js"
+
+  # rsync ONNX models (rsync is a no-op if files are unchanged; --checksum verifies content)
+  ssh "root@${ip}" "mkdir -p ${REMOTE_DIR}/models"
+  rsync -az --checksum \
+      "${GHOST_MODELS_DIR}/ghost-intent-classifier.onnx" \
+      "${GHOST_MODELS_DIR}/ghost-intent-classifier.onnx.data" \
+      "${GHOST_MODELS_DIR}/label_map.json" \
+      "root@${ip}:${REMOTE_DIR}/models/"
+
+  # Ensure native deps are installed (writes package.json then skips npm install if already present)
+  ssh "root@${ip}" "cat > ${REMOTE_DIR}/package.json" <<PKG
+{
+  "name": "veil-api-runtime",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "onnxruntime-node": "${ONNXRUNTIME_VERSION}",
+    "@xenova/transformers": "${XENOVA_VERSION}"
+  }
+}
+PKG
+  ssh "root@${ip}" "
+    if [ ! -d ${REMOTE_DIR}/node_modules/onnxruntime-node ]; then
+      echo '  [npm] Installing runtime deps...'
+      cd ${REMOTE_DIR} && npm install --ignore-scripts 2>&1
+    else
+      echo '  [npm] Runtime deps already present, skipping.'
+    fi
+  "
+
   ssh "root@${ip}" "systemctl restart veil-api"
 
   echo -n "  Waiting for health check..."

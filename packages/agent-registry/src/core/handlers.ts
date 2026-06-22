@@ -1,7 +1,7 @@
 /**
  * Core tool handlers shared by every agent-marketplace wrapper (MCP, LangChain,
  * OpenAI functions, REST). Keeping the logic in one place means each wrapper is
- * a thin adapter over the same @veil/x402-pqc and @veil/circles calls.
+ * a thin adapter over the same @veil_/x402-pqc and @veil_/circles calls.
  */
 import { createX402PQCHeader, verifyX402PQCHeader, encryptPaymentMetadata } from '@veil_/x402-pqc';
 import { generatePQCKeypair } from '@veil_/pqc-wallet';

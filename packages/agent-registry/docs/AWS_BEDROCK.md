@@ -4,7 +4,7 @@
 
 Defines a Bedrock Agent action group exposing Veil Protocol's quantum-resistant
 payment signing/verification and Ghost private DeFi intent execution as
-Lambda-backed actions, fronted by `@veil/agent-registry`'s REST API
+Lambda-backed actions, fronted by `@veil_/agent-registry`'s REST API
 (`src/api`).
 
 ## CloudFormation

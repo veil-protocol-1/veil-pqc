@@ -55,4 +55,8 @@ contract x402PQCPayments is Ownable {
     function getPayment(bytes32 sigHash) external view returns (Payment memory) {
         return _payments[sigHash];
     }
+
+    function renounceOwnership() public override onlyOwner {
+        revert("disabled");
+    }
 }

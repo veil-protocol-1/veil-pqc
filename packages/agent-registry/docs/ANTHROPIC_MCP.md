@@ -19,7 +19,7 @@ instructions in plaintext.
   "mcpServers": {
     "veil-protocol": {
       "command": "npx",
-      "args": ["@veil/agent-registry"]
+      "args": ["@veil_/agent-registry"]
     }
   }
 }

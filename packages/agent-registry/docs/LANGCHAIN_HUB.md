@@ -2,7 +2,7 @@
 
 ## Package
 
-`@veil/agent-registry` — import from `@veil/agent-registry/langchain`
+`@veil_/agent-registry` — import from `@veil_/agent-registry/langchain`
 
 ## Description
 
@@ -13,7 +13,7 @@ sealed Octra Circles (FHE).
 ## Installation
 
 ```bash
-npm install @veil/agent-registry
+npm install @veil_/agent-registry
 ```
 
 ## Tools
@@ -28,7 +28,7 @@ npm install @veil/agent-registry
 ```ts
 import { ChatOpenAI } from '@langchain/openai';
 import { createToolCallingAgent, AgentExecutor } from 'langchain/agents';
-import { veilTools } from '@veil/agent-registry/langchain';
+import { veilTools } from '@veil_/agent-registry/langchain';
 
 const llm = new ChatOpenAI({ model: 'gpt-4o' });
 const agent = await createToolCallingAgent({ llm, tools: veilTools, prompt });

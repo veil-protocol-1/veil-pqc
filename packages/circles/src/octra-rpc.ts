@@ -37,11 +37,23 @@
  */
 
 import axios from 'axios';
+import { createPrivateKey, createPublicKey, sign as cryptoSign } from 'crypto';
+
+// ─── Shared HTTP client ───────────────────────────────────────────────────────
+
+const _http = axios.create({
+  headers: {
+    'Content-Type': 'application/json',
+    'User-Agent': 'Veil-Ghost/1.0',
+  },
+});
 
 // ─── Endpoints ────────────────────────────────────────────────────────────────
 
 export const GHOST_RPC_PRIMARY = 'https://octra.network/rpc';
 export const GHOST_RPC_FALLBACK = 'https://rpc.octra.org';
+/** Octra devnet endpoint — opt-in only via GHOST_OCTRA_DEVNET=1 env var. Never the default. */
+export const GHOST_RPC_DEVNET = 'https://devnet.octra.com/rpc';
 const GHOST_RPC_TIMEOUT_MS = 8_000;
 
 // ─── Mode state (module-level singleton) ──────────────────────────────────────
@@ -185,10 +197,10 @@ export async function rpc(method: string, params: unknown[]): Promise<unknown> {
 
   const id = _rpcId++;
   try {
-    const res = await axios.post<{ result?: unknown; error?: { code: number; message: string } }>(
+    const res = await _http.post<{ result?: unknown; error?: { code: number; message: string } }>(
       _activeEndpoint,
       { jsonrpc: '2.0', id, method, params },
-      { timeout: GHOST_RPC_TIMEOUT_MS, headers: { 'Content-Type': 'application/json' } },
+      { timeout: GHOST_RPC_TIMEOUT_MS },
     );
     if (res.data.error) {
       throw new GhostRpcError(
@@ -226,22 +238,35 @@ async function ensureProbed(): Promise<void> {
 
 async function _tryEndpoint(url: string): Promise<boolean> {
   try {
-    await axios.post(
+    const res = await _http.post<{ result?: unknown }>(
       url,
       { jsonrpc: '2.0', id: 0, method: 'node_status', params: [] },
-      { timeout: GHOST_RPC_TIMEOUT_MS, headers: { 'Content-Type': 'application/json' } },
+      { timeout: GHOST_RPC_TIMEOUT_MS },
     );
-    return true;
-  } catch (err: unknown) {
-    // Any HTTP response (including 4xx/5xx like 429 Too Many Requests) means the
-    // server is reachable — only a network error (ECONNREFUSED, DNS failure, etc.)
-    // means it's truly unreachable.
-    if (axios.isAxiosError(err) && err.response !== undefined) return true;
+    return res.status === 200;
+  } catch {
     return false;
   }
 }
 
 async function _runProbe(): Promise<RpcMode> {
+  // Devnet opt-in: set GHOST_OCTRA_DEVNET=1 to target devnet instead of mainnet.
+  // GHOST_OCTRA_DEVNET_URL overrides the default devnet URL.
+  // This is an explicit safety gate — devnet mode NEVER activates by default.
+  if (process.env['GHOST_OCTRA_DEVNET'] === '1') {
+    const devnetUrl = process.env['GHOST_OCTRA_DEVNET_URL'] ?? GHOST_RPC_DEVNET;
+    console.info(`[ghost-rpc] DEVNET MODE — probing ${devnetUrl}…`);
+    if (await _tryEndpoint(devnetUrl)) {
+      _activeEndpoint = devnetUrl;
+      _probeState = 'real';
+      console.info(`[ghost-rpc] real mode — devnet node ${devnetUrl}`);
+      return 'real';
+    }
+    _probeState = 'mock';
+    console.info(`[ghost-rpc] mock mode — devnet node unreachable: ${devnetUrl}`);
+    return 'mock';
+  }
+
   console.info('[ghost-rpc] probing Octra mainnet node…');
 
   if (await _tryEndpoint(GHOST_RPC_PRIMARY)) {
@@ -297,6 +322,10 @@ export async function ghostNodeStatus(): Promise<GhostNodeStatus | null> {
 export async function ghostNonce(address: string): Promise<number> {
   const result = await rpc('octra_nonce', [address]);
   if (result == null) return 0;
+  // Node returns { address, nonce } — extract the nonce field
+  if (typeof result === 'object' && result !== null && 'nonce' in result) {
+    return Number((result as { nonce: unknown }).nonce);
+  }
   return typeof result === 'number' ? result : Number(result);
 }
 
@@ -309,8 +338,53 @@ export async function ghostNonce(address: string): Promise<number> {
 export async function ghostBalance(address: string): Promise<bigint> {
   const result = await rpc('octra_balance', [address]);
   if (result == null) return 0n;
+  // Node returns { address, balance, balance_raw, nonce, ... } — use balance_raw (μOCT) directly
+  if (typeof result === 'object' && result !== null) {
+    const res = result as { balance_raw?: unknown; balance?: unknown };
+    if (res.balance_raw != null) return BigInt(String(res.balance_raw));
+    if (res.balance != null) {
+      return BigInt(Math.round(parseFloat(String(res.balance)) * 1_000_000));
+    }
+  }
   const octFloat = typeof result === 'string' ? parseFloat(result) : Number(result);
   return BigInt(Math.round(octFloat * 1_000_000));
+}
+
+// Ed25519 PKCS#8 v2 DER prefix for a 32-byte seed (RFC 8410)
+const _ED25519_PKCS8_PREFIX = Buffer.from('302e020100300506032b657004220420', 'hex');
+// Ed25519 SPKI DER prefix (12 bytes) before the 32-byte public key
+const _ED25519_SPKI_PUB_OFFSET = 12;
+
+/**
+ * Signs a transaction body with Ed25519 per Octra's wire format.
+ *
+ * Mirrors octra_pre_client signing: compact JSON of all tx fields (no spaces),
+ * signed as UTF-8 bytes. Adds `signature` (base64, 64 B) and `public_key`
+ * (base64, 32 B) to the returned object.
+ *
+ * @param txBody  - Transaction fields WITHOUT signature/public_key.
+ * @param privKeyHex - 32-byte Ed25519 seed in hex. NEVER log this value.
+ */
+export function signOctraTx(
+  txBody: Record<string, unknown>,
+  privKeyHex: string,
+): Record<string, unknown> {
+  const seed = Buffer.from(privKeyHex, 'hex');
+  if (seed.length !== 32) throw new Error('GHOST_OCTRA_PRIVATE_KEY_HEX must be 32 bytes (64 hex chars)');
+
+  const pkcs8 = Buffer.concat([_ED25519_PKCS8_PREFIX, seed]);
+  const privKey = createPrivateKey({ key: pkcs8, format: 'der', type: 'pkcs8' });
+  const pubSpki = createPublicKey(privKey).export({ type: 'spki', format: 'der' }) as Buffer;
+  const rawPub = pubSpki.slice(_ED25519_SPKI_PUB_OFFSET);
+
+  const msgBytes = Buffer.from(JSON.stringify(txBody), 'utf8');
+  const sig = cryptoSign(null, msgBytes, privKey);
+
+  return {
+    ...txBody,
+    signature: sig.toString('base64'),
+    public_key: rawPub.toString('base64'),
+  };
 }
 
 /**
@@ -353,35 +427,65 @@ export async function ghostPollTx(hash: string): Promise<Record<string, unknown>
  * the likely name based on Octra docs but may differ per node_status.
  */
 export async function ghostCompile(source: string): Promise<string> {
-  const result = await rpc('compile', [source]);
-  if (result == null) {
-    // Mock: base64-encode the source itself so the round-trip is testable
-    return Buffer.from(source).toString('base64');
+  try {
+    const result = await rpc('compile', [source]);
+    if (result == null) {
+      return Buffer.from(source).toString('base64');
+    }
+    const res = result as { code_b64?: string };
+    if (!res.code_b64) throw new GhostRpcError('compile: no code_b64 in response', 'compile', -3);
+    return res.code_b64;
+  } catch (err) {
+    // -32601 = method not found: compile RPC name is unconfirmed — fall back to mock.
+    if (err instanceof GhostRpcError && err.code === -32601) {
+      return Buffer.from(source).toString('base64');
+    }
+    throw err;
   }
-  const res = result as { code_b64?: string };
-  if (!res.code_b64) throw new GhostRpcError('compile: no code_b64 in response', 'compile', -3);
-  return res.code_b64;
 }
 
 /**
  * Submits a GhostCircle deploy transaction.
  * Returns { circleId, txHash } — both are real on-chain values in real mode.
  *
- * WIRE: octra_submit({ op_type: "deploy_circle", payload, from, nonce, ou })
+ * WIRE: octra_submit with confirmed Octra wire format:
+ *   - signFields field order: { from, to_, amount, nonce, ou, timestamp, op_type }
+ *   - op_type: 'deploy_circle' is INSIDE the signing blob
+ *   - payload (circle resource budget) is appended OUTSIDE the signing blob
+ *   - ou: "1" for deploy_circle (not "250000" — that belongs inside payload only)
+ *   - to_: deployerAddress (not empty string)
+ *   - timestamp: Date.now() / 1000 as a float (millisecond precision / 1000)
+ *
+ * Nonce: the node returns 0 for a fresh account but expects 1 for the first tx.
+ * We send wireNonce = nonce + 1, mirroring cli.py's mk() which uses n + 1.
  */
 export async function ghostDeployCircle(
   deployerAddress: string,
   nonce: number,
   payload: object = GHOST_CIRCLE_DEPLOY_PAYLOAD,
 ): Promise<{ circleId: string; txHash: string }> {
-  const circleId = await deriveGhostCircleId(payload, deployerAddress, nonce);
+  // Octra node returns 0 for a fresh account; first tx must use nonce 1.
+  const wireNonce = nonce + 1;
+  const circleId = await deriveGhostCircleId(payload, deployerAddress, wireNonce);
 
-  const txJson = {
+  // Signing blob: confirmed field order — op_type is INSIDE, payload is OUTSIDE
+  const signFields: Record<string, unknown> = {
     from: deployerAddress,
+    to_: deployerAddress,
+    amount: '0',
+    nonce: wireNonce,
+    ou: '1',
+    timestamp: Date.now() / 1000,
     op_type: 'deploy_circle',
+  };
+
+  const privKeyHex = process.env['GHOST_OCTRA_PRIVATE_KEY_HEX'];
+  const signedFields = privKeyHex ? signOctraTx(signFields, privKeyHex) : signFields;
+
+  // Full wire tx: signed fields + payload (outside the signing blob)
+  const txJson: Record<string, unknown> = {
+    ...signedFields,
     payload,
-    nonce,
-    ou: '250000',
   };
 
   const txHash = await ghostSubmitTx(txJson);

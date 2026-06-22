@@ -1,5 +1,10 @@
 import type { GhostAction, ParsedIntent, ParsedIntentParams, UserContext } from './types.js';
 
+// Shared interface satisfied by both DistilBertClassifier and EmbeddingClassifier.
+interface IntentClassifier {
+  classifyAsync(text: string): Promise<{ action: GhostAction; confidence: number }>;
+}
+
 const KNOWN_TOKENS = [
   'USDC', 'USDT', 'DAI', 'ETH', 'WETH', 'WBTC', 'CBBTC', 'CBETH', 'OCT', 'AERO', 'WELL',
 ];
@@ -11,15 +16,81 @@ interface RuleMatch {
   requiresReasoning: boolean;
 }
 
-/**
- * IntentParser — rule-based natural language → DeFi intent translation.
- *
- * Rule matching is instant (regex-based, no model call). Anything ambiguous,
- * or any request that combines a named protocol with a free-text constraint,
- * is escalated to 'complex' (or 'clarify' when nothing matches at all) so the
- * DeFiReasoner / a human can take a closer look.
- */
+// Actions that require DeFiReasoner — keeps the lookup in one place.
+const REQUIRES_REASONING: ReadonlySet<GhostAction> = new Set([
+  'borrow', 'provide_liquidity', 'remove_liquidity', 'bridge', 'complex',
+]);
+
 export class IntentParser {
+  private classifier: IntentClassifier | null = null;
+
+  /**
+   * Load the intent classifier. Tries DistilBertClassifier (ONNX, ~5-15 ms/inference)
+   * first; gracefully falls back to EmbeddingClassifier (MiniLM k-NN) if the ONNX
+   * model files aren't present (e.g. dev environments without a trained model).
+   * Call once before using parseAsync(). Safe to skip — parse() stays sync.
+   */
+  async initClassifier(): Promise<void> {
+    try {
+      const { DistilBertClassifier } = await import('./DistilBertClassifier.js');
+      const bert = new DistilBertClassifier();
+      await bert.init();
+      this.classifier = bert;
+    } catch (bertErr) {
+      console.warn(
+        '[IntentParser] DistilBertClassifier unavailable, falling back to EmbeddingClassifier:',
+        bertErr instanceof Error ? bertErr.message : bertErr,
+      );
+      const { EmbeddingClassifier } = await import('./EmbeddingClassifier.js');
+      const emb = new EmbeddingClassifier();
+      await emb.init();
+      this.classifier = emb;
+    }
+  }
+
+  /**
+   * Embedding-primary intent parse.
+   * Short inputs (≤ 2 words) take the fast regex path first; longer inputs go
+   * through the MiniLM classifier, falling back to regex if the classifier
+   * is not yet initialized.
+   */
+  async parseAsync(input: string, context?: UserContext): Promise<ParsedIntent> {
+    const trimmed = input.trim();
+
+    if (trimmed.length === 0) {
+      return this.buildClarify(input, 'what you would like me to do');
+    }
+
+    // Fast regex override for obvious single/two-word commands ("swap", "stake ETH", …)
+    const wordCount = trimmed.split(/\s+/).length;
+    if (wordCount <= 2) {
+      const regexMatch = this.matchRules(trimmed);
+      if (regexMatch) {
+        return this.buildFromMatch(input, trimmed, regexMatch);
+      }
+    }
+
+    // Embedding-classifier primary path
+    if (this.classifier) {
+      const { action, confidence: embConfidence } = await this.classifier.classifyAsync(trimmed);
+      const params = this.extractParams(trimmed, action);
+      const confidence = this.blendConfidence(embConfidence, action, params, trimmed);
+      const intent: ParsedIntent = {
+        action,
+        confidence,
+        params,
+        requiresReasoning: REQUIRES_REASONING.has(action),
+        raw: input,
+        ghostResponse: '',
+      };
+      intent.ghostResponse = this.buildGhostResponse(intent);
+      return intent;
+    }
+
+    // Classifier not initialized — fall through to regex
+    return this.parse(input, context);
+  }
+
   parse(input: string, _context?: UserContext): ParsedIntent {
     const raw = input;
     const trimmed = input.trim();
@@ -230,6 +301,36 @@ export class IntentParser {
       default:
         return `Understood, Sovereign. Processing your request.`;
     }
+  }
+
+  private buildFromMatch(raw: string, trimmed: string, match: RuleMatch): ParsedIntent {
+    const params = this.extractParams(trimmed, match.action);
+    const confidence = this.scoreConfidence(match.action, params, trimmed);
+    const intent: ParsedIntent = {
+      action: match.action,
+      confidence,
+      params,
+      requiresReasoning: match.requiresReasoning,
+      raw,
+      ghostResponse: '',
+    };
+    intent.ghostResponse = this.buildGhostResponse(intent);
+    return intent;
+  }
+
+  // Blends embedding cosine similarity with slot-fill signals for a final score.
+  private blendConfidence(
+    embSim: number,
+    action: GhostAction,
+    params: ParsedIntentParams,
+    input: string,
+  ): number {
+    let bonus = 0;
+    if (params.amount) bonus += 0.05;
+    if (params.fromToken || params.toToken) bonus += 0.05;
+    if (params.protocol) bonus += 0.05;
+    if (action === 'complex') bonus -= 0.05;
+    return Math.max(0.2, Math.min(0.97, embSim + bonus));
   }
 
   private buildClarify(raw: string, unclearPart: string): ParsedIntent {

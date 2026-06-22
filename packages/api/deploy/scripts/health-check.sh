@@ -18,10 +18,10 @@ for entry in "${NODES[@]}"; do
   body=$(cat /tmp/veil_health_resp 2>/dev/null || echo "")
   if [[ "$status" == "200" ]]; then
     echo "[PASS] ${name} (${ip}) — HTTP ${status} — ${body}"
-    ((PASS++))
+    PASS=$((PASS + 1))
   else
     echo "[FAIL] ${name} (${ip}) — HTTP ${status} — ${body}"
-    ((FAIL++))
+    FAIL=$((FAIL + 1))
   fi
 done
 
