@@ -9,6 +9,10 @@ export { TrainingScheduler } from './training/TrainingScheduler.js';
 
 export { PQCTransport, pqcTransport, getAuditLog } from './crypto/PQCTransport.js';
 export type { PQCEnvelope, PQCAuditEntry } from './crypto/PQCTransport.js';
+export { DeidentificationPipeline, KNOWN_TOKENS } from './crypto/DeidentificationPipeline.js';
+export type { DeidentificationVault, DeidentificationResult } from './crypto/DeidentificationPipeline.js';
+export { PQCLLMClient } from './llm/PQCLLMClient.js';
+export type { PQCLLMConfig, LLMMessage } from './llm/PQCLLMClient.js';
 export { COORDINATOR_PUBLIC_KEY, OCTRA_NODE_PUBKEY, NODE_PRIVATE_KEY } from './crypto/keys.js';
 
 export * from './parser/types.js';

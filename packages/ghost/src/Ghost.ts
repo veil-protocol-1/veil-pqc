@@ -8,6 +8,7 @@ import { pqcTransport } from './crypto/PQCTransport.js';
 import { COORDINATOR_PUBLIC_KEY } from './crypto/keys.js';
 import type { ParsedIntent, UserContext } from './parser/types.js';
 import type { ExecutionPlan, ExecutionStep } from './reasoning/types.js';
+import type { PQCLLMClient } from './llm/PQCLLMClient.js';
 
 const DEFAULT_API_URL = 'https://api.veilprotocol.net';
 const CHAIN_IDS: Record<UserContext['network'], number> = { base: 8453, 'base-sepolia': 84532 };
@@ -20,6 +21,8 @@ export interface GhostConfig {
   nodeId?: string;
   /** Used to sign execution steps in sign(). Generated lazily if omitted. */
   keypair?: PQCKeypair;
+  /** When provided, 'clarify' intents are answered via de-identified LLM instead of a static string. */
+  llmClient?: PQCLLMClient;
 }
 
 export interface GhostResult {
@@ -71,6 +74,17 @@ export class Ghost {
       executionReady,
       requiresClarification,
     };
+
+    if (requiresClarification && this.config.llmClient) {
+      try {
+        result.ghostResponse = await this.config.llmClient.chat(
+          [{ role: 'user', content: instruction }],
+          context,
+        );
+      } catch {
+        // fall back to intent.ghostResponse if LLM is unavailable
+      }
+    }
 
     if (this.config.enableTraining !== false && !requiresClarification) {
       const trainingPlan = plan ?? this.buildSyntheticPlan(intent);
