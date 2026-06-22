@@ -11,7 +11,7 @@ import { errorHandler, notFoundHandler } from './middleware/error';
 const AGENT_CARD = {
   name: 'Veil Ghost',
   description:
-    'Quantum-resistant AI inference and payment infrastructure for Web3 — private, sovereign, post-quantum secured via ML-DSA-65 + ML-KEM-768. Testnet only (base-sepolia).',
+    'Quantum-resistant AI inference and payment infrastructure for Web3 — private, sovereign, post-quantum secured via ML-DSA-65 + ML-KEM-768. Payments on Base mainnet (x402PQCPayments).',
   url: 'https://api.veilprotocol.net',
   version: '0.1.0',
   provider: {
@@ -30,7 +30,7 @@ const AGENT_CARD = {
   },
   defaultInputModes: ['application/json'],
   defaultOutputModes: ['application/json'],
-  network: 'base-sepolia', // testnet — explicit, do not assume mainnet
+  network: 'base', // Base mainnet, chainId 8453
   paymentScheme: 'x402-pqc',
   paymentDetails: 'https://api.veilprotocol.net/.well-known/x402-bazaar.json',
   skills: [
@@ -73,8 +73,8 @@ const BAZAAR_MANIFEST = {
   description: 'Quantum-resistant AI inference for Web3 — private, sovereign, post-quantum secured via ML-DSA-65 + ML-KEM-768',
   endpoint: 'https://api.veilprotocol.net/ghost/query',
   scheme: 'x402-pqc',
-  network: 'base-sepolia', // testnet — explicit, not mainnet
-  contract: '0xd56F1D27d3ba06EF46F9712d050Dc88FE933131E',
+  network: 'base', // Base mainnet, chainId 8453
+  contract: '0x8F446afA9877C79F3CCb5eaA5b6503752817223f',
   recipient: '0x77761912b6435287f2b4DaAe93c02611351e7750',
   pricing: {
     tiers: {
