@@ -10,6 +10,7 @@ const NAV_LINKS = [
   { label: 'DEVELOPERS', href: '/developers' },
   { label: 'TOKEN', href: '/token' },
   { label: 'NODES', href: '/nodes' },
+  { label: 'WHITEPAPER', href: '/whitepaper' },
 ]
 
 function VeilIcon() {
