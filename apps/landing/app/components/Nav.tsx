@@ -9,6 +9,7 @@ const NAV_LINKS = [
   { label: 'SECURITY', href: '/security' },
   { label: 'DEVELOPERS', href: '/developers' },
   { label: 'TOKEN', href: '/token' },
+  { label: 'NODES', href: '/nodes' },
 ]
 
 function VeilIcon() {
