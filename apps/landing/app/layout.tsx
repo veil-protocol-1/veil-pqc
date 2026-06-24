@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   description:
     'The world\'s first quantum-resistant self-sovereign AI-powered neobank. Built for a future most wallets won\'t survive.',
   icons: {
-    icon: '/favicon.svg',
+    icon: '/veil-icon.png',
   },
   openGraph: {
     title: 'Veil — Quantum-Resistant Neobank',

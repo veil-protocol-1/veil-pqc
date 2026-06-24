@@ -1,69 +1,63 @@
 'use client'
 
-import { useEffect, useRef, useState } from 'react'
+import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
 
-const THREATS = [
-  {
-    id: 'harvest',
-    title: 'Harvest Now, Decrypt Later',
-    body: 'State actors are collecting encrypted blockchain transactions today. When quantum hardware arrives, every ECDSA key ever used becomes vulnerable. Retroactively. Simultaneously.',
-  },
-  {
-    id: 'google',
-    title: 'Google, March 2026',
-    body: "Google demonstrated a refined Shor's algorithm requiring 20x fewer resources to crack ECDSA. The software is ready. The hardware is being built.",
-  },
-  {
-    id: 'cisa',
-    title: '2029 CISA Deadline',
-    body: 'The NSA and CISA have mandated post-quantum migration for all critical systems by 2029. Veil is already there.',
-  },
-]
-
-const STACK = [
-  { id: 'ml-dsa', name: 'ML-DSA-65', sub: 'FIPS 204', body: 'Transaction signing' },
-  { id: 'ml-kem', name: 'ML-KEM-768', sub: 'FIPS 203', body: 'Key encapsulation' },
-  { id: 'rlwe', name: 'RLWE/CKKS', sub: '', body: 'Ghost FHE inference' },
-  { id: 'x402', name: 'x402-pqc', sub: '', body: 'Payment standard' },
-]
-
-function PurpleUnderlineText({
-  children,
-  isInView,
-}: {
-  children: React.ReactNode
-  isInView: boolean
-}) {
-  return <div className={`purple-underline ${isInView ? 'animated' : ''}`}>{children}</div>
+function Section({ children }: { children: React.ReactNode }) {
+  const ref = useRef<HTMLDivElement>(null)
+  const inView = useInView(ref, { once: true, margin: '-80px' })
+  return (
+    <motion.div
+      ref={ref}
+      initial={{ opacity: 0, y: 32 }}
+      animate={inView ? { opacity: 1, y: 0 } : {}}
+      transition={{ duration: 0.65, ease: [0.65, 0, 0.35, 1] }}
+    >
+      {children}
+    </motion.div>
+  )
 }
 
+const TIMELINE = [
+  {
+    year: '2024',
+    label: 'NIST Standards Published',
+    detail: 'FIPS 203 (ML-KEM) and FIPS 204 (ML-DSA) finalized. Veil ships on Day 1.',
+    active: true,
+  },
+  {
+    year: '2030',
+    label: 'Early Quantum Threat',
+    detail: 'First fault-tolerant quantum computers capable of breaking 512-bit ECC emerge.',
+    active: false,
+  },
+  {
+    year: '2035',
+    label: 'RSA-2048 Broken',
+    detail: "Shor's algorithm runs at scale. Every unmitigated wallet is retroactively exposed.",
+    active: false,
+  },
+  {
+    year: '2040',
+    label: 'Harvest-Now Fully Realized',
+    detail: "Data collected since 2020 is decrypted. State actors liquidate any non-PQC address they've been watching.",
+    active: false,
+  },
+]
+
+const AUDIT_STATUS = [
+  { label: 'MNDA Status', value: 'Signed', ok: true },
+  { label: 'Audit Status', value: 'In Progress', ok: true },
+  { label: 'Auditor', value: 'Halborn', ok: true },
+  { label: 'Scope', value: 'Smart contracts + PQC crypto layer', ok: true },
+  { label: 'Public Report', value: 'Pending completion', ok: null },
+]
+
 export default function SecurityPageContent() {
-  const heroRef = useRef<HTMLDivElement>(null)
-  const heroInView = useInView(heroRef, { once: true, margin: '-80px' })
-
-  const threatsRef = useRef<HTMLDivElement>(null)
-  const threatsInView = useInView(threatsRef, { once: true, margin: '-80px' })
-
-  const ctaRef = useRef<HTMLDivElement>(null)
-  const ctaInView = useInView(ctaRef, { once: true, margin: '-80px' })
-
-  const stackRef = useRef<HTMLDivElement>(null)
-  const stackInView = useInView(stackRef, { once: true, margin: '-80px' })
-
-  const [underlineActive, setUnderlineActive] = useState(false)
-  useEffect(() => {
-    if (ctaInView) {
-      const t = setTimeout(() => setUnderlineActive(true), 500)
-      return () => clearTimeout(t)
-    }
-  }, [ctaInView])
-
   return (
     <>
       {/* Hero */}
       <section
-        ref={heroRef}
         className="relative z-10 pt-36 pb-20 px-4 flex flex-col items-center text-center"
         style={{ background: '#000000' }}
       >
@@ -75,18 +69,21 @@ export default function SecurityPageContent() {
           }}
         />
 
-        <h1
+        <motion.h1
           className="font-orbitron font-bold text-white tabular-nums relative z-10"
           style={{ fontSize: 'clamp(64px, 12vw, 100px)', lineHeight: 1 }}
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.7 }}
         >
           9:00
-        </h1>
+        </motion.h1>
 
         <motion.p
           className="font-rajdhani text-white font-semibold relative z-10 mt-5"
           style={{ fontSize: 'clamp(16px, 2.5vw, 22px)' }}
           initial={{ opacity: 0, y: 16 }}
-          animate={heroInView ? { opacity: 1, y: 0 } : {}}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
         >
           Minutes to crack ECDSA on a quantum computer.
@@ -96,119 +93,434 @@ export default function SecurityPageContent() {
           className="font-rajdhani italic relative z-10 mt-1"
           style={{ color: '#888888', fontSize: '14px' }}
           initial={{ opacity: 0, y: 16 }}
-          animate={heroInView ? { opacity: 1, y: 0 } : {}}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
           Google Quantum AI, March 2026
         </motion.p>
       </section>
 
-      {/* Threat cards */}
-      <section ref={threatsRef} className="relative z-10 py-12 px-4" style={{ background: '#000000' }}>
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
-          {THREATS.map((threat, i) => (
-            <motion.div
-              key={threat.id}
-              initial={{ opacity: 0, y: 40 }}
-              animate={threatsInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: 0.1 + i * 0.15, ease: [0.65, 0, 0.35, 1] }}
-              className="group relative flex flex-col p-8 rounded-2xl transition-all duration-300 cursor-default"
+      {/* ML-KEM-768 */}
+      <section className="relative z-10 py-12 px-4" style={{ background: '#000000' }}>
+        <div className="max-w-5xl mx-auto">
+          <Section>
+            <div
+              className="p-8 rounded-2xl mb-6"
               style={{
                 background: '#0A0A0A',
                 border: '1px solid rgba(168,85,247,0.25)',
                 borderTop: '4px solid #A855F7',
               }}
-              whileHover={{
-                boxShadow: '0 0 40px rgba(168,85,247,0.25)',
-                borderColor: 'rgba(168,85,247,0.5)',
-                y: -4,
-                scale: 1.02,
-              }}
             >
-              <h3
-                className="font-orbitron font-bold text-white mb-2"
-                style={{ fontSize: '18px', letterSpacing: '0.5px' }}
-              >
-                {threat.title}
-              </h3>
-
-              <div
-                className="h-0.5 w-10 mb-4 transition-all duration-500 group-hover:w-16"
-                style={{ background: '#A855F7' }}
-              />
+              <div className="flex flex-wrap items-start justify-between gap-4 mb-6">
+                <div>
+                  <p
+                    className="font-mono text-purple-400 mb-1"
+                    style={{ fontSize: '22px' }}
+                  >
+                    ML-KEM-768
+                  </p>
+                  <p
+                    className="font-rajdhani uppercase"
+                    style={{ color: '#666', fontSize: '11px', letterSpacing: '2px' }}
+                  >
+                    NIST FIPS 203 · Module-Lattice Key Encapsulation
+                  </p>
+                </div>
+                <span
+                  className="font-rajdhani uppercase px-4 py-1.5 rounded-full"
+                  style={{
+                    background: 'rgba(168,85,247,0.1)',
+                    border: '1px solid rgba(168,85,247,0.35)',
+                    color: '#A855F7',
+                    fontSize: '11px',
+                    letterSpacing: '1.5px',
+                  }}
+                >
+                  Key Encapsulation
+                </span>
+              </div>
 
               <p
-                className="font-rajdhani leading-relaxed"
-                style={{ color: '#888888', fontSize: '15px' }}
+                className="font-rajdhani leading-relaxed mb-6"
+                style={{ color: '#CCCCCC', fontSize: '15px' }}
               >
-                {threat.body}
+                ML-KEM-768 (formerly Kyber-768) is the NIST-standardized key encapsulation mechanism
+                based on the hardness of the Module Learning With Errors (MLWE) problem — a lattice
+                problem with no known efficient quantum algorithm. It replaces ECDH/RSA for session
+                key establishment.
               </p>
-            </motion.div>
-          ))}
+
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                {[
+                  { label: 'Security Level', value: 'AES-192 equivalent (NIST Level 3)' },
+                  { label: 'Public Key Size', value: '1184 bytes' },
+                  { label: 'Ciphertext Size', value: '1088 bytes' },
+                ].map((stat) => (
+                  <div
+                    key={stat.label}
+                    className="p-4 rounded-xl"
+                    style={{ background: '#111', border: '1px solid rgba(168,85,247,0.15)' }}
+                  >
+                    <p
+                      className="font-rajdhani uppercase mb-1"
+                      style={{ color: '#666', fontSize: '10px', letterSpacing: '1.5px' }}
+                    >
+                      {stat.label}
+                    </p>
+                    <p className="font-mono text-white" style={{ fontSize: '13px' }}>
+                      {stat.value}
+                    </p>
+                  </div>
+                ))}
+              </div>
+
+              <p
+                className="font-rajdhani mt-5 leading-relaxed"
+                style={{ color: '#666', fontSize: '13.5px' }}
+              >
+                In Veil, ML-KEM-768 is used for PQCTransport session key establishment (KEM-DEM hybrid
+                with AES-256-GCM) and for the <code className="font-mono text-purple-400">encapsulationKey</code>{' '}
+                field of every wallet keypair. Ephemeral per-session KEM ensures forward secrecy even
+                if a long-term signing key is later compromised.
+              </p>
+            </div>
+          </Section>
+
+          {/* ML-DSA-65 */}
+          <Section>
+            <div
+              className="p-8 rounded-2xl"
+              style={{
+                background: '#0A0A0A',
+                border: '1px solid rgba(99,102,241,0.25)',
+                borderTop: '4px solid #6366F1',
+              }}
+            >
+              <div className="flex flex-wrap items-start justify-between gap-4 mb-6">
+                <div>
+                  <p
+                    className="font-mono mb-1"
+                    style={{ fontSize: '22px', color: '#818CF8' }}
+                  >
+                    ML-DSA-65
+                  </p>
+                  <p
+                    className="font-rajdhani uppercase"
+                    style={{ color: '#666', fontSize: '11px', letterSpacing: '2px' }}
+                  >
+                    NIST FIPS 204 · Module-Lattice Digital Signature (Dilithium)
+                  </p>
+                </div>
+                <span
+                  className="font-rajdhani uppercase px-4 py-1.5 rounded-full"
+                  style={{
+                    background: 'rgba(99,102,241,0.1)',
+                    border: '1px solid rgba(99,102,241,0.35)',
+                    color: '#818CF8',
+                    fontSize: '11px',
+                    letterSpacing: '1.5px',
+                  }}
+                >
+                  Digital Signatures
+                </span>
+              </div>
+
+              <p
+                className="font-rajdhani leading-relaxed mb-6"
+                style={{ color: '#CCCCCC', fontSize: '15px' }}
+              >
+                ML-DSA-65 (formerly Dilithium3) is the NIST-standardized digital signature algorithm,
+                also based on MLWE. Every transaction broadcast, Ghost step log, and x402-pqc payment
+                envelope in Veil is signed with ML-DSA-65 — replacing secp256k1 ECDSA throughout the
+                entire stack.
+              </p>
+
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                {[
+                  { label: 'Security Level', value: 'AES-192 equivalent (NIST Level 3)' },
+                  { label: 'Public Key Size', value: '1952 bytes' },
+                  { label: 'Signature Size', value: '3293 bytes' },
+                ].map((stat) => (
+                  <div
+                    key={stat.label}
+                    className="p-4 rounded-xl"
+                    style={{ background: '#111', border: '1px solid rgba(99,102,241,0.15)' }}
+                  >
+                    <p
+                      className="font-rajdhani uppercase mb-1"
+                      style={{ color: '#666', fontSize: '10px', letterSpacing: '1.5px' }}
+                    >
+                      {stat.label}
+                    </p>
+                    <p className="font-mono text-white" style={{ fontSize: '13px' }}>
+                      {stat.value}
+                    </p>
+                  </div>
+                ))}
+              </div>
+
+              <p
+                className="font-rajdhani mt-5 leading-relaxed"
+                style={{ color: '#666', fontSize: '13.5px' }}
+              >
+                ML-DSA-65 is deterministic — no random nonce required at signing time, eliminating the
+                class of nonce-reuse attacks that have historically compromised ECDSA wallets. Every Ghost
+                execution step is individually signed, creating a verifiable chain of custody from intent
+                to settlement.
+              </p>
+            </div>
+          </Section>
         </div>
       </section>
 
-      {/* CTA line */}
-      <section
-        ref={ctaRef}
-        className="relative z-10 py-20 px-4 flex flex-col items-center text-center"
-        style={{ background: '#000000' }}
-      >
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={ctaInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.7 }}
-        >
-          <PurpleUnderlineText isInView={underlineActive}>
+      {/* Quantum timeline */}
+      <section className="relative z-10 py-16 px-4" style={{ background: '#000000' }}>
+        <div className="max-w-4xl mx-auto">
+          <Section>
             <h2
-              className="font-orbitron font-bold text-white"
-              style={{ fontSize: 'clamp(24px, 4.5vw, 36px)' }}
+              className="font-orbitron font-bold text-white text-center mb-12"
+              style={{ fontSize: 'clamp(20px, 3.5vw, 32px)' }}
             >
-              Your current wallet isn&apos;t ready. Veil is.
+              The Quantum Threat Timeline
             </h2>
-          </PurpleUnderlineText>
-        </motion.div>
+          </Section>
+
+          <div className="relative">
+            {/* Track line */}
+            <div
+              className="hidden md:block absolute left-[130px] top-6 bottom-6 w-px"
+              style={{ background: 'linear-gradient(to bottom, #A855F7 0%, #EC4899 100%)' }}
+            />
+
+            <div className="flex flex-col gap-10">
+              {TIMELINE.map((item, i) => (
+                <Section key={item.year}>
+                  <div className="flex gap-6 md:gap-0 items-start">
+                    {/* Year */}
+                    <div className="md:w-[130px] md:text-right md:pr-10 flex-shrink-0">
+                      <span
+                        className="font-orbitron font-bold"
+                        style={{
+                          fontSize: '22px',
+                          color: item.active ? '#A855F7' : '#444',
+                        }}
+                      >
+                        {item.year}
+                      </span>
+                    </div>
+
+                    {/* Dot */}
+                    <div className="hidden md:flex flex-col items-center z-10">
+                      <div
+                        className="w-4 h-4 rounded-full border-2 flex-shrink-0"
+                        style={{
+                          background: item.active ? '#A855F7' : '#222',
+                          borderColor: item.active ? '#A855F7' : '#444',
+                          boxShadow: item.active ? '0 0 16px rgba(168,85,247,0.6)' : 'none',
+                        }}
+                      />
+                    </div>
+
+                    {/* Content */}
+                    <div className="md:pl-10 flex-1">
+                      <p
+                        className="font-orbitron font-bold text-white mb-1"
+                        style={{ fontSize: '15px' }}
+                      >
+                        {item.label}
+                        {item.active && (
+                          <span
+                            className="ml-3 font-rajdhani uppercase"
+                            style={{
+                              color: '#A855F7',
+                              fontSize: '10px',
+                              letterSpacing: '1.5px',
+                              verticalAlign: 'middle',
+                            }}
+                          >
+                            ← YOU ARE HERE
+                          </span>
+                        )}
+                      </p>
+                      <p
+                        className="font-rajdhani leading-relaxed"
+                        style={{ color: '#888', fontSize: '14.5px' }}
+                      >
+                        {item.detail}
+                      </p>
+                    </div>
+                  </div>
+                </Section>
+              ))}
+            </div>
+          </div>
+        </div>
       </section>
 
-      {/* PQC stack */}
-      <section ref={stackRef} className="relative z-10 py-12 px-4 pb-24" style={{ background: '#000000' }}>
+      {/* Fuzzy extractor */}
+      <section className="relative z-10 py-12 px-4" style={{ background: '#000000' }}>
         <div className="max-w-5xl mx-auto">
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5">
-            {STACK.map((item, i) => (
-              <motion.div
-                key={item.id}
-                className="stat-card flex flex-col gap-1"
-                initial={{ opacity: 0, y: 24 }}
-                animate={stackInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.5, delay: 0.1 + i * 0.1 }}
+          <Section>
+            <div
+              className="p-8 rounded-2xl"
+              style={{
+                background: '#0A0A0A',
+                border: '1px solid rgba(236,72,153,0.25)',
+                borderTop: '4px solid #EC4899',
+              }}
+            >
+              <p
+                className="font-mono mb-1"
+                style={{ fontSize: '20px', color: '#F472B6' }}
               >
-                <p className="font-mono text-purple-400" style={{ fontSize: '15px' }}>
-                  {item.name}
-                </p>
-                {item.sub && (
+                Fuzzy Extractor
+              </p>
+              <p
+                className="font-rajdhani uppercase mb-6"
+                style={{ color: '#666', fontSize: '11px', letterSpacing: '2px' }}
+              >
+                Biometric Key Derivation · No Template Storage
+              </p>
+
+              <p
+                className="font-rajdhani leading-relaxed mb-6"
+                style={{ color: '#CCCCCC', fontSize: '15px' }}
+              >
+                Veil never stores your biometric. Instead, a fuzzy extractor maps your biometric reading
+                (face geometry, fingerprint minutiae) to a stable 256-bit seed, tolerating natural
+                inter-measurement variation while producing a cryptographically uniform output.
+              </p>
+
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-6">
+                {[
+                  {
+                    step: '01',
+                    title: 'Enrollment',
+                    body: 'On first auth, your biometric is processed into a helper string P and secret seed S. S seeds your ML-DSA-65/ML-KEM-768 keypair.',
+                  },
+                  {
+                    step: '02',
+                    title: 'Reproduction',
+                    body: 'On subsequent auths, the fuzzy extractor uses P and a fresh biometric reading w’ to recover S, even if w’ ≠ w (within error tolerance).',
+                  },
+                  {
+                    step: '03',
+                    title: 'Key Derivation',
+                    body: 'S feeds into HKDF-SHA3-512 to derive your wallet signing key and encapsulation key. Session-scoped. Never persisted.',
+                  },
+                ].map((card) => (
+                  <div
+                    key={card.step}
+                    className="p-5 rounded-xl"
+                    style={{ background: '#111', border: '1px solid rgba(236,72,153,0.15)' }}
+                  >
+                    <p
+                      className="font-orbitron font-bold mb-2"
+                      style={{ color: '#F472B6', fontSize: '12px' }}
+                    >
+                      {card.step}
+                    </p>
+                    <p className="font-orbitron text-white mb-2" style={{ fontSize: '14px' }}>
+                      {card.title}
+                    </p>
+                    <p className="font-rajdhani" style={{ color: '#888', fontSize: '13.5px', lineHeight: 1.6 }}>
+                      {card.body}
+                    </p>
+                  </div>
+                ))}
+              </div>
+
+              <p
+                className="font-rajdhani"
+                style={{ color: '#666', fontSize: '13.5px' }}
+              >
+                Helper string P is stored locally (device secure enclave). It reveals nothing about S
+                without the biometric. Even if P is leaked, an attacker without your biometric cannot
+                derive S — and without S, there are no keys.
+              </p>
+            </div>
+          </Section>
+        </div>
+      </section>
+
+      {/* Halborn audit */}
+      <section className="relative z-10 py-12 px-4 pb-24" style={{ background: '#000000' }}>
+        <div className="max-w-5xl mx-auto">
+          <Section>
+            <div
+              className="p-8 rounded-2xl"
+              style={{
+                background: '#0A0A0A',
+                border: '1px solid rgba(168,85,247,0.2)',
+              }}
+            >
+              <div className="flex flex-wrap items-center justify-between gap-4 mb-6">
+                <div>
+                  <p
+                    className="font-orbitron font-bold text-white mb-1"
+                    style={{ fontSize: '20px' }}
+                  >
+                    Security Audit
+                  </p>
                   <p
                     className="font-rajdhani uppercase"
-                    style={{ color: '#666666', fontSize: '10px', letterSpacing: '1px' }}
+                    style={{ color: '#666', fontSize: '11px', letterSpacing: '2px' }}
                   >
-                    {item.sub}
+                    Halborn Security · Independent Third-Party Review
                   </p>
-                )}
-                <p className="font-rajdhani text-white mt-2" style={{ fontSize: '14px' }}>
-                  {item.body}
-                </p>
-              </motion.div>
-            ))}
-          </div>
+                </div>
+                <span
+                  className="font-rajdhani uppercase px-4 py-1.5 rounded-full"
+                  style={{
+                    background: 'rgba(168,85,247,0.1)',
+                    border: '1px solid rgba(168,85,247,0.35)',
+                    color: '#A855F7',
+                    fontSize: '11px',
+                    letterSpacing: '1.5px',
+                  }}
+                >
+                  IN PROGRESS
+                </span>
+              </div>
 
-          <motion.p
-            className="font-rajdhani italic text-center mt-10"
-            style={{ color: '#A855F7', fontSize: '16px' }}
-            initial={{ opacity: 0 }}
-            animate={stackInView ? { opacity: 1 } : {}}
-            transition={{ duration: 0.7, delay: 0.6 }}
-          >
-            Every layer. Quantum resistant. From day one.
-          </motion.p>
+              <div className="flex flex-col gap-3 mb-6">
+                {AUDIT_STATUS.map((row) => (
+                  <div
+                    key={row.label}
+                    className="flex items-center justify-between py-3 px-4 rounded-xl"
+                    style={{ background: '#111', border: '1px solid rgba(168,85,247,0.1)' }}
+                  >
+                    <span
+                      className="font-rajdhani uppercase"
+                      style={{ color: '#666', fontSize: '11px', letterSpacing: '1.5px' }}
+                    >
+                      {row.label}
+                    </span>
+                    <span
+                      className="font-mono"
+                      style={{
+                        fontSize: '13px',
+                        color: row.ok === true ? '#A855F7' : row.ok === null ? '#666' : '#EF4444',
+                      }}
+                    >
+                      {row.value}
+                    </span>
+                  </div>
+                ))}
+              </div>
+
+              <p
+                className="font-rajdhani leading-relaxed"
+                style={{ color: '#666', fontSize: '13.5px' }}
+              >
+                All Veil smart contracts (excluding x402PQCPayments, which is already Base mainnet live)
+                are gated on a clean Halborn audit before any mainnet deployment. The PQC cryptographic
+                layer is included in scope. The public report will be linked here upon completion. No
+                deadline pressure moves that gate.
+              </p>
+            </div>
+          </Section>
         </div>
       </section>
     </>
