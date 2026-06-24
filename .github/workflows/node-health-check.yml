@@ -1,0 +1,35 @@
+name: Node Health Check
+
+on:
+  schedule:
+    - cron: '*/15 * * * *'
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  health-check:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        node:
+          - ip: 45.63.6.252
+            name: node-1
+          - ip: 108.61.81.13
+            name: node-2
+          - ip: 149.28.229.102
+            name: node-3
+
+    name: Health check ${{ matrix.node.name }} (${{ matrix.node.ip }})
+    steps:
+      - name: Check ${{ matrix.node.name }}
+        run: |
+          STATUS=$(curl -s -o /dev/null -w "%{http_code}" --max-time 10 http://${{ matrix.node.ip }}:3000/health)
+          if [ "$STATUS" = "200" ]; then
+            echo "${{ matrix.node.name }} (${{ matrix.node.ip }}) is healthy — HTTP $STATUS"
+          else
+            echo "FAIL: ${{ matrix.node.name }} (${{ matrix.node.ip }}) returned HTTP $STATUS"
+            exit 1
+          fi
