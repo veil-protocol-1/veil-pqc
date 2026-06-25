@@ -7,7 +7,7 @@ import { GhostTrainer } from './training/GhostTrainer.js';
 import { pqcTransport } from './crypto/PQCTransport.js';
 import { COORDINATOR_PUBLIC_KEY } from './crypto/keys.js';
 import type { ParsedIntent, UserContext } from './parser/types.js';
-import type { ExecutionPlan, ExecutionStep } from './reasoning/types.js';
+import type { ExecutionPlan } from './reasoning/types.js';
 import type { PQCLLMClient } from './llm/PQCLLMClient.js';
 
 const DEFAULT_API_URL = 'https://api.veilprotocol.net';
@@ -145,25 +145,21 @@ export class Ghost {
     return { txHashes, success };
   }
 
-  /** Streams Ghost's reasoning token-by-token and step-by-step for mobile UI. */
-  async stream(
+  /** Streams Ghost's response token-by-token. Clarify intents pipe the Anthropic SSE stream
+   *  through the generator; all other intents yield the static ghost response as a single chunk. */
+  async *stream(
     instruction: string,
     context: UserContext,
-    onToken: (token: string) => void,
-    onStep: (step: ExecutionStep) => void,
-  ): Promise<GhostResult> {
+  ): AsyncGenerator<string, void, unknown> {
+    const intent = this.parser.parse(instruction, context);
+
+    if (intent.action === 'clarify' && this.config.llmClient) {
+      yield* this.config.llmClient.stream([{ role: 'user', content: instruction }], context);
+      return;
+    }
+
     const result = await this.execute(instruction, context);
-
-    for (const token of result.ghostResponse.split(/(\s+)/).filter(Boolean)) {
-      onToken(token);
-    }
-    if (result.plan) {
-      for (const step of result.plan.steps) {
-        onStep(step);
-      }
-    }
-
-    return result;
+    yield result.ghostResponse;
   }
 
   private signStep(step: ExecutionStep, context: UserContext, keypair: PQCKeypair): string {

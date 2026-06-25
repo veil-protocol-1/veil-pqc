@@ -26,7 +26,6 @@ import { Ghost } from '../src/Ghost.js';
 import { DeFiReasoner } from '../src/reasoning/DeFiReasoner.js';
 import { GhostTrainer } from '../src/training/GhostTrainer.js';
 import type { UserContext } from '../src/parser/types.js';
-import type { ExecutionStep } from '../src/reasoning/types.js';
 
 afterEach(() => {
   vi.restoreAllMocks();
@@ -84,29 +83,33 @@ describe('Ghost.execute', () => {
 });
 
 describe('Ghost.stream', () => {
-  it('streams tokens and steps for a reasoning-required intent', async () => {
+  it('yields the ghost response as a single chunk for a non-clarify intent', async () => {
     const ghost = new Ghost({ network: 'base-sepolia', enableTraining: false });
-    const tokens: string[] = [];
-    const steps: ExecutionStep[] = [];
-    const result = await ghost.stream(
-      'borrow USDC against my ETH',
-      context({ ETH: '5' }),
-      t => tokens.push(t),
-      s => steps.push(s),
-    );
-    expect(tokens.join('')).toBe(result.ghostResponse);
-    expect(tokens.length).toBeGreaterThan(0);
-    expect(steps.length).toBe(result.plan?.steps.length ?? 0);
-    expect(steps.length).toBeGreaterThan(0);
+    const chunks: string[] = [];
+    for await (const chunk of ghost.stream('swap 1 ETH for USDC', context({ ETH: '5' }))) {
+      chunks.push(chunk);
+    }
+    expect(chunks.length).toBeGreaterThan(0);
+    expect(chunks.join('').length).toBeGreaterThan(0);
   });
 
-  it('streams tokens but no steps for a simple swap intent', async () => {
-    const ghost = new Ghost({ network: 'base-sepolia', enableTraining: false });
-    const tokens: string[] = [];
-    const steps: ExecutionStep[] = [];
-    await ghost.stream('swap 1 ETH for USDC', context({ ETH: '5' }), t => tokens.push(t), s => steps.push(s));
-    expect(tokens.length).toBeGreaterThan(0);
-    expect(steps).toHaveLength(0);
+  it('yields at least one chunk for a clarify intent with mocked llmClient', async () => {
+    async function* mockStream() { yield 'Hello'; yield ', Sovereign.'; }
+    const llmClient = {
+      chat: vi.fn().mockResolvedValue('Hello, Sovereign.'),
+      stream: vi.fn().mockReturnValue(mockStream()),
+    };
+    const ghost = new Ghost({
+      network: 'base-sepolia',
+      enableTraining: false,
+      llmClient: llmClient as any,
+    });
+    const chunks: string[] = [];
+    for await (const chunk of ghost.stream('do the thing with my money', context({ USDC: '100' }))) {
+      chunks.push(chunk);
+    }
+    expect(chunks.length).toBeGreaterThan(0);
+    expect(llmClient.stream).toHaveBeenCalledTimes(1);
   });
 });
 
