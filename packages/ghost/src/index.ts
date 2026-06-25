@@ -21,3 +21,5 @@ export * from './training/types.js';
 
 export { SEED_EXAMPLES } from './data/seed.js';
 export type { TrainingExample } from './data/seed.js';
+
+export { fetchBalances } from './chain/balances.js';
